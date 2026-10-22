@@ -170,6 +170,29 @@ private def lower : Pattern OpCode := Pattern.Builder
 #guard_puddle lower contains "llvm.add(X, X)  =>  gmir.g_add(X, X)"
 #guard_puddle lower contains "P1 ← some P0"
 
+private def lowerZero (toArith : Bool) : Pattern OpCode := Pattern.Builder
+  (do
+    let ty ← MatchProg.type (Attr := IntegerType) (fun t => t == .signless 32)
+    let _ ← MatchProg.root (.llvm .mlir__constant) #[] #[ty]
+      (fun p => match p.value with | .integer a => a.value == 0 | _ => false)
+    return ty)
+  (fun ty => do
+    if toArith then
+      let p ← CreateProg.property (.arith .constant) ⟨⟨0, .signless 32⟩⟩
+      CreateProg.operation (.arith .constant) #[] #[ty] p
+    else
+      let p ← CreateProg.property (.gmir .g_constant) ⟨⟨0, .signless 32⟩⟩
+      CreateProg.operation (.gmir .g_constant) #[] #[ty] p)
+  (fun op => op)
+
+-- Literal summaries can coincide, but the detail graphs must distinguish dialects.
+#guard_puddle lowerZero true contains "0  =>  C1"
+#guard_puddle lowerZero false contains "0  =>  C1"
+#guard_puddle lowerZero true contains "root = llvm.mlir.constant(0) : T0"
+#guard_puddle lowerZero false contains "root = llvm.mlir.constant(0) : T0"
+#guard_puddle lowerZero true contains "C1 = arith.constant(0) : T0 [created]"
+#guard_puddle lowerZero false contains "C1 = gmir.g_constant(0) : T0 [created]"
+
 private def guardedConstant : Pattern OpCode := Pattern.Builder
   (do
     let ty ← MatchProg.type (Attr := IntegerType)
@@ -191,6 +214,42 @@ variable (n : Int)
 #guard_puddle Veir.InstSimplify.IS3341_mulUdiv (n + 1) 8 contains "icmp(udiv((X * (n + 1)), 8), X)"
 #guard_puddle Veir.InstSimplify.IS3341_mulUdiv (n + 1) 8 contains "C0 = (n + 1) : T0"
 #guard_puddle Veir.InstSimplify.IS3341_mulUdiv (n + 1) 8 contains "a2 = (X * C0) : T0"
+end
+
+section
+variable (X : Int)
+-- The symbolic constant and the free SSA operand must not share a name.
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X 8 contains "icmp(udiv((X_1 * X), 8), X_1)"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X 8 contains "C0 = X : T0"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X 8 contains "X_1 : T0"
+end
+
+section
+variable (X X_1 : Int)
+-- Suffixes are checked too, rather than merely appending a fixed suffix.
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (X + X_1) 8 contains "(X_2 * (X + X_1))"
+end
+
+section
+variable (t : Int)
+-- The temporary binder used to explain a type guard must also avoid parameters.
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv t 8
+  contains "where t_1 = T0: (BitVec.ofInt t_1.bitwidth t)"
+end
+
+section
+variable (T0 P0 C0 root a2 C5 : Int)
+-- Operation, constant, and metadata names must also leave parameters unshadowed.
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (T0 + P0 + C0 + root + a2 + C5) 8
+  contains "P0_1 = properties(C0_1)"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (T0 + P0 + C0 + root + a2 + C5) 8
+  contains "a2_1 = (X * C0_1) : T0_1"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (T0 + P0 + C0 + root + a2 + C5) 8
+  contains "root_1 = icmp(a3, X) : T1"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (T0 + P0 + C0 + root + a2 + C5) 8
+  contains "C5_1 = 0 : T1 [created]"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv (T0 + P0 + C0 + root + a2 + C5) 8
+  contains "intConstantGuard P0_1 (T0 + P0 + C0 + root + a2 + C5)"
 end
 
 private def emptyMetadata : Pattern OpCode := Pattern.Builder
@@ -246,6 +305,12 @@ section
 variable (n : Int)
 #guard_puddle createdCompound n contains "arith: (X + X)  =>  (X * (n + 1))"
 #guard_puddle createdCompound n contains "new2 = (X * C1) : T0 [created]"
+end
+
+section
+variable (new2 : Int)
+#guard_puddle createdCompound new2 contains "new2_1 = (X * C1) : T0 [created]"
+#guard_puddle createdCompound new2 contains "arith: (X + X)  =>  (X * (new2 + 1))"
 end
 
 private def narrowConstant : Pattern OpCode := Pattern.Builder

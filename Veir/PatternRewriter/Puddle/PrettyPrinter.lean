@@ -66,6 +66,7 @@ private structure Description where
   matchDecls : Array Expr := #[]
   createDecls : Array Expr := #[]
   replacements : Array Nat := #[]
+  names : Std.HashMap Nat String := {}
 
 private def constructor (e : Expr) (name : Name) : MetaM (Array Expr) := do
   let e ← whnf e
@@ -199,7 +200,7 @@ private def leafName (index : Nat) : String :=
   if index < 3 then #["X", "Y", "Z"][index]! else s!"X{index}"
 
 private def opName (d : Description) (op : Operation) : String :=
-  if op.id == d.root then "root" else
+  d.names[op.id]?.getD <| if op.id == d.root then "root" else
     if #["llvm.mlir.constant", "arith.constant", "gmir.g_constant"].contains op.opcode then
       s!"C{d.operations.findIdx (·.id == op.id)}"
     else
@@ -207,10 +208,41 @@ private def opName (d : Description) (op : Operation) : String :=
 
 private def valueName (d : Description) (id : Nat) : String :=
   match d.leaves.findIdx? (·.1 == id) with
-  | some i => leafName i
+  | some i => d.names[id]?.getD (leafName i)
   | none => match d.operations.find? (·.results.contains id) with
     | some op => opName d op ++ if op.results.size == 1 then "" else s!".{op.results.findIdx (· == id)}"
     | none => s!"value#{id}"
+
+private def freshName (used : Std.HashSet String) (base : String) : String := Id.run do
+  let mut candidate := base
+  for i in [:used.size + 1] do
+    if !used.contains candidate then return candidate
+    candidate := s!"{base}_{i + 1}"
+  return candidate
+
+-- Graph references are strings, whereas symbolic parameters are printed by Lean.
+-- Reserve the existing local names before introducing any of our own, including
+-- metadata locals, so both parts of the output agree on distinct names.
+private def nameHandles (d : Description) : MetaM Description := do
+  let mut used : Std.HashSet String := {}
+  for decl in ← getLCtx do
+    used := used.insert decl.userName.eraseMacroScopes.toString
+    used := used.insert (← ppExpr decl.toExpr).pretty
+  let mut names := d.names
+  for i in [:d.leaves.size] do
+    let name := freshName used (leafName i)
+    used := used.insert name
+    names := names.insert d.leaves[i]!.1 name
+  for op in d.operations do
+    let name := freshName used (opName d op)
+    used := used.insert name
+    names := names.insert op.id name
+  let mut metadata := #[]
+  for item in d.metadata do
+    let name := freshName used item.name
+    used := used.insert name
+    metadata := metadata.push { item with name }
+  return { d with names, metadata }
 
 private def tuple (values : Array String) : String :=
   if values.size == 1 then values[0]! else "(" ++ String.intercalate ", " values.toList ++ ")"
@@ -318,11 +350,12 @@ private def typeConstraint (fn arg : Expr) : MetaM String := do
       let predicate := args[args.size - 2]!
       let type ← whnf (← inferType predicate)
       if let .forallE _ attr _ _ := type then
-        return ← withLocalDeclD `t attr fun t => do
+        return ← withLocalDeclD ((← getLCtx).getUnusedName `t) attr fun t => do
           let condition ← applyText predicate t
           let name ← exprText arg
+          let binder ← exprText t
           let label := s!"{name} : {← exprText attr}"
-          return if condition == "true" then label else s!"{label}, where t = {name}: {condition}"
+          return if condition == "true" then label else s!"{label}, where {binder} = {name}: {condition}"
   return "require " ++ (← exprText body)
 
 private def field (e : Expr) (structureName : Name) (index : Nat) : MetaM Expr :=
@@ -436,7 +469,12 @@ private def render (d : Description) (bindings : Array (Nat × Expr)) : MetaM Fo
   for op in d.operations do
     -- The detail graph always identifies the exact operands, even when the
     -- summary can inline them into a more readable expression.
-    let expr := application d op (op.operands.map (valueName d))
+    -- A bare literal carries no dialect. Preserve its opcode in mixed-dialect
+    -- detail graphs, even when the summary uses the shorter literal notation.
+    let expr := match op.literal with
+      | some literal => if (commonDialect d).isNone then s!"{op.opcode}({literal})"
+          else application d op (op.operands.map (valueName d))
+      | none => application d op (op.operands.map (valueName d))
     let types := tuple (op.types.map (metadataName d))
     -- Also name inlined operations here, so property and inspection references are unambiguous.
     lines := lines.push s!"{opName d op} = {expr} : {types}{if op.created then " [created]" else ""}"
@@ -460,7 +498,7 @@ private def withMetadata (d : Description) (remaining : List Metadata)
 Parameters controlling graph construction (e.g. commutation flags) must be instantiated.
 Parameters occurring only in predicates may remain symbolic. -/
 def format (rule : Expr) : MetaM Format := withTransparency .all do
-  let d ← describe rule
+  let d ← nameHandles (← describe rule)
   withMetadata d d.metadata.toList #[]
 
 end PrettyPrinter

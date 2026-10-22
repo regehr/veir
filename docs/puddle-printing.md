@@ -79,7 +79,9 @@ The notation follows the expression-oriented comments in LLVM's InstSimplify
 and InstCombine. It is intended for reading, not parsing back into a pattern:
 
 - `X`, `Y`, `Z`, and `X3`, ... are free SSA values. Repeated names denote the same
-  value. Parentheses make grouping explicit.
+  value. Parentheses make grouping explicit. Generated value, operation, type,
+  and property names gain suffixes such as `_1` when needed to avoid collisions
+  with symbolic parameters.
 - `T0`, `T1`, ... are type handles; `P0`, `P1`, ... are operation properties.
   Type equality, property predicates, and overflow flags remain visible in the
   `where` block. Unconstrained matched properties are not assumed to be defaults.
@@ -106,7 +108,9 @@ and InstCombine. It is intended for reading, not parsing back into a pattern:
   a contextual inspection. Guards and inspections appear in matcher execution
   order, followed by creation metadata computations in creation order.
 - A leading dialect name qualifies the operators in a single-dialect rewrite.
-  Rewrites crossing dialects use fully qualified operation names instead.
+  Rewrites crossing dialects use fully qualified operation names instead. Their
+  `where` blocks also qualify recognized constants, for example
+  `C1 = gmir.g_constant(0) : T0 [created]`, even when the summary uses a literal.
 
 The printer reduces the existing Puddle builders into `MatchDecl`, `CreateDecl`,
 and `Replacement` data. It works with helpers and pattern families without
