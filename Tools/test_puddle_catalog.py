@@ -70,7 +70,7 @@ where
 ```
 '''
     extracted = '''VeIR · Puddle rewrite catalog
-llvm: (X + 0) => X
+llvm: (\u200bX + 0) => X
 
 where
   X : T0

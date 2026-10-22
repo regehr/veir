@@ -256,6 +256,8 @@ private def commonDialect (d : Description) : Option String := do
 
 private def application (d : Description) (op : Operation) (operands : Array String) : String := Id.run do
   if let some literal := op.literal then return literal
+  if op.opcode == "llvm.mlir.zero" then return "0"
+  if op.opcode == "llvm.mlir.poison" then return "poison"
   let name := if (commonDialect d).isSome then
       String.intercalate "." ((op.opcode.splitOn ".").drop 1)
     else op.opcode

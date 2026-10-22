@@ -99,6 +99,8 @@ and InstCombine. It is intended for reading, not parsing back into a pattern:
   constant's result type handle. Compound symbolic payloads are parenthesized.
   More complicated constant predicates stay as named constants with explicit
   conditions.
+- LLVM's `mlir.zero` and `mlir.poison` operations display as `0` and `poison`,
+  respectively, in both summaries and `where` blocks, including across dialects.
 - `new0`, ... and `[created]` mark new operations. All created operations are
   listed in creation order, including those whose results are not replacements.
   Reusing a matched value is different from creating a new operation.

@@ -280,7 +280,8 @@ PDF_TEMPLATE = r'''
     [
       #block(above: 0pt, below: 0pt)[
         #show raw: set text(size: 11pt, weight: "semibold")
-        #raw(parts.at(0).trim())
+        // Allow nested calls to wrap without inserting visible characters.
+        #raw(parts.at(0).trim().replace("(", "(\u{200b}"))
       ]
       #v(12pt)
       #raw("where\n" + parts.at(1))
@@ -642,7 +643,8 @@ def verify_pdf_text(markdown_text: str, extracted: str) -> None:
         if lines and re.fullmatch(r'\s*\d+\s*', lines[-1]):
             lines.pop()
         pages.append('\n'.join(lines))
-    normalize = lambda s: re.sub(r'\s+', '', s)
+    # The large summaries use zero-width spaces as discretionary line breaks.
+    normalize = lambda s: re.sub(r'[\s\u200b]+', '', s)
     body = normalize('\n'.join(pages))
     blocks = re.findall(r'```text\n(.*?)\n```', markdown_text, re.S)
     for index, block in enumerate(blocks, 1):

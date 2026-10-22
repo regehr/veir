@@ -1,6 +1,6 @@
 # Puddle rewrite catalog
 
-Generated on 2026-10-22 from the working tree at `9ad043ebaebd277ced08cc0955acd54e6580532c` (`pretty-print`).
+Generated on 2026-10-22 from the working tree at `a67d8f2de5cb3f45ce68aebdee66fa9e8c41d459` (`pretty-print`).
 
 **1,703 renderings**, covering all **534 discovered production `Pattern OpCode` declarations** under `Veir/`: 472 builder definitions, 3 direct record definitions, and 59 aliases or dispatchers. The renderings also include concrete instances extracted from compiled pass patterns. Generic builders are covered through the displayed instances; compiler-generated auxiliary declarations and unit tests are excluded.
 
@@ -295,8 +295,9 @@ Coverage was checked against the elaborated Lean declarations: no discovered pro
 
 ```text
 llvm: getelementptr(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0) : T0
   P1 = properties(root)
@@ -308,8 +309,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X) : T0
   P1 = properties(root)
@@ -323,8 +325,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y) : T0
   P1 = properties(root)
@@ -340,8 +343,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y, Z)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y, Z) : T0
   P1 = properties(root)
@@ -363,8 +367,9 @@ where
 
 ```text
 llvm: getelementptr(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0) : T0
   P1 = properties(root)
@@ -376,8 +381,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X) : T0
   P1 = properties(root)
@@ -391,8 +397,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y) : T0
   P1 = properties(root)
@@ -408,8 +415,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y, Z)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y, Z) : T0
   P1 = properties(root)
@@ -437,12 +445,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   require (Array.filter (fun x => x == -2147483648) P1.rawConstantIndices.values).size == 0 + 1 + 0
@@ -455,12 +464,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0, Y)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -475,12 +485,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0, Y, Z)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0, Y, Z) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -497,12 +508,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -517,12 +529,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0, Z)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0, Z) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -539,12 +552,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0, Z, X3)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0, Z, X3) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -563,12 +577,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -585,12 +600,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0, X3)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0, X3) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -609,12 +625,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0, X3, X4)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0, X3, X4) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -645,6 +662,7 @@ where
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -658,6 +676,7 @@ where
 
 ```text
 llvm: getelementptr(X, a)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -675,6 +694,7 @@ where
 
 ```text
 llvm: getelementptr(X, a, b)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -700,6 +720,7 @@ where
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -713,6 +734,7 @@ where
 
 ```text
 llvm: getelementptr(X, a)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -730,6 +752,7 @@ where
 
 ```text
 llvm: getelementptr(X, a, b)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -759,6 +782,7 @@ where
 
 ```text
 llvm: (C0 + C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -778,6 +802,7 @@ where
 
 ```text
 llvm: (C0 - C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -797,6 +822,7 @@ where
 
 ```text
 llvm: (C0 * C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -816,6 +842,7 @@ where
 
 ```text
 llvm: shl(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -836,6 +863,7 @@ where
 
 ```text
 llvm: lshr(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -856,6 +884,7 @@ where
 
 ```text
 llvm: ashr(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -876,6 +905,7 @@ where
 
 ```text
 llvm: (C0 & C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -895,6 +925,7 @@ where
 
 ```text
 llvm: (C0 | C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -914,6 +945,7 @@ where
 
 ```text
 llvm: (C0 ^ C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -933,6 +965,7 @@ where
 
 ```text
 llvm: udiv(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -953,6 +986,7 @@ where
 
 ```text
 llvm: sdiv(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -973,6 +1007,7 @@ where
 
 ```text
 llvm: urem(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -993,6 +1028,7 @@ where
 
 ```text
 llvm: srem(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1012,7 +1048,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L571)
 
 ```text
-llvm: shl(C0, C1)  =>  mlir.poison()
+llvm: shl(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1020,7 +1057,7 @@ where
   P1 = properties(C1)
   root = shl(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_shl✝ T0 P0 P1
@@ -1032,7 +1069,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L606)
 
 ```text
-llvm: lshr(C0, C1)  =>  mlir.poison()
+llvm: lshr(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1040,7 +1078,7 @@ where
   P1 = properties(C1)
   root = lshr(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_lshr✝ T0 P0 P1
@@ -1052,7 +1090,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L641)
 
 ```text
-llvm: ashr(C0, C1)  =>  mlir.poison()
+llvm: ashr(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1060,7 +1099,7 @@ where
   P1 = properties(C1)
   root = ashr(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_ashr✝ T0 P0 P1
@@ -1072,7 +1111,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L676)
 
 ```text
-llvm: udiv(C0, C1)  =>  mlir.poison()
+llvm: udiv(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1080,7 +1120,7 @@ where
   P1 = properties(C1)
   root = udiv(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_udiv✝ T0 P0 P1
@@ -1092,7 +1132,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L703)
 
 ```text
-llvm: sdiv(C0, C1)  =>  mlir.poison()
+llvm: sdiv(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1100,7 +1141,7 @@ where
   P1 = properties(C1)
   root = sdiv(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_sdiv✝ T0 P0 P1
@@ -1112,7 +1153,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L730)
 
 ```text
-llvm: urem(C0, C1)  =>  mlir.poison()
+llvm: urem(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1120,7 +1162,7 @@ where
   P1 = properties(C1)
   root = urem(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_urem✝ T0 P0 P1
@@ -1132,7 +1174,8 @@ where
 [Source](../Veir/InstSimplify/IS0582.lean#L757)
 
 ```text
-llvm: srem(C0, C1)  =>  mlir.poison()
+llvm: srem(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -1140,7 +1183,7 @@ where
   P1 = properties(C1)
   root = srem(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require !Veir.InstSimplify.IS0582.constantDefined_srem✝ T0 P0 P1
@@ -1159,8 +1202,9 @@ where
 
 ```text
 llvm: (X + a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X + a0) : T0
   P1 = properties(root)
@@ -1174,8 +1218,9 @@ where
 
 ```text
 llvm: (a0 + X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (a0 + X) : T0
   P1 = properties(root)
@@ -1195,6 +1240,7 @@ where
 
 ```text
 llvm: (X + 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1211,6 +1257,7 @@ where
 
 ```text
 llvm: (0 + X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1235,6 +1282,7 @@ where
 
 ```text
 llvm: (X + (Y - X))  =>  Y
+
 where
   a0 = (Y - X) : T0
   P0 = properties(a0)
@@ -1249,6 +1297,7 @@ where
 
 ```text
 llvm: ((Y - X) + X)  =>  Y
+
 where
   a0 = (Y - X) : T0
   P0 = properties(a0)
@@ -1271,6 +1320,7 @@ where
 
 ```text
 llvm: (X + (X ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -1289,6 +1339,7 @@ where
 
 ```text
 llvm: (X + (C0 ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -1307,6 +1358,7 @@ where
 
 ```text
 llvm: ((X ^ C0) + X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -1325,6 +1377,7 @@ where
 
 ```text
 llvm: ((C0 ^ X) + X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -1351,6 +1404,7 @@ where
 
 ```text
 llvm: ((X ^ n) + m)  =>  X
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -1383,6 +1437,7 @@ where
 
 ```text
 llvm: (X + C0)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -1406,8 +1461,9 @@ where
 
 ```text
 llvm: (X - a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X - a0) : T0
   P1 = properties(root)
@@ -1421,8 +1477,9 @@ where
 
 ```text
 llvm: (a0 - X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (a0 - X) : T0
   P1 = properties(root)
@@ -1442,6 +1499,7 @@ where
 
 ```text
 llvm: (X - 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1463,11 +1521,12 @@ where
 [Source](../Veir/InstSimplify/IS0767.lean#L5)
 
 ```text
-llvm: (X - X)  =>  mlir.zero()
+llvm: (X - X)  =>  0
+
 where
   root = (X - X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -1486,6 +1545,7 @@ where
 
 ```text
 llvm: (C0 - X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1511,6 +1571,7 @@ where
 
 ```text
 llvm: (C0 - (X ^ C0))  =>  X
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -1539,8 +1600,9 @@ where
 
 ```text
 llvm: (X * a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X * a0) : T0
   P1 = properties(root)
@@ -1554,8 +1616,9 @@ where
 
 ```text
 llvm: (a0 * X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (a0 * X) : T0
   P1 = properties(root)
@@ -1575,6 +1638,7 @@ where
 
 ```text
 llvm: (X * C0)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1591,6 +1655,7 @@ where
 
 ```text
 llvm: (C0 * X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1613,6 +1678,7 @@ where
 
 ```text
 llvm: (X * 1)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -1629,6 +1695,7 @@ where
 
 ```text
 llvm: (1 * X)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -1651,6 +1718,7 @@ where
 
 ```text
 llvm: (udiv(X, Y) * Y)  =>  X
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -1668,6 +1736,7 @@ where
 
 ```text
 llvm: (Y * udiv(X, Y))  =>  X
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -1685,6 +1754,7 @@ where
 
 ```text
 llvm: (sdiv(X, Y) * Y)  =>  X
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -1702,6 +1772,7 @@ where
 
 ```text
 llvm: (Y * sdiv(X, Y))  =>  X
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -1724,11 +1795,12 @@ where
 [Source](../Veir/InstSimplify/IS0929.lean#L6)
 
 ```text
-llvm: (X * Y)  =>  mlir.zero()
+llvm: (X * Y)  =>  0
+
 where
   root = (X * Y) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   Y : T0
@@ -1752,12 +1824,13 @@ where
 
 ```text
 llvm: sdiv(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = sdiv(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1770,12 +1843,13 @@ where
 
 ```text
 llvm: udiv(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = udiv(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1788,12 +1862,13 @@ where
 
 ```text
 llvm: srem(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = srem(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1806,12 +1881,13 @@ where
 
 ```text
 llvm: urem(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = urem(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1829,13 +1905,14 @@ where
 [Source](../Veir/InstSimplify/IS1063.lean#L6)
 
 ```text
-llvm: sdiv(X, 0)  =>  mlir.poison()
+llvm: sdiv(X, 0)  =>  poison
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = sdiv(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1848,13 +1925,14 @@ where
 [Source](../Veir/InstSimplify/IS1063.lean#L35)
 
 ```text
-llvm: udiv(X, 0)  =>  mlir.poison()
+llvm: udiv(X, 0)  =>  poison
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = udiv(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1867,13 +1945,14 @@ where
 [Source](../Veir/InstSimplify/IS1063.lean#L64)
 
 ```text
-llvm: srem(X, 0)  =>  mlir.poison()
+llvm: srem(X, 0)  =>  poison
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = srem(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1886,13 +1965,14 @@ where
 [Source](../Veir/InstSimplify/IS1063.lean#L93)
 
 ```text
-llvm: urem(X, 0)  =>  mlir.poison()
+llvm: urem(X, 0)  =>  poison
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = urem(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -1912,8 +1992,9 @@ where
 
 ```text
 llvm: sdiv(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = sdiv(a0, X) : T0
   P1 = properties(root)
@@ -1927,8 +2008,9 @@ where
 
 ```text
 llvm: udiv(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = udiv(a0, X) : T0
   P1 = properties(root)
@@ -1942,8 +2024,9 @@ where
 
 ```text
 llvm: srem(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = srem(a0, X) : T0
   P1 = properties(root)
@@ -1957,8 +2040,9 @@ where
 
 ```text
 llvm: urem(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = urem(a0, X) : T0
   P1 = properties(root)
@@ -1978,6 +2062,7 @@ where
 
 ```text
 llvm: sdiv(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -1994,6 +2079,7 @@ where
 
 ```text
 llvm: udiv(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2010,6 +2096,7 @@ where
 
 ```text
 llvm: srem(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2026,6 +2113,7 @@ where
 
 ```text
 llvm: urem(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2048,6 +2136,7 @@ where
 
 ```text
 llvm: sdiv(X, X)  =>  C1
+
 where
   root = sdiv(X, X) : T0
   P0 = properties(root)
@@ -2066,6 +2155,7 @@ where
 
 ```text
 llvm: udiv(X, X)  =>  C1
+
 where
   root = udiv(X, X) : T0
   P0 = properties(root)
@@ -2083,11 +2173,12 @@ where
 [Source](../Veir/InstSimplify/IS1083.lean#L61)
 
 ```text
-llvm: srem(X, X)  =>  mlir.zero()
+llvm: srem(X, X)  =>  0
+
 where
   root = srem(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -2099,11 +2190,12 @@ where
 [Source](../Veir/InstSimplify/IS1083.lean#L87)
 
 ```text
-llvm: urem(X, X)  =>  mlir.zero()
+llvm: urem(X, X)  =>  0
+
 where
   root = urem(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -2122,6 +2214,7 @@ where
 
 ```text
 llvm: sdiv((X * Y), Y)  =>  X
+
 where
   a0 = (X * Y) : T0
   P0 = properties(a0)
@@ -2139,6 +2232,7 @@ where
 
 ```text
 llvm: sdiv((Y * X), Y)  =>  X
+
 where
   a0 = (Y * X) : T0
   P0 = properties(a0)
@@ -2156,6 +2250,7 @@ where
 
 ```text
 llvm: udiv((X * Y), Y)  =>  X
+
 where
   a0 = (X * Y) : T0
   P0 = properties(a0)
@@ -2173,6 +2268,7 @@ where
 
 ```text
 llvm: udiv((Y * X), Y)  =>  X
+
 where
   a0 = (Y * X) : T0
   P0 = properties(a0)
@@ -2189,13 +2285,14 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L127)
 
 ```text
-llvm: srem((X * Y), Y)  =>  mlir.zero()
+llvm: srem((X * Y), Y)  =>  0
+
 where
   a0 = (X * Y) : T0
   P0 = properties(a0)
   root = srem(a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2209,13 +2306,14 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L154)
 
 ```text
-llvm: srem((Y * X), Y)  =>  mlir.zero()
+llvm: srem((Y * X), Y)  =>  0
+
 where
   a0 = (Y * X) : T0
   P0 = properties(a0)
   root = srem(a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2229,13 +2327,14 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L187)
 
 ```text
-llvm: urem((X * Y), Y)  =>  mlir.zero()
+llvm: urem((X * Y), Y)  =>  0
+
 where
   a0 = (X * Y) : T0
   P0 = properties(a0)
   root = urem(a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2249,13 +2348,14 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L214)
 
 ```text
-llvm: urem((Y * X), Y)  =>  mlir.zero()
+llvm: urem((Y * X), Y)  =>  0
+
 where
   a0 = (Y * X) : T0
   P0 = properties(a0)
   root = urem(a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2270,6 +2370,7 @@ where
 
 ```text
 llvm: sdiv((a0 * Y), Y)  =>  a0
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -2288,6 +2389,7 @@ where
 
 ```text
 llvm: sdiv((Y * a0), Y)  =>  a0
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -2306,6 +2408,7 @@ where
 
 ```text
 llvm: udiv((a0 * Y), Y)  =>  a0
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -2324,6 +2427,7 @@ where
 
 ```text
 llvm: udiv((Y * a0), Y)  =>  a0
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -2341,7 +2445,8 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L387)
 
 ```text
-llvm: srem((sdiv(X, Y) * Y), Y)  =>  mlir.zero()
+llvm: srem((sdiv(X, Y) * Y), Y)  =>  0
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -2349,7 +2454,7 @@ where
   P1 = properties(a1)
   root = srem(a1, Y) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   Y : T0
@@ -2362,7 +2467,8 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L415)
 
 ```text
-llvm: srem((Y * sdiv(X, Y)), Y)  =>  mlir.zero()
+llvm: srem((Y * sdiv(X, Y)), Y)  =>  0
+
 where
   a0 = sdiv(X, Y) : T0
   P0 = properties(a0)
@@ -2370,7 +2476,7 @@ where
   P1 = properties(a1)
   root = srem(a1, Y) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   Y : T0
@@ -2383,7 +2489,8 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L452)
 
 ```text
-llvm: urem((udiv(X, Y) * Y), Y)  =>  mlir.zero()
+llvm: urem((udiv(X, Y) * Y), Y)  =>  0
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -2391,7 +2498,7 @@ where
   P1 = properties(a1)
   root = urem(a1, Y) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   Y : T0
@@ -2404,7 +2511,8 @@ where
 [Source](../Veir/InstSimplify/IS1114.lean#L480)
 
 ```text
-llvm: urem((Y * udiv(X, Y)), Y)  =>  mlir.zero()
+llvm: urem((Y * udiv(X, Y)), Y)  =>  0
+
 where
   a0 = udiv(X, Y) : T0
   P0 = properties(a0)
@@ -2412,7 +2520,7 @@ where
   P1 = properties(a1)
   root = urem(a1, Y) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   Y : T0
@@ -2434,6 +2542,7 @@ where
 
 ```text
 llvm: udiv((X * C0), C0)  =>  X
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -2460,6 +2569,7 @@ where
 
 ```text
 llvm: sdiv((X * C0), C0)  =>  X
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -2489,13 +2599,14 @@ where
 [Source](../Veir/InstSimplify/IS1189.lean#L47)
 
 ```text
-llvm: srem(shl(X, Y), X)  =>  mlir.zero()
+llvm: srem(shl(X, Y), X)  =>  0
+
 where
   a0 = shl(X, Y) : T0
   P0 = properties(a0)
   root = srem(a0, X) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2509,13 +2620,14 @@ where
 [Source](../Veir/InstSimplify/IS1189.lean#L81)
 
 ```text
-llvm: urem(shl(X, Y), X)  =>  mlir.zero()
+llvm: urem(shl(X, Y), X)  =>  0
+
 where
   a0 = shl(X, Y) : T0
   P0 = properties(a0)
   root = urem(a0, X) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -2537,7 +2649,8 @@ where
 **Parameters:** `n : Int; m : Int`
 
 ```text
-llvm: srem((X * n), m)  =>  mlir.zero()
+llvm: srem((X * n), m)  =>  0
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -2547,7 +2660,7 @@ where
   P2 = properties(a2)
   root = srem(a2, C1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   require P2.nsw
@@ -2567,7 +2680,8 @@ where
 **Parameters:** `n : Int; m : Int`
 
 ```text
-llvm: urem((X * n), m)  =>  mlir.zero()
+llvm: urem((X * n), m)  =>  0
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -2577,7 +2691,7 @@ where
   P2 = properties(a2)
   root = urem(a2, C1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   require P2.nuw
@@ -2601,13 +2715,14 @@ where
 [Source](../Veir/InstSimplify/IS1246.lean#L25)
 
 ```text
-llvm: srem(Y, sext(X))  =>  mlir.zero()
+llvm: srem(Y, sext(X))  =>  0
+
 where
   a0 = sext(X) : T1
   P0 = properties(a0)
   root = srem(Y, a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   X : T0
   Y : T1
@@ -2631,8 +2746,9 @@ where
 
 ```text
 llvm: shl(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = shl(a0, X) : T0
   P1 = properties(root)
@@ -2646,8 +2762,9 @@ where
 
 ```text
 llvm: lshr(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = lshr(a0, X) : T0
   P1 = properties(root)
@@ -2661,8 +2778,9 @@ where
 
 ```text
 llvm: ashr(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = ashr(a0, X) : T0
   P1 = properties(root)
@@ -2682,6 +2800,7 @@ where
 
 ```text
 llvm: shl(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2698,6 +2817,7 @@ where
 
 ```text
 llvm: lshr(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2714,6 +2834,7 @@ where
 
 ```text
 llvm: ashr(C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2736,6 +2857,7 @@ where
 
 ```text
 llvm: shl(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2752,6 +2874,7 @@ where
 
 ```text
 llvm: lshr(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2768,6 +2891,7 @@ where
 
 ```text
 llvm: ashr(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -2784,6 +2908,7 @@ where
 
 ```text
 llvm: shl(Y, sext(X))  =>  Y
+
 where
   a0 = sext(X) : T1
   P0 = properties(a0)
@@ -2804,6 +2929,7 @@ where
 
 ```text
 llvm: lshr(Y, sext(X))  =>  Y
+
 where
   a0 = sext(X) : T1
   P0 = properties(a0)
@@ -2824,6 +2950,7 @@ where
 
 ```text
 llvm: ashr(Y, sext(X))  =>  Y
+
 where
   a0 = sext(X) : T1
   P0 = properties(a0)
@@ -2851,13 +2978,14 @@ where
 **Parameters:** `n : Int`
 
 ```text
-llvm: shl(X, n)  =>  mlir.poison()
+llvm: shl(X, n)  =>  poison
+
 where
   C0 = n : T0
   P0 = properties(C0)
   root = shl(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -2875,13 +3003,14 @@ where
 **Parameters:** `n : Int`
 
 ```text
-llvm: lshr(X, n)  =>  mlir.poison()
+llvm: lshr(X, n)  =>  poison
+
 where
   C0 = n : T0
   P0 = properties(C0)
   root = lshr(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -2899,13 +3028,14 @@ where
 **Parameters:** `n : Int`
 
 ```text
-llvm: ashr(X, n)  =>  mlir.poison()
+llvm: ashr(X, n)  =>  poison
+
 where
   C0 = n : T0
   P0 = properties(C0)
   root = ashr(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -2927,11 +3057,12 @@ where
 [Source](../Veir/InstSimplify/IS1381.lean#L26)
 
 ```text
-llvm: lshr(X, X)  =>  mlir.zero()
+llvm: lshr(X, X)  =>  0
+
 where
   root = lshr(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -2943,11 +3074,12 @@ where
 [Source](../Veir/InstSimplify/IS1381.lean#L50)
 
 ```text
-llvm: ashr(X, X)  =>  mlir.zero()
+llvm: ashr(X, X)  =>  0
+
 where
   root = ashr(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -2966,6 +3098,7 @@ where
 
 ```text
 llvm: shl(lshr(X, Y), Y)  =>  X
+
 where
   a0 = lshr(X, Y) : T0
   P0 = properties(a0)
@@ -2983,6 +3116,7 @@ where
 
 ```text
 llvm: shl(ashr(X, Y), Y)  =>  X
+
 where
   a0 = ashr(X, Y) : T0
   P0 = properties(a0)
@@ -3008,6 +3142,7 @@ where
 
 ```text
 llvm: shl(C0, X)  =>  C0
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -3035,13 +3170,14 @@ where
 **Parameters:** `n : Int`
 
 ```text
-llvm: shl(X, n)  =>  mlir.zero()
+llvm: shl(X, n)  =>  0
+
 where
   C0 = n : T0
   P0 = properties(C0)
   root = shl(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   require P1.nsw && P1.nuw
@@ -3066,6 +3202,7 @@ where
 
 ```text
 llvm: lshr(shl(X, Y), Y)  =>  X
+
 where
   a0 = shl(X, Y) : T0
   P0 = properties(a0)
@@ -3089,6 +3226,7 @@ where
 
 ```text
 llvm: ashr(C0, X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -3105,6 +3243,7 @@ where
 
 ```text
 llvm: ashr(shl(C0, X), X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -3129,6 +3268,7 @@ where
 
 ```text
 llvm: ashr(shl(X, Y), Y)  =>  X
+
 where
   a0 = shl(X, Y) : T0
   P0 = properties(a0)
@@ -3154,6 +3294,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | icmp(X, Y))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3189,6 +3330,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3224,6 +3366,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | icmp(Y, X))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3259,6 +3402,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3294,6 +3438,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | icmp(X, Y))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3329,6 +3474,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3364,6 +3510,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | icmp(Y, X))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3398,6 +3545,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3442,6 +3590,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & icmp(X, Y))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3477,6 +3626,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3512,6 +3662,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & icmp(Y, X))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3547,6 +3698,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3582,6 +3734,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & icmp(X, Y))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3617,6 +3770,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3652,6 +3806,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & icmp(Y, X))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3686,6 +3841,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & icmp((X - Y), 0))  =>  C5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3730,6 +3886,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3760,6 +3917,7 @@ where
 
 ```text
 llvm: (a3 & icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3790,6 +3948,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3820,6 +3979,7 @@ where
 
 ```text
 llvm: (a3 & icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3850,6 +4010,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3880,6 +4041,7 @@ where
 
 ```text
 llvm: (a3 & icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3910,6 +4072,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) & a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3939,6 +4102,7 @@ where
 
 ```text
 llvm: (a3 & icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -3972,6 +4136,7 @@ where
 
 ```text
 llvm: (a2 | icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4002,6 +4167,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4032,6 +4198,7 @@ where
 
 ```text
 llvm: (a2 | icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4062,6 +4229,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4092,6 +4260,7 @@ where
 
 ```text
 llvm: (a2 | icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4122,6 +4291,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4152,6 +4322,7 @@ where
 
 ```text
 llvm: (a2 | icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4181,6 +4352,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4220,6 +4392,7 @@ where
 
 ```text
 llvm: (a2 & icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4250,6 +4423,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4280,6 +4454,7 @@ where
 
 ```text
 llvm: (a2 & icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4310,6 +4485,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4340,6 +4516,7 @@ where
 
 ```text
 llvm: (a2 & icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4370,6 +4547,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4400,6 +4578,7 @@ where
 
 ```text
 llvm: (a2 & icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4429,6 +4608,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4462,6 +4642,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4492,6 +4673,7 @@ where
 
 ```text
 llvm: (a3 | icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4522,6 +4704,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4552,6 +4735,7 @@ where
 
 ```text
 llvm: (a3 | icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4582,6 +4766,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4612,6 +4797,7 @@ where
 
 ```text
 llvm: (a3 | icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4642,6 +4828,7 @@ where
 
 ```text
 llvm: (icmp((X - Y), 0) | a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4671,6 +4858,7 @@ where
 
 ```text
 llvm: (a3 | icmp((X - Y), 0))  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4710,6 +4898,7 @@ where
 
 ```text
 llvm: (a1 & icmp(Y, 0))  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4735,6 +4924,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) & a1)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4760,6 +4950,7 @@ where
 
 ```text
 llvm: (a1 & icmp(Y, 0))  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4785,6 +4976,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) & a1)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4814,6 +5006,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4839,6 +5032,7 @@ where
 
 ```text
 llvm: (a2 | icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4864,6 +5058,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4889,6 +5084,7 @@ where
 
 ```text
 llvm: (a2 | icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4924,6 +5120,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4949,6 +5146,7 @@ where
 
 ```text
 llvm: (a2 & icmp(X, Y))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4974,6 +5172,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -4999,6 +5198,7 @@ where
 
 ```text
 llvm: (a2 & icmp(Y, X))  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5028,6 +5228,7 @@ where
 
 ```text
 llvm: (a1 | icmp(Y, 0))  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5053,6 +5254,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) | a1)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5078,6 +5280,7 @@ where
 
 ```text
 llvm: (a1 | icmp(Y, 0))  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5103,6 +5306,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) | a1)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5138,6 +5342,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) & icmp(Y, 0))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5168,6 +5373,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) & icmp(X, Y))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5198,6 +5404,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) & icmp(Y, 0))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5228,6 +5435,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) & icmp(Y, X))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5268,6 +5476,7 @@ where
 
 ```text
 llvm: (icmp(X, Y) | icmp(Y, 0))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5298,6 +5507,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) | icmp(X, Y))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5328,6 +5538,7 @@ where
 
 ```text
 llvm: (icmp(Y, X) | icmp(Y, 0))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5358,6 +5569,7 @@ where
 
 ```text
 llvm: (icmp(Y, 0) | icmp(Y, X))  =>  C4
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -5398,6 +5610,7 @@ where
 
 ```text
 llvm: (icmp(X, k0) & icmp(X, k1))  =>  C5
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5441,6 +5654,7 @@ where
 
 ```text
 llvm: (icmp(X, k0) | icmp(X, k1))  =>  C5
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5484,6 +5698,7 @@ where
 
 ```text
 llvm: (icmp(X, k0) & a3)  =>  a3
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5516,6 +5731,7 @@ where
 
 ```text
 llvm: (a2 | icmp(X, k1))  =>  a2
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5554,6 +5770,7 @@ where
 
 ```text
 llvm: (a2 & icmp(X, k1))  =>  a2
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5586,6 +5803,7 @@ where
 
 ```text
 llvm: (icmp(X, k0) | a3)  =>  a3
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5624,6 +5842,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5661,6 +5880,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5708,6 +5928,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5746,6 +5967,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5794,6 +6016,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5831,6 +6054,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5878,6 +6102,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5916,6 +6141,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -5964,6 +6190,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6001,6 +6228,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6048,6 +6276,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) & icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6085,6 +6314,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) & icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6132,6 +6362,7 @@ where
 
 ```text
 llvm: (icmp(intr.ctpop(X), c) | a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6161,6 +6392,7 @@ where
 
 ```text
 llvm: (a4 | icmp(intr.ctpop(X), c))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6190,6 +6422,7 @@ where
 
 ```text
 llvm: (icmp(intr.ctpop(X), c) | a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6219,6 +6452,7 @@ where
 
 ```text
 llvm: (a4 | icmp(intr.ctpop(X), c))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6248,6 +6482,7 @@ where
 
 ```text
 llvm: (icmp(c, intr.ctpop(X)) | a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6277,6 +6512,7 @@ where
 
 ```text
 llvm: (a4 | icmp(c, intr.ctpop(X)))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6306,6 +6542,7 @@ where
 
 ```text
 llvm: (icmp(c, intr.ctpop(X)) | a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6335,6 +6572,7 @@ where
 
 ```text
 llvm: (a4 | icmp(c, intr.ctpop(X)))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6374,6 +6612,7 @@ where
 
 ```text
 llvm: (icmp(intr.ctpop(X), c) & a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6403,6 +6642,7 @@ where
 
 ```text
 llvm: (a4 & icmp(intr.ctpop(X), c))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6432,6 +6672,7 @@ where
 
 ```text
 llvm: (icmp(intr.ctpop(X), c) & a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6461,6 +6702,7 @@ where
 
 ```text
 llvm: (a4 & icmp(intr.ctpop(X), c))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6490,6 +6732,7 @@ where
 
 ```text
 llvm: (icmp(c, intr.ctpop(X)) & a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6519,6 +6762,7 @@ where
 
 ```text
 llvm: (a4 & icmp(c, intr.ctpop(X)))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6548,6 +6792,7 @@ where
 
 ```text
 llvm: (icmp(c, intr.ctpop(X)) & a4)  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6577,6 +6822,7 @@ where
 
 ```text
 llvm: (a4 & icmp(c, intr.ctpop(X)))  =>  a4
+
 where
   a0 = intr.ctpop(X) : T0
   P0 = properties(a0)
@@ -6616,6 +6862,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6653,6 +6900,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6700,6 +6948,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6738,6 +6987,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6786,6 +7036,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6823,6 +7074,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6870,6 +7122,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6908,6 +7161,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6956,6 +7210,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -6993,6 +7248,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -7040,6 +7296,7 @@ where
 
 ```text
 llvm: (icmp((X + C0), k1) | icmp(X, C0))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -7077,6 +7334,7 @@ where
 
 ```text
 llvm: (icmp(X, C0) | icmp((X + C0), k1))  =>  C6
+
 where
   C0 = k0 : T0
   P0 = properties(C0)
@@ -7124,6 +7382,7 @@ where
 
 ```text
 llvm: ((X + c) & ((-c - 1) - X))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7150,6 +7409,7 @@ where
 
 ```text
 llvm: (((-c - 1) - X) & (X + c))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7180,6 +7440,7 @@ where
 
 ```text
 llvm: ((X + c) | ((-c - 1) - X))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7206,6 +7467,7 @@ where
 
 ```text
 llvm: (((-c - 1) - X) | (X + c))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7236,6 +7498,7 @@ where
 
 ```text
 llvm: ((X + c) ^ ((-c - 1) - X))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7262,6 +7525,7 @@ where
 
 ```text
 llvm: (((-c - 1) - X) ^ (X + c))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -7297,7 +7561,8 @@ where
 **Variant 1:** `sw0 = false; sw1 = false`
 
 ```text
-llvm: ((X ^ -1) & X)  =>  mlir.zero()
+llvm: ((X ^ -1) & X)  =>  0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7305,7 +7570,7 @@ where
   P1 = properties(a1)
   root = (a1 & X) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   T0 : Veir.IntegerType
@@ -7316,7 +7581,8 @@ where
 **Variant 2:** `sw0 = false; sw1 = true`
 
 ```text
-llvm: (X & (X ^ -1))  =>  mlir.zero()
+llvm: (X & (X ^ -1))  =>  0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7324,7 +7590,7 @@ where
   P1 = properties(a1)
   root = (X & a1) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   T0 : Veir.IntegerType
@@ -7335,7 +7601,8 @@ where
 **Variant 3:** `sw0 = true; sw1 = false`
 
 ```text
-llvm: ((-1 ^ X) & X)  =>  mlir.zero()
+llvm: ((-1 ^ X) & X)  =>  0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7343,7 +7610,7 @@ where
   P1 = properties(a1)
   root = (a1 & X) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   T0 : Veir.IntegerType
@@ -7354,7 +7621,8 @@ where
 **Variant 4:** `sw0 = true; sw1 = true`
 
 ```text
-llvm: (X & (-1 ^ X))  =>  mlir.zero()
+llvm: (X & (-1 ^ X))  =>  0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7362,7 +7630,7 @@ where
   P1 = properties(a1)
   root = (X & a1) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   T0 : Veir.IntegerType
@@ -7384,6 +7652,7 @@ where
 
 ```text
 llvm: ((X | Y) & X)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -7398,6 +7667,7 @@ where
 
 ```text
 llvm: (X & (X | Y))  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -7412,6 +7682,7 @@ where
 
 ```text
 llvm: ((Y | X) & X)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -7426,6 +7697,7 @@ where
 
 ```text
 llvm: (X & (Y | X))  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -7450,6 +7722,7 @@ where
 
 ```text
 llvm: ((X | (Y ^ -1)) & (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7471,6 +7744,7 @@ where
 
 ```text
 llvm: ((X | Y) & (X | (Y ^ -1)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7492,6 +7766,7 @@ where
 
 ```text
 llvm: ((X | (Y ^ -1)) & (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7513,6 +7788,7 @@ where
 
 ```text
 llvm: ((Y | X) & (X | (Y ^ -1)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7534,6 +7810,7 @@ where
 
 ```text
 llvm: (((Y ^ -1) | X) & (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7555,6 +7832,7 @@ where
 
 ```text
 llvm: ((X | Y) & ((Y ^ -1) | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7576,6 +7854,7 @@ where
 
 ```text
 llvm: (((Y ^ -1) | X) & (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7597,6 +7876,7 @@ where
 
 ```text
 llvm: ((Y | X) & ((Y ^ -1) | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7618,6 +7898,7 @@ where
 
 ```text
 llvm: ((X | (-1 ^ Y)) & (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7639,6 +7920,7 @@ where
 
 ```text
 llvm: ((X | Y) & (X | (-1 ^ Y)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7660,6 +7942,7 @@ where
 
 ```text
 llvm: ((X | (-1 ^ Y)) & (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7681,6 +7964,7 @@ where
 
 ```text
 llvm: ((Y | X) & (X | (-1 ^ Y)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7702,6 +7986,7 @@ where
 
 ```text
 llvm: (((-1 ^ Y) | X) & (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7723,6 +8008,7 @@ where
 
 ```text
 llvm: ((X | Y) & ((-1 ^ Y) | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7744,6 +8030,7 @@ where
 
 ```text
 llvm: (((-1 ^ Y) | X) & (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7765,6 +8052,7 @@ where
 
 ```text
 llvm: ((Y | X) & ((-1 ^ Y) | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7794,8 +8082,9 @@ where
 
 ```text
 llvm: (X & a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X & a0) : T0
   P1 = properties(root)
@@ -7817,6 +8106,7 @@ where
 
 ```text
 llvm: (X & X)  =>  X
+
 where
   root = (X & X) : T0
   P0 = properties(root)
@@ -7828,6 +8118,7 @@ where
 
 ```text
 llvm: (X & X)  =>  X
+
 where
   root = (X & X) : T0
   P0 = properties(root)
@@ -7848,13 +8139,14 @@ where
 **Variant 1:** `sw0 = false`
 
 ```text
-llvm: (X & 0)  =>  mlir.zero()
+llvm: (X & C0)  =>  new2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = (X & C0) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -7865,13 +8157,14 @@ where
 **Variant 2:** `sw0 = true`
 
 ```text
-llvm: (0 & X)  =>  mlir.zero()
+llvm: (C0 & X)  =>  new2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
   root = (C0 & X) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -7893,6 +8186,7 @@ where
 
 ```text
 llvm: (X & -1)  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7907,6 +8201,7 @@ where
 
 ```text
 llvm: (-1 & X)  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -7931,6 +8226,7 @@ where
 
 ```text
 llvm: (a2 & mask)  =>  a2
+
 where
   C0 = amount : T0
   P0 = properties(C0)
@@ -7963,6 +8259,7 @@ where
 
 ```text
 llvm: (a2 & mask)  =>  a2
+
 where
   C0 = amount : T0
   P0 = properties(C0)
@@ -7995,6 +8292,7 @@ where
 
 ```text
 llvm: (a0 & sext(X))  =>  a0
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -8011,6 +8309,7 @@ where
 
 ```text
 llvm: (sext(X) & a0)  =>  a0
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -8037,6 +8336,7 @@ Builder families: `Veir.InstSimplify.IS2143.pattern`.
 
 ```text
 llvm: (sext(X) & a0)  =>  a0
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -8063,6 +8363,7 @@ where
 
 ```text
 llvm: (X & a1)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -8083,6 +8384,7 @@ where
 
 ```text
 llvm: (a1 & X)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -8113,6 +8415,7 @@ Builder families: `Veir.InstSimplify.IS2167.pattern`.
 
 ```text
 llvm: (a1 & X)  =>  a1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -8142,7 +8445,8 @@ where
 **Variant 1:** `sw0 = false; sw1 = false; sw2 = false; sw3 = false`
 
 ```text
-llvm: ((a0 ^ X) & (a0 ^ Y))  =>  mlir.zero()
+llvm: ((a0 ^ X) & (a0 ^ Y))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8152,7 +8456,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8163,7 +8467,8 @@ where
 **Variant 2:** `sw0 = false; sw1 = false; sw2 = false; sw3 = true`
 
 ```text
-llvm: ((a0 ^ Y) & (a0 ^ X))  =>  mlir.zero()
+llvm: ((a0 ^ Y) & (a0 ^ X))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8173,7 +8478,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8184,7 +8489,8 @@ where
 **Variant 3:** `sw0 = false; sw1 = false; sw2 = true; sw3 = false`
 
 ```text
-llvm: ((a0 ^ X) & (Y ^ a0))  =>  mlir.zero()
+llvm: ((a0 ^ X) & (Y ^ a0))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8194,7 +8500,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8205,7 +8511,8 @@ where
 **Variant 4:** `sw0 = false; sw1 = false; sw2 = true; sw3 = true`
 
 ```text
-llvm: ((Y ^ a0) & (a0 ^ X))  =>  mlir.zero()
+llvm: ((Y ^ a0) & (a0 ^ X))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8215,7 +8522,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8226,7 +8533,8 @@ where
 **Variant 5:** `sw0 = false; sw1 = true; sw2 = false; sw3 = false`
 
 ```text
-llvm: ((X ^ a0) & (a0 ^ Y))  =>  mlir.zero()
+llvm: ((X ^ a0) & (a0 ^ Y))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8236,7 +8544,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8247,7 +8555,8 @@ where
 **Variant 6:** `sw0 = false; sw1 = true; sw2 = false; sw3 = true`
 
 ```text
-llvm: ((a0 ^ Y) & (X ^ a0))  =>  mlir.zero()
+llvm: ((a0 ^ Y) & (X ^ a0))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8257,7 +8566,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8268,7 +8577,8 @@ where
 **Variant 7:** `sw0 = false; sw1 = true; sw2 = true; sw3 = false`
 
 ```text
-llvm: ((X ^ a0) & (Y ^ a0))  =>  mlir.zero()
+llvm: ((X ^ a0) & (Y ^ a0))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8278,7 +8588,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8289,7 +8599,8 @@ where
 **Variant 8:** `sw0 = false; sw1 = true; sw2 = true; sw3 = true`
 
 ```text
-llvm: ((Y ^ a0) & (X ^ a0))  =>  mlir.zero()
+llvm: ((Y ^ a0) & (X ^ a0))  =>  0
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -8299,7 +8610,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8310,7 +8621,8 @@ where
 **Variant 9:** `sw0 = true; sw1 = false; sw2 = false; sw3 = false`
 
 ```text
-llvm: ((a0 ^ X) & (a0 ^ Y))  =>  mlir.zero()
+llvm: ((a0 ^ X) & (a0 ^ Y))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8320,7 +8632,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8331,7 +8643,8 @@ where
 **Variant 10:** `sw0 = true; sw1 = false; sw2 = false; sw3 = true`
 
 ```text
-llvm: ((a0 ^ Y) & (a0 ^ X))  =>  mlir.zero()
+llvm: ((a0 ^ Y) & (a0 ^ X))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8341,7 +8654,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8352,7 +8665,8 @@ where
 **Variant 11:** `sw0 = true; sw1 = false; sw2 = true; sw3 = false`
 
 ```text
-llvm: ((a0 ^ X) & (Y ^ a0))  =>  mlir.zero()
+llvm: ((a0 ^ X) & (Y ^ a0))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8362,7 +8676,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8373,7 +8687,8 @@ where
 **Variant 12:** `sw0 = true; sw1 = false; sw2 = true; sw3 = true`
 
 ```text
-llvm: ((Y ^ a0) & (a0 ^ X))  =>  mlir.zero()
+llvm: ((Y ^ a0) & (a0 ^ X))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8383,7 +8698,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8394,7 +8709,8 @@ where
 **Variant 13:** `sw0 = true; sw1 = true; sw2 = false; sw3 = false`
 
 ```text
-llvm: ((X ^ a0) & (a0 ^ Y))  =>  mlir.zero()
+llvm: ((X ^ a0) & (a0 ^ Y))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8404,7 +8720,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8415,7 +8731,8 @@ where
 **Variant 14:** `sw0 = true; sw1 = true; sw2 = false; sw3 = true`
 
 ```text
-llvm: ((a0 ^ Y) & (X ^ a0))  =>  mlir.zero()
+llvm: ((a0 ^ Y) & (X ^ a0))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8425,7 +8742,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8436,7 +8753,8 @@ where
 **Variant 15:** `sw0 = true; sw1 = true; sw2 = true; sw3 = false`
 
 ```text
-llvm: ((X ^ a0) & (Y ^ a0))  =>  mlir.zero()
+llvm: ((X ^ a0) & (Y ^ a0))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8446,7 +8764,7 @@ where
   P2 = properties(a2)
   root = (a1 & a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8457,7 +8775,8 @@ where
 **Variant 16:** `sw0 = true; sw1 = true; sw2 = true; sw3 = true`
 
 ```text
-llvm: ((Y ^ a0) & (X ^ a0))  =>  mlir.zero()
+llvm: ((Y ^ a0) & (X ^ a0))  =>  0
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -8467,7 +8786,7 @@ where
   P2 = properties(a2)
   root = (a2 & a1) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   X : T0
   Y : T0
@@ -8489,6 +8808,7 @@ where
 
 ```text
 llvm: ((X ^ c) & (X ^ (-c - 1)))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -8525,6 +8845,7 @@ where
 
 ```text
 llvm: (X | (X ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8541,6 +8862,7 @@ where
 
 ```text
 llvm: ((X ^ C0) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8557,6 +8879,7 @@ where
 
 ```text
 llvm: (X | (C0 ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8573,6 +8896,7 @@ where
 
 ```text
 llvm: ((C0 ^ X) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8599,6 +8923,7 @@ where
 
 ```text
 llvm: (X | ((X & Y) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8618,6 +8943,7 @@ where
 
 ```text
 llvm: (((X & Y) ^ C0) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8637,6 +8963,7 @@ where
 
 ```text
 llvm: (X | (C0 ^ (X & Y)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8656,6 +8983,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X & Y)) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8675,6 +9003,7 @@ where
 
 ```text
 llvm: (X | ((Y & X) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8694,6 +9023,7 @@ where
 
 ```text
 llvm: (((Y & X) ^ C0) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8713,6 +9043,7 @@ where
 
 ```text
 llvm: (X | (C0 ^ (Y & X)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8732,6 +9063,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y & X)) | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8761,6 +9093,7 @@ where
 
 ```text
 llvm: (X | (X & Y))  =>  X
+
 where
   a0 = (X & Y) : T0
   P0 = properties(a0)
@@ -8775,6 +9108,7 @@ where
 
 ```text
 llvm: ((X & Y) | X)  =>  X
+
 where
   a0 = (X & Y) : T0
   P0 = properties(a0)
@@ -8789,6 +9123,7 @@ where
 
 ```text
 llvm: (X | (Y & X))  =>  X
+
 where
   a0 = (Y & X) : T0
   P0 = properties(a0)
@@ -8803,6 +9138,7 @@ where
 
 ```text
 llvm: ((Y & X) | X)  =>  X
+
 where
   a0 = (Y & X) : T0
   P0 = properties(a0)
@@ -8827,6 +9163,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a1)  =>  a1
+
 where
   a0 = (X ^ Y) : T0
   P0 = properties(a0)
@@ -8843,6 +9180,7 @@ where
 
 ```text
 llvm: (a1 | (X ^ Y))  =>  a1
+
 where
   a0 = (X ^ Y) : T0
   P0 = properties(a0)
@@ -8859,6 +9197,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a1)  =>  a1
+
 where
   a0 = (X ^ Y) : T0
   P0 = properties(a0)
@@ -8875,6 +9214,7 @@ where
 
 ```text
 llvm: (a1 | (X ^ Y))  =>  a1
+
 where
   a0 = (X ^ Y) : T0
   P0 = properties(a0)
@@ -8891,6 +9231,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a1)  =>  a1
+
 where
   a0 = (Y ^ X) : T0
   P0 = properties(a0)
@@ -8907,6 +9248,7 @@ where
 
 ```text
 llvm: (a1 | (Y ^ X))  =>  a1
+
 where
   a0 = (Y ^ X) : T0
   P0 = properties(a0)
@@ -8923,6 +9265,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a1)  =>  a1
+
 where
   a0 = (Y ^ X) : T0
   P0 = properties(a0)
@@ -8939,6 +9282,7 @@ where
 
 ```text
 llvm: (a1 | (Y ^ X))  =>  a1
+
 where
   a0 = (Y ^ X) : T0
   P0 = properties(a0)
@@ -8965,6 +9309,7 @@ where
 
 ```text
 llvm: (((X ^ Y) ^ C0) | (X | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -8986,6 +9331,7 @@ where
 
 ```text
 llvm: ((X | Y) | ((X ^ Y) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9007,6 +9353,7 @@ where
 
 ```text
 llvm: (((X ^ Y) ^ C0) | (Y | X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9028,6 +9375,7 @@ where
 
 ```text
 llvm: ((Y | X) | ((X ^ Y) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9049,6 +9397,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X ^ Y)) | (X | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9070,6 +9419,7 @@ where
 
 ```text
 llvm: ((X | Y) | (C0 ^ (X ^ Y)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9091,6 +9441,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X ^ Y)) | (Y | X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9112,6 +9463,7 @@ where
 
 ```text
 llvm: ((Y | X) | (C0 ^ (X ^ Y)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9133,6 +9485,7 @@ where
 
 ```text
 llvm: (((Y ^ X) ^ C0) | (X | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9154,6 +9507,7 @@ where
 
 ```text
 llvm: ((X | Y) | ((Y ^ X) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9175,6 +9529,7 @@ where
 
 ```text
 llvm: (((Y ^ X) ^ C0) | (Y | X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9196,6 +9551,7 @@ where
 
 ```text
 llvm: ((Y | X) | ((Y ^ X) ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9217,6 +9573,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y ^ X)) | (X | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9238,6 +9595,7 @@ where
 
 ```text
 llvm: ((X | Y) | (C0 ^ (Y ^ X)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9259,6 +9617,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y ^ X)) | (Y | X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9280,6 +9639,7 @@ where
 
 ```text
 llvm: ((Y | X) | (C0 ^ (Y ^ X)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9311,6 +9671,7 @@ where
 
 ```text
 llvm: ((X & (Y ^ -1)) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9332,6 +9693,7 @@ where
 
 ```text
 llvm: (a3 | (X & (Y ^ -1)))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9353,6 +9715,7 @@ where
 
 ```text
 llvm: ((X & (Y ^ -1)) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9374,6 +9737,7 @@ where
 
 ```text
 llvm: (a3 | (X & (Y ^ -1)))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9395,6 +9759,7 @@ where
 
 ```text
 llvm: (((Y ^ -1) & X) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9416,6 +9781,7 @@ where
 
 ```text
 llvm: (a3 | ((Y ^ -1) & X))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9437,6 +9803,7 @@ where
 
 ```text
 llvm: (((Y ^ -1) & X) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9458,6 +9825,7 @@ where
 
 ```text
 llvm: (a3 | ((Y ^ -1) & X))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9479,6 +9847,7 @@ where
 
 ```text
 llvm: ((X & (-1 ^ Y)) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9500,6 +9869,7 @@ where
 
 ```text
 llvm: (a3 | (X & (-1 ^ Y)))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9521,6 +9891,7 @@ where
 
 ```text
 llvm: ((X & (-1 ^ Y)) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9542,6 +9913,7 @@ where
 
 ```text
 llvm: (a3 | (X & (-1 ^ Y)))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9563,6 +9935,7 @@ where
 
 ```text
 llvm: (((-1 ^ Y) & X) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9584,6 +9957,7 @@ where
 
 ```text
 llvm: (a3 | ((-1 ^ Y) & X))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9605,6 +9979,7 @@ where
 
 ```text
 llvm: (((-1 ^ Y) & X) | a3)  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9626,6 +10001,7 @@ where
 
 ```text
 llvm: (a3 | ((-1 ^ Y) & X))  =>  a3
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9657,6 +10033,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9678,6 +10055,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9699,6 +10077,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9720,6 +10099,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9741,6 +10121,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9762,6 +10143,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9783,6 +10165,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9804,6 +10187,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9825,6 +10209,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9846,6 +10231,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9867,6 +10253,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9888,6 +10275,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9909,6 +10297,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9930,6 +10319,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9951,6 +10341,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -9972,6 +10363,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10003,6 +10395,7 @@ where
 
 ```text
 llvm: (((X ^ C0) | Y) | (X ^ Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10024,6 +10417,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | ((X ^ C0) | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10045,6 +10439,7 @@ where
 
 ```text
 llvm: (((X ^ C0) | Y) | (Y ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10066,6 +10461,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | ((X ^ C0) | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10087,6 +10483,7 @@ where
 
 ```text
 llvm: ((Y | (X ^ C0)) | (X ^ Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10108,6 +10505,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | (Y | (X ^ C0)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10129,6 +10527,7 @@ where
 
 ```text
 llvm: ((Y | (X ^ C0)) | (Y ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10150,6 +10549,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | (Y | (X ^ C0)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10171,6 +10571,7 @@ where
 
 ```text
 llvm: (((C0 ^ X) | Y) | (X ^ Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10192,6 +10593,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | ((C0 ^ X) | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10213,6 +10615,7 @@ where
 
 ```text
 llvm: (((C0 ^ X) | Y) | (Y ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10234,6 +10637,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | ((C0 ^ X) | Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10255,6 +10659,7 @@ where
 
 ```text
 llvm: ((Y | (C0 ^ X)) | (X ^ Y))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10276,6 +10681,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | (Y | (C0 ^ X)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10297,6 +10703,7 @@ where
 
 ```text
 llvm: ((Y | (C0 ^ X)) | (Y ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10318,6 +10725,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | (Y | (C0 ^ X)))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10349,6 +10757,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10372,6 +10781,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10395,6 +10805,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10418,6 +10829,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10441,6 +10853,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10464,6 +10877,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10487,6 +10901,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10510,6 +10925,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10533,6 +10949,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10556,6 +10973,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10579,6 +10997,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10602,6 +11021,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10625,6 +11045,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10648,6 +11069,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10671,6 +11093,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10694,6 +11117,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10717,6 +11141,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10740,6 +11165,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10763,6 +11189,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10786,6 +11213,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10809,6 +11237,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10832,6 +11261,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10855,6 +11285,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10878,6 +11309,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10901,6 +11333,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10924,6 +11357,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10947,6 +11381,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10970,6 +11405,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -10993,6 +11429,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11016,6 +11453,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11039,6 +11477,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11062,6 +11501,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11095,6 +11535,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11121,6 +11562,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11147,6 +11589,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11173,6 +11616,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11199,6 +11643,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11225,6 +11670,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11251,6 +11697,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11277,6 +11724,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11303,6 +11751,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11329,6 +11778,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11355,6 +11805,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11381,6 +11832,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11407,6 +11859,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11433,6 +11886,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11459,6 +11913,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11485,6 +11940,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11511,6 +11967,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11537,6 +11994,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11563,6 +12021,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((X | Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11589,6 +12048,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (X | Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11615,6 +12075,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11641,6 +12102,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11667,6 +12129,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11693,6 +12156,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11719,6 +12183,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11745,6 +12210,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11771,6 +12237,7 @@ where
 
 ```text
 llvm: ((Y & a1) | ((Y | X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11797,6 +12264,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ (Y | X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11823,6 +12291,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11849,6 +12318,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11875,6 +12345,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11901,6 +12372,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11927,6 +12399,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (select(X, C0, Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11953,6 +12426,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ select(X, C0, Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -11979,6 +12453,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (select(X, C0, Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12005,6 +12480,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ select(X, C0, Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12031,6 +12507,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12057,6 +12534,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12083,6 +12561,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12109,6 +12588,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12135,6 +12615,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (select(Y, C0, X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12161,6 +12642,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ select(Y, C0, X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12187,6 +12669,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (select(Y, C0, X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12213,6 +12696,7 @@ where
 
 ```text
 llvm: ((a1 & Y) | (C0 ^ select(Y, C0, X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12239,6 +12723,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12265,6 +12750,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12291,6 +12777,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12317,6 +12804,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | (a1 & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12343,6 +12831,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (select(X, C0, Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12369,6 +12858,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ select(X, C0, Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12395,6 +12885,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (select(X, C0, Y) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12421,6 +12912,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ select(X, C0, Y)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12447,6 +12939,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12473,6 +12966,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12499,6 +12993,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12525,6 +13020,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12551,6 +13047,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (select(Y, C0, X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12577,6 +13074,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ select(Y, C0, X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12603,6 +13101,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (select(Y, C0, X) ^ C0))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12629,6 +13128,7 @@ where
 
 ```text
 llvm: ((Y & a1) | (C0 ^ select(Y, C0, X)))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12655,6 +13155,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12681,6 +13182,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12707,6 +13209,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12733,6 +13236,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | (Y & a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12759,6 +13263,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | ((X | Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12788,6 +13293,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ (X | Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12817,6 +13323,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | ((X | Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12846,6 +13353,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ (X | Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12875,6 +13383,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12904,6 +13413,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12933,6 +13443,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12962,6 +13473,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -12991,6 +13503,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | ((Y | X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13020,6 +13533,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ (Y | X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13049,6 +13563,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | ((Y | X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13078,6 +13593,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ (Y | X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13107,6 +13623,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13136,6 +13653,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13165,6 +13683,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13194,6 +13713,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13223,6 +13743,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | ((X | Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13252,6 +13773,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ (X | Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13281,6 +13803,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | ((X | Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13310,6 +13833,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ (X | Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13339,6 +13863,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13368,6 +13893,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13397,6 +13923,7 @@ where
 
 ```text
 llvm: (((X | Y) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13426,6 +13953,7 @@ where
 
 ```text
 llvm: ((C0 ^ (X | Y)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13455,6 +13983,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | ((Y | X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13484,6 +14013,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ (Y | X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13513,6 +14043,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | ((Y | X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13542,6 +14073,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ (Y | X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13571,6 +14103,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13600,6 +14133,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13629,6 +14163,7 @@ where
 
 ```text
 llvm: (((Y | X) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13658,6 +14193,7 @@ where
 
 ```text
 llvm: ((C0 ^ (Y | X)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13687,6 +14223,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (select(X, C0, Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13716,6 +14253,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ select(X, C0, Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13745,6 +14283,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (select(X, C0, Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13774,6 +14313,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ select(X, C0, Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13803,6 +14343,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13832,6 +14373,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13861,6 +14403,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13890,6 +14433,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13919,6 +14463,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (select(Y, C0, X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13948,6 +14493,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ select(Y, C0, X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -13977,6 +14523,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (select(Y, C0, X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14006,6 +14553,7 @@ where
 
 ```text
 llvm: (select(a2, Y, 0) | (C0 ^ select(Y, C0, X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14035,6 +14583,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14064,6 +14613,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14093,6 +14643,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14122,6 +14673,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | select(a2, Y, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14151,6 +14703,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (select(X, C0, Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14180,6 +14733,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ select(X, C0, Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14209,6 +14763,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (select(X, C0, Y) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14238,6 +14793,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ select(X, C0, Y)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14267,6 +14823,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14296,6 +14853,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14325,6 +14883,7 @@ where
 
 ```text
 llvm: ((select(X, C0, Y) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14354,6 +14913,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(X, C0, Y)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14383,6 +14943,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (select(Y, C0, X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14412,6 +14973,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ select(Y, C0, X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14441,6 +15003,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (select(Y, C0, X) ^ C0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14470,6 +15033,7 @@ where
 
 ```text
 llvm: (select(Y, a2, 0) | (C0 ^ select(Y, C0, X)))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14499,6 +15063,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14528,6 +15093,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14557,6 +15123,7 @@ where
 
 ```text
 llvm: ((select(Y, C0, X) ^ C0) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14586,6 +15153,7 @@ where
 
 ```text
 llvm: ((C0 ^ select(Y, C0, X)) | select(Y, a2, 0))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14625,6 +15193,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14646,6 +15215,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14667,6 +15237,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14688,6 +15259,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14709,6 +15281,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14730,6 +15303,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14751,6 +15325,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14772,6 +15347,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14793,6 +15369,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14814,6 +15391,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14835,6 +15413,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14856,6 +15435,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14877,6 +15457,7 @@ where
 
 ```text
 llvm: (a2 | (X & Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14898,6 +15479,7 @@ where
 
 ```text
 llvm: ((X & Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14919,6 +15501,7 @@ where
 
 ```text
 llvm: (a2 | (Y & X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14940,6 +15523,7 @@ where
 
 ```text
 llvm: ((Y & X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14971,6 +15555,7 @@ where
 
 ```text
 llvm: (a2 | (X ^ Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -14992,6 +15577,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15013,6 +15599,7 @@ where
 
 ```text
 llvm: (a2 | (Y ^ X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15034,6 +15621,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15055,6 +15643,7 @@ where
 
 ```text
 llvm: (a2 | (X ^ Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15076,6 +15665,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15097,6 +15687,7 @@ where
 
 ```text
 llvm: (a2 | (Y ^ X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15118,6 +15709,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15139,6 +15731,7 @@ where
 
 ```text
 llvm: (a2 | (X ^ Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15160,6 +15753,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15181,6 +15775,7 @@ where
 
 ```text
 llvm: (a2 | (Y ^ X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15202,6 +15797,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15223,6 +15819,7 @@ where
 
 ```text
 llvm: (a2 | (X ^ Y))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15244,6 +15841,7 @@ where
 
 ```text
 llvm: ((X ^ Y) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15265,6 +15863,7 @@ where
 
 ```text
 llvm: (a2 | (Y ^ X))  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15286,6 +15885,7 @@ where
 
 ```text
 llvm: ((Y ^ X) | a2)  =>  a2
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15315,8 +15915,9 @@ where
 
 ```text
 llvm: (X | a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X | a0) : T0
   P1 = properties(root)
@@ -15338,6 +15939,7 @@ where
 
 ```text
 llvm: (X | C0)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15352,6 +15954,7 @@ where
 
 ```text
 llvm: (C0 | X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -15376,6 +15979,7 @@ where
 
 ```text
 llvm: (X | X)  =>  X
+
 where
   root = (X | X) : T0
   P0 = properties(root)
@@ -15387,6 +15991,7 @@ where
 
 ```text
 llvm: (X | X)  =>  X
+
 where
   root = (X | X) : T0
   P0 = properties(root)
@@ -15402,6 +16007,7 @@ where
 
 ```text
 llvm: (X | 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -15416,6 +16022,7 @@ where
 
 ```text
 llvm: (0 | X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -15440,6 +16047,7 @@ where
 
 ```text
 llvm: (shl(C1, X) | lshr(C2, (constant - X)))  =>  C1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -15469,6 +16077,7 @@ where
 
 ```text
 llvm: (lshr(C2, (constant - X)) | shl(C1, X))  =>  C1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -15498,6 +16107,7 @@ where
 
 ```text
 llvm: (shl(C1, (constant - X)) | lshr(C2, X))  =>  C1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -15527,6 +16137,7 @@ where
 
 ```text
 llvm: (lshr(C2, X) | shl(C1, (constant - X)))  =>  C1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -15566,6 +16177,7 @@ where
 
 ```text
 llvm: (zext(X) | a1)  =>  a1
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -15582,6 +16194,7 @@ where
 
 ```text
 llvm: (a1 | zext(X))  =>  a1
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -15608,6 +16221,7 @@ Builder families: `Veir.InstSimplify.IS2406.pattern`.
 
 ```text
 llvm: (a1 | zext(X))  =>  a1
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -15634,6 +16248,7 @@ where
 
 ```text
 llvm: (a0 | shl(X, Z))  =>  a0
+
 where
   a0 = intr.fshl(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15651,6 +16266,7 @@ where
 
 ```text
 llvm: (shl(X, Z) | a0)  =>  a0
+
 where
   a0 = intr.fshl(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15678,6 +16294,7 @@ Builder families: `Veir.InstSimplify.IS2419`.
 
 ```text
 llvm: (shl(X, Z) | a0)  =>  a0
+
 where
   a0 = intr.fshl(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15705,6 +16322,7 @@ where
 
 ```text
 llvm: (a0 | lshr(Y, Z))  =>  a0
+
 where
   a0 = intr.fshr(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15722,6 +16340,7 @@ where
 
 ```text
 llvm: (lshr(Y, Z) | a0)  =>  a0
+
 where
   a0 = intr.fshr(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15749,6 +16368,7 @@ Builder families: `Veir.InstSimplify.IS2430`.
 
 ```text
 llvm: (lshr(Y, Z) | a0)  =>  a0
+
 where
   a0 = intr.fshr(X, Y, Z) : T0
   P0 = properties(a0)
@@ -15776,6 +16396,7 @@ where
 
 ```text
 llvm: (X | a1)  =>  a1
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -15796,6 +16417,7 @@ where
 
 ```text
 llvm: (a1 | X)  =>  a1
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -15826,6 +16448,7 @@ Builder families: `Veir.InstSimplify.IS2468.pattern`.
 
 ```text
 llvm: (a1 | X)  =>  a1
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -15856,6 +16479,7 @@ where
 
 ```text
 llvm: ((X ^ c) | (X ^ (-c - 1)))  =>  C5
+
 where
   C0 = c : T0
   P0 = properties(C0)
@@ -15890,8 +16514,9 @@ where
 
 ```text
 llvm: (X ^ a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = (X ^ a0) : T0
   P1 = properties(root)
@@ -15913,6 +16538,7 @@ where
 
 ```text
 llvm: (X ^ 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -15927,6 +16553,7 @@ where
 
 ```text
 llvm: (0 ^ X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -15950,11 +16577,12 @@ where
 **Variant 1:** `sw0 = false`
 
 ```text
-llvm: (X ^ X)  =>  mlir.zero()
+llvm: (X ^ X)  =>  0
+
 where
   root = (X ^ X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -15964,11 +16592,12 @@ where
 **Variant 2:** `sw0 = true`
 
 ```text
-llvm: (X ^ X)  =>  mlir.zero()
+llvm: (X ^ X)  =>  0
+
 where
   root = (X ^ X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -15989,6 +16618,7 @@ where
 
 ```text
 llvm: (X ^ (X ^ C0))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16005,6 +16635,7 @@ where
 
 ```text
 llvm: ((X ^ C0) ^ X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16021,6 +16652,7 @@ where
 
 ```text
 llvm: (X ^ (C0 ^ X))  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16037,6 +16669,7 @@ where
 
 ```text
 llvm: ((C0 ^ X) ^ X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16063,6 +16696,7 @@ where
 
 ```text
 llvm: (((X ^ -1) & Y) ^ (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16084,6 +16718,7 @@ where
 
 ```text
 llvm: ((X | Y) ^ ((X ^ -1) & Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16105,6 +16740,7 @@ where
 
 ```text
 llvm: (((X ^ -1) & Y) ^ (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16126,6 +16762,7 @@ where
 
 ```text
 llvm: ((Y | X) ^ ((X ^ -1) & Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16147,6 +16784,7 @@ where
 
 ```text
 llvm: ((Y & (X ^ -1)) ^ (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16168,6 +16806,7 @@ where
 
 ```text
 llvm: ((X | Y) ^ (Y & (X ^ -1)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16189,6 +16828,7 @@ where
 
 ```text
 llvm: ((Y & (X ^ -1)) ^ (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16210,6 +16850,7 @@ where
 
 ```text
 llvm: ((Y | X) ^ (Y & (X ^ -1)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16231,6 +16872,7 @@ where
 
 ```text
 llvm: (((-1 ^ X) & Y) ^ (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16252,6 +16894,7 @@ where
 
 ```text
 llvm: ((X | Y) ^ ((-1 ^ X) & Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16273,6 +16916,7 @@ where
 
 ```text
 llvm: (((-1 ^ X) & Y) ^ (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16294,6 +16938,7 @@ where
 
 ```text
 llvm: ((Y | X) ^ ((-1 ^ X) & Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16315,6 +16960,7 @@ where
 
 ```text
 llvm: ((Y & (-1 ^ X)) ^ (X | Y))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16336,6 +16982,7 @@ where
 
 ```text
 llvm: ((X | Y) ^ (Y & (-1 ^ X)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16357,6 +17004,7 @@ where
 
 ```text
 llvm: ((Y & (-1 ^ X)) ^ (Y | X))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16378,6 +17026,7 @@ where
 
 ```text
 llvm: ((Y | X) ^ (Y & (-1 ^ X)))  =>  X
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16409,6 +17058,7 @@ where
 
 ```text
 llvm: ((a1 | Y) ^ (X & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16430,6 +17080,7 @@ where
 
 ```text
 llvm: ((X & Y) ^ (a1 | Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16451,6 +17102,7 @@ where
 
 ```text
 llvm: ((a1 | Y) ^ (Y & X))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16472,6 +17124,7 @@ where
 
 ```text
 llvm: ((Y & X) ^ (a1 | Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16493,6 +17146,7 @@ where
 
 ```text
 llvm: ((Y | a1) ^ (X & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16514,6 +17168,7 @@ where
 
 ```text
 llvm: ((X & Y) ^ (Y | a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16535,6 +17190,7 @@ where
 
 ```text
 llvm: ((Y | a1) ^ (Y & X))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16556,6 +17212,7 @@ where
 
 ```text
 llvm: ((Y & X) ^ (Y | a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16577,6 +17234,7 @@ where
 
 ```text
 llvm: ((a1 | Y) ^ (X & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16598,6 +17256,7 @@ where
 
 ```text
 llvm: ((X & Y) ^ (a1 | Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16619,6 +17278,7 @@ where
 
 ```text
 llvm: ((a1 | Y) ^ (Y & X))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16640,6 +17300,7 @@ where
 
 ```text
 llvm: ((Y & X) ^ (a1 | Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16661,6 +17322,7 @@ where
 
 ```text
 llvm: ((Y | a1) ^ (X & Y))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16682,6 +17344,7 @@ where
 
 ```text
 llvm: ((X & Y) ^ (Y | a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16703,6 +17366,7 @@ where
 
 ```text
 llvm: ((Y | a1) ^ (Y & X))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16724,6 +17388,7 @@ where
 
 ```text
 llvm: ((Y & X) ^ (Y | a1))  =>  a1
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -16755,6 +17420,7 @@ where
 
 ```text
 llvm: ((C0 - X) ^ C0)  =>  X
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -16783,6 +17449,7 @@ where
 
 ```text
 llvm: icmp(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -16807,6 +17474,7 @@ where
 
 ```text
 llvm: icmp((X ^ 1), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -16836,6 +17504,7 @@ where
 
 ```text
 llvm: icmp(X, C0)  =>  C2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -16862,6 +17531,7 @@ where
 
 ```text
 llvm: icmp(X, 0)  =>  1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -16888,6 +17558,7 @@ where
 
 ```text
 llvm: icmp(X, 1)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -16912,6 +17583,7 @@ where
 
 ```text
 llvm: icmp((X ^ C0), C2)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -16941,6 +17613,7 @@ where
 
 ```text
 llvm: icmp(X, 1)  =>  0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -16967,6 +17640,7 @@ where
 
 ```text
 llvm: icmp(X, C0)  =>  C2
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -16993,6 +17667,7 @@ where
 
 ```text
 llvm: icmp(X, C0)  =>  C2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -17020,6 +17695,7 @@ where
 
 ```text
 llvm: icmp(X, 0)  =>  1
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -17049,6 +17725,7 @@ where
 
 ```text
 llvm: icmp(X, constant)  =>  0
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -17078,6 +17755,7 @@ where
 
 ```text
 llvm: icmp(X, constant)  =>  1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -17107,6 +17785,7 @@ where
 
 ```text
 llvm: icmp((X * multiplier), constant)  =>  1
+
 where
   C0 = multiplier : T0
   P0 = properties(C0)
@@ -17133,6 +17812,7 @@ where
 
 ```text
 llvm: icmp((X * multiplier), constant)  =>  0
+
 where
   C0 = multiplier : T0
   P0 = properties(C0)
@@ -17159,6 +17839,7 @@ where
 
 ```text
 llvm: icmp((X * multiplier), constant)  =>  1
+
 where
   C0 = multiplier : T0
   P0 = properties(C0)
@@ -17184,6 +17865,7 @@ where
 
 ```text
 llvm: icmp((X * multiplier), constant)  =>  0
+
 where
   C0 = multiplier : T0
   P0 = properties(C0)
@@ -17217,6 +17899,7 @@ where
 
 ```text
 llvm: icmp(urem(X, Y), Y)  =>  0
+
 where
   a0 = urem(X, Y) : T0
   P0 = properties(a0)
@@ -17245,6 +17928,7 @@ where
 
 ```text
 llvm: icmp(urem(X, Y), Y)  =>  1
+
 where
   a0 = urem(X, Y) : T0
   P0 = properties(a0)
@@ -17275,6 +17959,7 @@ where
 
 ```text
 llvm: icmp(udiv((X * a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17305,6 +17990,7 @@ where
 
 ```text
 llvm: icmp(lshr((X * a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17335,6 +18021,7 @@ where
 
 ```text
 llvm: icmp(udiv(shl(X, a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17367,6 +18054,7 @@ Builder families: `Veir.InstSimplify.IS3341_mulLshr`, `Veir.InstSimplify.IS3341_
 
 ```text
 llvm: icmp(udiv((X * a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17393,6 +18081,7 @@ where
 
 ```text
 llvm: icmp(lshr((X * a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17419,6 +18108,7 @@ where
 
 ```text
 llvm: icmp(udiv(shl(X, a), b), X)  =>  0
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17455,6 +18145,7 @@ where
 
 ```text
 llvm: icmp(udiv((X * a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17485,6 +18176,7 @@ where
 
 ```text
 llvm: icmp(lshr((X * a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17515,6 +18207,7 @@ where
 
 ```text
 llvm: icmp(udiv(shl(X, a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17547,6 +18240,7 @@ Builder families: `Veir.InstSimplify.IS3343_mulLshr`, `Veir.InstSimplify.IS3343_
 
 ```text
 llvm: icmp(udiv((X * a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17573,6 +18267,7 @@ where
 
 ```text
 llvm: icmp(lshr((X * a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17599,6 +18294,7 @@ where
 
 ```text
 llvm: icmp(udiv(shl(X, a), b), X)  =>  1
+
 where
   C0 = a : T0
   P0 = properties(C0)
@@ -17635,6 +18331,7 @@ where
 
 ```text
 llvm: icmp((constant - X), X)  =>  1
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -17656,6 +18353,7 @@ where
 
 ```text
 llvm: icmp((constant - X), X)  =>  0
+
 where
   C0 = constant : T0
   P0 = properties(C0)
@@ -17687,6 +18385,7 @@ where
 
 ```text
 llvm: icmp((0 - zext(X)), constant)  =>  1
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -17724,6 +18423,7 @@ where
 
 ```text
 llvm: icmp((C0 - zext(X)), constant)  =>  C5
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -17761,6 +18461,7 @@ where
 
 ```text
 llvm: icmp((0 - zext(X)), constant)  =>  1
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -17798,6 +18499,7 @@ where
 
 ```text
 llvm: icmp((C0 - zext(X)), constant)  =>  C5
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -17835,6 +18537,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -17865,6 +18568,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -17895,6 +18599,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -17925,6 +18630,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -17957,6 +18663,7 @@ Builder families: `Veir.InstSimplify.IS3512_baseOne`, `Veir.InstSimplify.IS3512_
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -17983,6 +18690,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18009,6 +18717,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18035,6 +18744,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18071,6 +18781,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18101,6 +18812,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18131,6 +18843,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18161,6 +18874,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18193,6 +18907,7 @@ Builder families: `Veir.InstSimplify.IS3514_baseOne`, `Veir.InstSimplify.IS3514_
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18219,6 +18934,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18245,6 +18961,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18271,6 +18988,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), constant)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18307,6 +19025,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), mask)  =>  0
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18342,6 +19061,7 @@ where
 
 ```text
 llvm: icmp(shl(base, X), mask)  =>  1
+
 where
   C0 = base : T0
   P0 = properties(C0)
@@ -18377,6 +19097,7 @@ where
 
 ```text
 llvm: icmp((X & small), (X & large))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18403,6 +19124,7 @@ where
 
 ```text
 llvm: icmp((X & large), (X & small))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18429,6 +19151,7 @@ where
 
 ```text
 llvm: icmp((X | small), (X | large))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18455,6 +19178,7 @@ where
 
 ```text
 llvm: icmp((X | large), (X | small))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18491,6 +19215,7 @@ where
 
 ```text
 llvm: icmp((X & small), (X & large))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18517,6 +19242,7 @@ where
 
 ```text
 llvm: icmp((X & large), (X & small))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18543,6 +19269,7 @@ where
 
 ```text
 llvm: icmp((X | small), (X | large))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18569,6 +19296,7 @@ where
 
 ```text
 llvm: icmp((X | large), (X | small))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18605,6 +19333,7 @@ where
 
 ```text
 llvm: icmp((X & small), (X & large))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18632,6 +19361,7 @@ where
 
 ```text
 llvm: icmp((X & large), (X & small))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18659,6 +19389,7 @@ where
 
 ```text
 llvm: icmp((X | small), (X | large))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18686,6 +19417,7 @@ where
 
 ```text
 llvm: icmp((X | large), (X | small))  =>  1
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18723,6 +19455,7 @@ where
 
 ```text
 llvm: icmp((X & small), (X & large))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18750,6 +19483,7 @@ where
 
 ```text
 llvm: icmp((X & large), (X & small))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18777,6 +19511,7 @@ where
 
 ```text
 llvm: icmp((X | small), (X | large))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18804,6 +19539,7 @@ where
 
 ```text
 llvm: icmp((X | large), (X | small))  =>  0
+
 where
   C0 = small : T0
   P0 = properties(C0)
@@ -18841,6 +19577,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), X)  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -18863,6 +19600,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smax(X, Y))  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -18885,6 +19623,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), X)  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -18907,6 +19646,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smax(Y, X))  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -18929,6 +19669,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Y), X)  =>  1
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -18951,6 +19692,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smin(X, Y))  =>  1
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -18973,6 +19715,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Y, X), X)  =>  1
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -18995,6 +19738,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smin(Y, X))  =>  1
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -19027,6 +19771,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), X)  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19049,6 +19794,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smax(X, Y))  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19071,6 +19817,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), X)  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19093,6 +19840,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smax(Y, X))  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19115,6 +19863,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Y), X)  =>  0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -19137,6 +19886,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smin(X, Y))  =>  0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -19159,6 +19909,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Y, X), X)  =>  0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -19181,6 +19932,7 @@ where
 
 ```text
 llvm: icmp(X, intr.smin(Y, X))  =>  0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -19213,6 +19965,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), X)  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -19235,6 +19988,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umax(X, Y))  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -19257,6 +20011,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), X)  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -19279,6 +20034,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umax(Y, X))  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -19301,6 +20057,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Y), X)  =>  1
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -19323,6 +20080,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umin(X, Y))  =>  1
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -19345,6 +20103,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Y, X), X)  =>  1
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -19367,6 +20126,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umin(Y, X))  =>  1
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -19399,6 +20159,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), X)  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -19421,6 +20182,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umax(X, Y))  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -19443,6 +20205,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), X)  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -19465,6 +20228,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umax(Y, X))  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -19487,6 +20251,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Y), X)  =>  0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -19509,6 +20274,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umin(X, Y))  =>  0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -19531,6 +20297,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Y, X), X)  =>  0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -19553,6 +20320,7 @@ where
 
 ```text
 llvm: icmp(X, intr.umin(Y, X))  =>  0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -19585,6 +20353,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), intr.smin(X, Z))  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19607,6 +20376,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Z), intr.smax(X, Y))  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19629,6 +20399,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), intr.smin(Z, X))  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19651,6 +20422,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Z, X), intr.smax(X, Y))  =>  1
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19673,6 +20445,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), intr.smin(X, Z))  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19695,6 +20468,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Z), intr.smax(Y, X))  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19717,6 +20491,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), intr.smin(Z, X))  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19739,6 +20514,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Z, X), intr.smax(Y, X))  =>  1
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19771,6 +20547,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), intr.smin(X, Z))  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19793,6 +20570,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Z), intr.smax(X, Y))  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19815,6 +20593,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(X, Y), intr.smin(Z, X))  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19837,6 +20616,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Z, X), intr.smax(X, Y))  =>  0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -19859,6 +20639,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), intr.smin(X, Z))  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19881,6 +20662,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(X, Z), intr.smax(Y, X))  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19903,6 +20685,7 @@ where
 
 ```text
 llvm: icmp(intr.smax(Y, X), intr.smin(Z, X))  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19925,6 +20708,7 @@ where
 
 ```text
 llvm: icmp(intr.smin(Z, X), intr.smax(Y, X))  =>  0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -19957,6 +20741,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), intr.umin(X, Z))  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -19979,6 +20764,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Z), intr.umax(X, Y))  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20001,6 +20787,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), intr.umin(Z, X))  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20023,6 +20810,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Z, X), intr.umax(X, Y))  =>  1
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20045,6 +20833,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), intr.umin(X, Z))  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20067,6 +20856,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Z), intr.umax(Y, X))  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20089,6 +20879,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), intr.umin(Z, X))  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20111,6 +20902,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Z, X), intr.umax(Y, X))  =>  1
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20143,6 +20935,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), intr.umin(X, Z))  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20165,6 +20958,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Z), intr.umax(X, Y))  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20187,6 +20981,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(X, Y), intr.umin(Z, X))  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20209,6 +21004,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Z, X), intr.umax(X, Y))  =>  0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -20231,6 +21027,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), intr.umin(X, Z))  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20253,6 +21050,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(X, Z), intr.umax(Y, X))  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20275,6 +21073,7 @@ where
 
 ```text
 llvm: icmp(intr.umax(Y, X), intr.umin(Z, X))  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20297,6 +21096,7 @@ where
 
 ```text
 llvm: icmp(intr.umin(Z, X), intr.umax(Y, X))  =>  0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -20329,6 +21129,7 @@ where
 
 ```text
 llvm: icmp(intr.uadd.sat(X, Y), (X + Y))  =>  1
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20350,6 +21151,7 @@ where
 
 ```text
 llvm: icmp((X + Y), intr.uadd.sat(X, Y))  =>  1
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20371,6 +21173,7 @@ where
 
 ```text
 llvm: icmp(intr.uadd.sat(X, Y), (Y + X))  =>  1
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20392,6 +21195,7 @@ where
 
 ```text
 llvm: icmp((Y + X), intr.uadd.sat(X, Y))  =>  1
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20423,6 +21227,7 @@ where
 
 ```text
 llvm: icmp(intr.uadd.sat(X, Y), (X + Y))  =>  0
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20444,6 +21249,7 @@ where
 
 ```text
 llvm: icmp((X + Y), intr.uadd.sat(X, Y))  =>  0
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20465,6 +21271,7 @@ where
 
 ```text
 llvm: icmp(intr.uadd.sat(X, Y), (Y + X))  =>  0
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20486,6 +21293,7 @@ where
 
 ```text
 llvm: icmp((Y + X), intr.uadd.sat(X, Y))  =>  0
+
 where
   a0 = intr.uadd.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20517,6 +21325,7 @@ where
 
 ```text
 llvm: icmp(intr.usub.sat(X, Y), (X - Y))  =>  1
+
 where
   a0 = intr.usub.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20538,6 +21347,7 @@ where
 
 ```text
 llvm: icmp((X - Y), intr.usub.sat(X, Y))  =>  1
+
 where
   a0 = intr.usub.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20569,6 +21379,7 @@ where
 
 ```text
 llvm: icmp(intr.usub.sat(X, Y), (X - Y))  =>  0
+
 where
   a0 = intr.usub.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20590,6 +21401,7 @@ where
 
 ```text
 llvm: icmp((X - Y), intr.usub.sat(X, Y))  =>  0
+
 where
   a0 = intr.usub.sat(X, Y) : T0
   P0 = properties(a0)
@@ -20621,6 +21433,7 @@ where
 
 ```text
 llvm: icmp(lhs_value, rhs_value)  =>  (if pred.eval (BitVec.ofInt width lhs_value) (BitVec.ofInt width rhs_value) = true then 1 else 0)
+
 where
   C0 = lhs_value : T0
   P0 = properties(C0)
@@ -20645,11 +21458,12 @@ where
 **Variant 2:** `width : Nat; pred : Veir.Data.LLVM.IntPred; lhs = .integer lhs_value, lhs_value : Int; rhs = .zero`
 
 ```text
-llvm: icmp(lhs_value, mlir.zero())  =>  (if pred.eval (BitVec.ofInt width lhs_value) 0#width = true then 1 else 0)
+llvm: icmp(lhs_value, 0)  =>  (if pred.eval (BitVec.ofInt width lhs_value) 0#width = true then 1 else 0)
+
 where
   C0 = lhs_value : T0
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   root = icmp(C0, a1) : T1
   P2 = properties(root)
@@ -20670,14 +21484,15 @@ where
 
 ```text
 llvm: icmp(lhs_value, a1)  =>  new3
+
 where
   C0 = lhs_value : T0
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   root = icmp(C0, a1) : T1
   P2 = properties(root)
-  new3 = mlir.poison() : T1 [created]
+  new3 = poison : T1 [created]
   P3 = properties(new3)
   require P2.predicate == pred
   require Veir.InstSimplify.intConstantGuard P0 lhs_value
@@ -20689,9 +21504,10 @@ where
 **Variant 4:** `width : Nat; pred : Veir.Data.LLVM.IntPred; lhs = .zero; rhs = .integer rhs_value, rhs_value : Int`
 
 ```text
-llvm: icmp(mlir.zero(), rhs_value)  =>  (if pred.eval (0#width) (BitVec.ofInt width rhs_value) = true then 1 else 0)
+llvm: icmp(0, rhs_value)  =>  (if pred.eval (0#width) (BitVec.ofInt width rhs_value) = true then 1 else 0)
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   C1 = rhs_value : T0
   P1 = properties(C1)
@@ -20714,10 +21530,11 @@ where
 
 ```text
 llvm: icmp(a0, a1)  =>  (if pred.eval 0#width 0#width = true then 1 else 0)
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   root = icmp(a0, a1) : T1
   P2 = properties(root)
@@ -20735,15 +21552,16 @@ where
 **Variant 6:** `width : Nat; pred : Veir.Data.LLVM.IntPred; lhs = .zero; rhs = .poison`
 
 ```text
-llvm: icmp(mlir.zero(), a1)  =>  new3
+llvm: icmp(0, a1)  =>  new3
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   root = icmp(a0, a1) : T1
   P2 = properties(root)
-  new3 = mlir.poison() : T1 [created]
+  new3 = poison : T1 [created]
   P3 = properties(new3)
   require P2.predicate == pred
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -20755,14 +21573,15 @@ where
 
 ```text
 llvm: icmp(a0, rhs_value)  =>  new3
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   C1 = rhs_value : T0
   P1 = properties(C1)
   root = icmp(a0, C1) : T1
   P2 = properties(root)
-  new3 = mlir.poison() : T1 [created]
+  new3 = poison : T1 [created]
   P3 = properties(new3)
   require P2.predicate == pred
   require Veir.InstSimplify.intConstantGuard P1 rhs_value
@@ -20774,15 +21593,16 @@ where
 **Variant 8:** `width : Nat; pred : Veir.Data.LLVM.IntPred; lhs = .poison; rhs = .zero`
 
 ```text
-llvm: icmp(a0, mlir.zero())  =>  new3
+llvm: icmp(a0, 0)  =>  new3
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   root = icmp(a0, a1) : T1
   P2 = properties(root)
-  new3 = mlir.poison() : T1 [created]
+  new3 = poison : T1 [created]
   P3 = properties(new3)
   require P2.predicate == pred
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -20794,14 +21614,15 @@ where
 
 ```text
 llvm: icmp(a0, a1)  =>  new3
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   root = icmp(a0, a1) : T1
   P2 = properties(root)
-  new3 = mlir.poison() : T1 [created]
+  new3 = poison : T1 [created]
   P3 = properties(new3)
   require P2.predicate == pred
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -20821,12 +21642,13 @@ where
 
 ```text
 llvm: icmp(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = icmp(X, a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   X : T0
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -20854,6 +21676,7 @@ llvm: icmp(X, X)  =>  (if
       true then
   1
 else 0)
+
 where
   root = icmp(X, X) : T1
   P0 = properties(root)
@@ -20899,6 +21722,7 @@ where
 
 ```text
 llvm: icmp(zext(X), sext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -20927,6 +21751,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -20955,6 +21780,7 @@ where
 
 ```text
 llvm: icmp(zext(X), sext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -20983,6 +21809,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21021,6 +21848,7 @@ where
 
 ```text
 llvm: icmp(zext(X), sext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21049,6 +21877,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21077,6 +21906,7 @@ where
 
 ```text
 llvm: icmp(zext(X), sext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21105,6 +21935,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21143,6 +21974,7 @@ where
 
 ```text
 llvm: icmp(zext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21185,6 +22017,7 @@ where
 
 ```text
 llvm: icmp(zext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21227,6 +22060,7 @@ where
 
 ```text
 llvm: icmp(zext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21268,6 +22102,7 @@ where
 
 ```text
 llvm: icmp(zext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21311,6 +22146,7 @@ Builder families: `Veir.InstSimplify.IS3985.pattern`.
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21339,6 +22175,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21379,6 +22216,7 @@ Builder families: `Veir.InstSimplify.IS3987.pattern`.
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21407,6 +22245,7 @@ where
 
 ```text
 llvm: icmp(sext(X), zext(X))  =>  C3
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -21445,6 +22284,7 @@ where
 
 ```text
 llvm: icmp(sext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21486,6 +22326,7 @@ where
 
 ```text
 llvm: icmp(sext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21527,6 +22368,7 @@ where
 
 ```text
 llvm: icmp(sext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21568,6 +22410,7 @@ where
 
 ```text
 llvm: icmp(sext(X), constant)  =>  C3
+
 where
   C0 = constant : T1
   P0 = properties(C0)
@@ -21609,6 +22452,7 @@ where
 
 ```text
 llvm: select(icmp((X & complement), 0), a4, X)  =>  a4
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21637,6 +22481,7 @@ where
 
 ```text
 llvm: select(icmp((X & complement), 0), (X & mask), X)  =>  X
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21675,6 +22520,7 @@ where
 
 ```text
 llvm: select(icmp((X & complement), 0), X, (X & mask))  =>  X
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21703,6 +22549,7 @@ where
 
 ```text
 llvm: select(icmp((X & complement), 0), X, a4)  =>  a4
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21741,6 +22588,7 @@ where
 
 ```text
 llvm: select(icmp((X & C0), 0), (X | C0), X)  =>  X
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21767,6 +22615,7 @@ where
 
 ```text
 llvm: select(icmp((X & C0), 0), a3, X)  =>  a3
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21803,6 +22652,7 @@ where
 
 ```text
 llvm: select(icmp((X & C0), 0), X, a3)  =>  a3
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21829,6 +22679,7 @@ where
 
 ```text
 llvm: select(icmp((X & C0), 0), X, (X | C0))  =>  X
+
 where
   C0 = mask : T0
   P0 = properties(C0)
@@ -21865,6 +22716,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21883,6 +22735,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21901,6 +22754,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21919,6 +22773,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21937,6 +22792,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21955,6 +22811,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21973,6 +22830,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -21991,6 +22849,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -22009,6 +22868,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22027,6 +22887,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22045,6 +22906,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22063,6 +22925,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22081,6 +22944,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22099,6 +22963,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22117,6 +22982,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22135,6 +23001,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -22153,6 +23020,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22171,6 +23039,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22189,6 +23058,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22207,6 +23077,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22225,6 +23096,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22243,6 +23115,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22261,6 +23134,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22279,6 +23153,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -22297,6 +23172,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22315,6 +23191,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22333,6 +23210,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22351,6 +23229,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22369,6 +23248,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22387,6 +23267,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22405,6 +23286,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22423,6 +23305,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -22441,6 +23324,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22459,6 +23343,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22477,6 +23362,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22495,6 +23381,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22513,6 +23400,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22531,6 +23419,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22549,6 +23438,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22567,6 +23457,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -22585,6 +23476,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22603,6 +23495,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22621,6 +23514,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22639,6 +23533,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22657,6 +23552,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22675,6 +23571,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22693,6 +23590,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22711,6 +23609,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -22729,6 +23628,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22747,6 +23647,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22765,6 +23666,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22783,6 +23685,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22801,6 +23704,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22819,6 +23723,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22837,6 +23742,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22855,6 +23761,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -22873,6 +23780,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22891,6 +23799,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22909,6 +23818,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22927,6 +23837,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22945,6 +23856,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22963,6 +23875,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22981,6 +23894,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -22999,6 +23913,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -23027,6 +23942,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23045,6 +23961,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23063,6 +23980,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23081,6 +23999,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23099,6 +24018,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23117,6 +24037,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23135,6 +24056,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23153,6 +24075,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23171,6 +24094,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23189,6 +24113,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23207,6 +24132,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23225,6 +24151,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23243,6 +24170,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23261,6 +24189,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23279,6 +24208,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23297,6 +24227,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23315,6 +24246,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23333,6 +24265,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23351,6 +24284,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23369,6 +24303,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23387,6 +24322,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -23405,6 +24341,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -23423,6 +24360,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -23441,6 +24379,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -23459,6 +24398,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -23477,6 +24417,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -23495,6 +24436,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -23513,6 +24455,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -23531,6 +24474,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -23549,6 +24493,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -23567,6 +24512,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -23585,6 +24531,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -23613,6 +24560,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23631,6 +24579,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23649,6 +24598,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23667,6 +24617,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -23685,6 +24636,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23703,6 +24655,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23721,6 +24674,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23739,6 +24693,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -23757,6 +24712,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23775,6 +24731,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23793,6 +24750,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23811,6 +24769,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -23829,6 +24788,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23847,6 +24807,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23865,6 +24826,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23883,6 +24845,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -23901,6 +24864,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23919,6 +24883,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23937,6 +24902,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23955,6 +24921,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -23973,6 +24940,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -23991,6 +24959,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24009,6 +24978,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24027,6 +24997,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24045,6 +25016,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -24063,6 +25035,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -24081,6 +25054,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -24099,6 +25073,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -24117,6 +25092,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -24135,6 +25111,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -24153,6 +25130,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -24171,6 +25149,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -24199,6 +25178,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24217,6 +25197,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24235,6 +25216,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24253,6 +25235,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24271,6 +25254,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24289,6 +25273,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24307,6 +25292,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24325,6 +25311,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -24343,6 +25330,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24361,6 +25349,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24379,6 +25368,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24397,6 +25387,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24415,6 +25406,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24433,6 +25425,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24451,6 +25444,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24469,6 +25463,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -24487,6 +25482,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24505,6 +25501,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24523,6 +25520,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24541,6 +25539,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24559,6 +25558,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24577,6 +25577,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24595,6 +25596,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24613,6 +25615,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -24631,6 +25634,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24649,6 +25653,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24667,6 +25672,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24685,6 +25691,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24703,6 +25710,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24721,6 +25729,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24739,6 +25748,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24757,6 +25767,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -24775,6 +25786,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24793,6 +25805,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24811,6 +25824,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24829,6 +25843,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24847,6 +25862,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24865,6 +25881,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24883,6 +25900,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24901,6 +25919,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -24919,6 +25938,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24937,6 +25957,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24955,6 +25976,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24973,6 +25995,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -24991,6 +26014,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -25009,6 +26033,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -25027,6 +26052,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -25045,6 +26071,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -25063,6 +26090,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25081,6 +26109,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25099,6 +26128,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25117,6 +26147,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25135,6 +26166,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25153,6 +26185,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25171,6 +26204,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25189,6 +26223,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -25207,6 +26242,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25225,6 +26261,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25243,6 +26280,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25261,6 +26299,7 @@ where
 
 ```text
 llvm: select(icmp(X, Y), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25279,6 +26318,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25297,6 +26337,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25315,6 +26356,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25333,6 +26375,7 @@ where
 
 ```text
 llvm: select(icmp(Y, X), intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -25361,6 +26404,7 @@ where
 
 ```text
 llvm: select(icmp(Z, 0), intr.fshr(Y, X, Z), X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25383,6 +26427,7 @@ where
 
 ```text
 llvm: select(icmp(0, Z), intr.fshr(Y, X, Z), X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25405,6 +26450,7 @@ where
 
 ```text
 llvm: select(icmp(Z, 0), intr.fshl(X, Y, Z), X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25427,6 +26473,7 @@ where
 
 ```text
 llvm: select(icmp(0, Z), intr.fshl(X, Y, Z), X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25459,6 +26506,7 @@ where
 
 ```text
 llvm: select(icmp(Y, 0), X, a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25480,6 +26528,7 @@ where
 
 ```text
 llvm: select(icmp(0, Y), X, a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25501,6 +26550,7 @@ where
 
 ```text
 llvm: select(icmp(Y, 0), X, a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25522,6 +26572,7 @@ where
 
 ```text
 llvm: select(icmp(0, Y), X, a2)  =>  a2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25553,6 +26604,7 @@ where
 
 ```text
 llvm: select(icmp((Y & (Int.ofNat (2 ^ k - 1))), 0), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25579,6 +26631,7 @@ where
 
 ```text
 llvm: select(icmp(((Int.ofNat (2 ^ k - 1)) & Y), 0), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25605,6 +26658,7 @@ where
 
 ```text
 llvm: select(icmp(0, (Y & (Int.ofNat (2 ^ k - 1)))), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25631,6 +26685,7 @@ where
 
 ```text
 llvm: select(icmp(0, ((Int.ofNat (2 ^ k - 1)) & Y)), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25657,6 +26712,7 @@ where
 
 ```text
 llvm: select(icmp((Y & (Int.ofNat (2 ^ k - 1))), 0), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25683,6 +26739,7 @@ where
 
 ```text
 llvm: select(icmp(((Int.ofNat (2 ^ k - 1)) & Y), 0), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25709,6 +26766,7 @@ where
 
 ```text
 llvm: select(icmp(0, (Y & (Int.ofNat (2 ^ k - 1)))), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25735,6 +26793,7 @@ where
 
 ```text
 llvm: select(icmp(0, ((Int.ofNat (2 ^ k - 1)) & Y)), X, a4)  =>  a4
+
 where
   C0 = (Int.ofNat (2 ^ k - 1)) : T0
   P0 = properties(C0)
@@ -25771,6 +26830,7 @@ where
 
 ```text
 llvm: select(icmp(urem(Y, (↑w)), 0), X, a4)  =>  a4
+
 where
   C0 = (↑w) : T0
   P0 = properties(C0)
@@ -25797,6 +26857,7 @@ where
 
 ```text
 llvm: select(icmp(0, urem(Y, (↑w))), X, a4)  =>  a4
+
 where
   C0 = (↑w) : T0
   P0 = properties(C0)
@@ -25823,6 +26884,7 @@ where
 
 ```text
 llvm: select(icmp(urem(Y, (↑w)), 0), X, a4)  =>  a4
+
 where
   C0 = (↑w) : T0
   P0 = properties(C0)
@@ -25849,6 +26911,7 @@ where
 
 ```text
 llvm: select(icmp(0, urem(Y, (↑w))), X, a4)  =>  a4
+
 where
   C0 = (↑w) : T0
   P0 = properties(C0)
@@ -25885,6 +26948,7 @@ where
 
 ```text
 llvm: select(icmp(X, C0), a2, a5)  =>  a5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25912,6 +26976,7 @@ where
 
 ```text
 llvm: select(icmp(C0, X), a2, a5)  =>  a5
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25949,6 +27014,7 @@ where
 
 ```text
 llvm: select(icmp(X, C0), (C4 - a2), a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -25976,6 +27042,7 @@ where
 
 ```text
 llvm: select(icmp(C0, X), (C4 - a2), a3)  =>  a3
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -26013,6 +27080,7 @@ where
 
 ```text
 llvm: select(0, trueVal_value, C2)  =>  C4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -26035,17 +27103,18 @@ where
 **Variant 2:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .zero`
 
 ```text
-llvm: select(0, trueVal_value, a2)  =>  new4
+llvm: select(C0, trueVal_value, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   require Veir.InstSimplify.intConstantGuard P0 0
@@ -26058,16 +27127,17 @@ where
 
 ```text
 llvm: select(0, trueVal_value, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   require Veir.InstSimplify.intConstantGuard P0 0
@@ -26079,11 +27149,12 @@ where
 **Variant 4:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .zero; falseVal = .integer falseVal_value, falseVal_value : Int`
 
 ```text
-llvm: select(0, mlir.zero(), C2)  =>  C4
+llvm: select(C0, a1, C2)  =>  C4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
@@ -26101,17 +27172,18 @@ where
 **Variant 5:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .zero; falseVal = .zero`
 
 ```text
-llvm: select(0, a1, a2)  =>  new4
+llvm: select(C0, a1, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 0
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26122,17 +27194,18 @@ where
 **Variant 6:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .zero; falseVal = .poison`
 
 ```text
-llvm: select(0, mlir.zero(), a2)  =>  new4
+llvm: select(C0, a1, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 0
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26143,11 +27216,12 @@ where
 **Variant 7:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .poison; falseVal = .integer falseVal_value, falseVal_value : Int`
 
 ```text
-llvm: select(0, mlir.poison(), C2)  =>  C4
+llvm: select(0, poison, C2)  =>  C4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
@@ -26165,17 +27239,18 @@ where
 **Variant 8:** `resultType : Veir.IntegerType; cond = .integer 0; trueVal = .poison; falseVal = .zero`
 
 ```text
-llvm: select(0, mlir.poison(), a2)  =>  new4
+llvm: select(C0, poison, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 0
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26187,16 +27262,17 @@ where
 
 ```text
 llvm: select(0, a1, a2)  =>  new4
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 0
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26208,6 +27284,7 @@ where
 
 ```text
 llvm: select(1, C1, falseVal_value)  =>  C4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
@@ -26230,13 +27307,14 @@ where
 **Variant 11:** `resultType : Veir.IntegerType; cond = .integer 1; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .zero`
 
 ```text
-llvm: select(1, C1, mlir.zero())  =>  C4
+llvm: select(1, C1, 0)  =>  C4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, C1, a2) : T0
   P3 = properties(root)
@@ -26252,13 +27330,14 @@ where
 **Variant 12:** `resultType : Veir.IntegerType; cond = .integer 1; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .poison`
 
 ```text
-llvm: select(1, C1, mlir.poison())  =>  C4
+llvm: select(1, C1, poison)  =>  C4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, C1, a2) : T0
   P3 = properties(root)
@@ -26275,16 +27354,17 @@ where
 
 ```text
 llvm: select(1, a1, falseVal_value)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
   root = select(C0, a1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P2 falseVal_value
   require Veir.InstSimplify.intConstantGuard P0 1
@@ -26297,16 +27377,17 @@ where
 
 ```text
 llvm: select(1, a1, a2)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 1
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26317,17 +27398,18 @@ where
 **Variant 15:** `resultType : Veir.IntegerType; cond = .integer 1; trueVal = .zero; falseVal = .poison`
 
 ```text
-llvm: select(1, a1, mlir.poison())  =>  new4
+llvm: select(1, a1, poison)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 1
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26339,16 +27421,17 @@ where
 
 ```text
 llvm: select(1, a1, falseVal_value)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
   root = select(C0, a1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P2 falseVal_value
   require Veir.InstSimplify.intConstantGuard P0 1
@@ -26360,17 +27443,18 @@ where
 **Variant 17:** `resultType : Veir.IntegerType; cond = .integer 1; trueVal = .poison; falseVal = .zero`
 
 ```text
-llvm: select(1, a1, mlir.zero())  =>  new4
+llvm: select(1, a1, 0)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 1
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26382,16 +27466,17 @@ where
 
 ```text
 llvm: select(1, a1, a2)  =>  new4
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(C0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P0 1
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26402,9 +27487,10 @@ where
 **Variant 19:** `resultType : Veir.IntegerType; cond = .zero; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .integer falseVal_value, falseVal_value : Int`
 
 ```text
-llvm: select(mlir.zero(), trueVal_value, C2)  =>  C4
+llvm: select(0, trueVal_value, C2)  =>  C4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
@@ -26425,16 +27511,17 @@ where
 
 ```text
 llvm: select(a0, trueVal_value, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26445,17 +27532,18 @@ where
 **Variant 21:** `resultType : Veir.IntegerType; cond = .zero; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .poison`
 
 ```text
-llvm: select(mlir.zero(), trueVal_value, a2)  =>  new4
+llvm: select(0, trueVal_value, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26467,10 +27555,11 @@ where
 
 ```text
 llvm: select(a0, a1, C2)  =>  C4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
@@ -26488,16 +27577,17 @@ where
 
 ```text
 llvm: select(a0, a1, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26508,16 +27598,17 @@ where
 
 ```text
 llvm: select(a0, a1, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26527,11 +27618,12 @@ where
 **Variant 25:** `resultType : Veir.IntegerType; cond = .zero; trueVal = .poison; falseVal = .integer falseVal_value, falseVal_value : Int`
 
 ```text
-llvm: select(mlir.zero(), mlir.poison(), C2)  =>  C4
+llvm: select(0, poison, C2)  =>  C4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
@@ -26548,17 +27640,18 @@ where
 **Variant 26:** `resultType : Veir.IntegerType; cond = .zero; trueVal = .poison; falseVal = .zero`
 
 ```text
-llvm: select(a0, mlir.poison(), a2)  =>  new4
+llvm: select(a0, poison, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.zero() : T0 [created]
+  new4 = 0 : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26568,17 +27661,18 @@ where
 **Variant 27:** `resultType : Veir.IntegerType; cond = .zero; trueVal = .poison; falseVal = .poison`
 
 ```text
-llvm: select(mlir.zero(), a1, a2)  =>  new4
+llvm: select(0, a1, a2)  =>  new4
+
 where
-  a0 = mlir.zero() : T1
+  a0 = 0 : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26589,8 +27683,9 @@ where
 
 ```text
 llvm: select(a0, trueVal_value, falseVal_value)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
@@ -26598,7 +27693,7 @@ where
   P2 = properties(C2)
   root = select(a0, C1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P2 falseVal_value
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
@@ -26610,17 +27705,18 @@ where
 **Variant 29:** `resultType : Veir.IntegerType; cond = .poison; trueVal = .integer trueVal_value, trueVal_value : Int; falseVal = .zero`
 
 ```text
-llvm: select(a0, trueVal_value, mlir.zero())  =>  new4
+llvm: select(a0, trueVal_value, 0)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26632,16 +27728,17 @@ where
 
 ```text
 llvm: select(a0, trueVal_value, a2)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   C1 = trueVal_value : T0
   P1 = properties(C1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, C1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P1 trueVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26652,17 +27749,18 @@ where
 **Variant 31:** `resultType : Veir.IntegerType; cond = .poison; trueVal = .zero; falseVal = .integer falseVal_value, falseVal_value : Int`
 
 ```text
-llvm: select(a0, mlir.zero(), falseVal_value)  =>  new4
+llvm: select(a0, 0, falseVal_value)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
   root = select(a0, a1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P2 falseVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26674,16 +27772,17 @@ where
 
 ```text
 llvm: select(a0, a1, a2)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26693,17 +27792,18 @@ where
 **Variant 33:** `resultType : Veir.IntegerType; cond = .poison; trueVal = .zero; falseVal = .poison`
 
 ```text
-llvm: select(a0, mlir.zero(), a2)  =>  new4
+llvm: select(a0, 0, a2)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.zero() : T0
+  a1 = 0 : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26714,16 +27814,17 @@ where
 
 ```text
 llvm: select(a0, a1, falseVal_value)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
   C2 = falseVal_value : T0
   P2 = properties(C2)
   root = select(a0, a1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   require Veir.InstSimplify.intConstantGuard P2 falseVal_value
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
@@ -26734,17 +27835,18 @@ where
 **Variant 35:** `resultType : Veir.IntegerType; cond = .poison; trueVal = .poison; falseVal = .zero`
 
 ```text
-llvm: select(a0, a1, mlir.zero())  =>  new4
+llvm: select(a0, a1, 0)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.zero() : T0
+  a2 = 0 : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26755,16 +27857,17 @@ where
 
 ```text
 llvm: select(a0, a1, a2)  =>  new4
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
-  a1 = mlir.poison() : T0
+  a1 = poison : T0
   P1 = properties(a1)
-  a2 = mlir.poison() : T0
+  a2 = poison : T0
   P2 = properties(a2)
   root = select(a0, a1, a2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 1
   T0 : Veir.IntegerType, where t = T0: t == resultType
@@ -26783,12 +27886,13 @@ where
 
 ```text
 llvm: select(a0, X, Y)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = select(a0, X, Y) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T0
@@ -26809,6 +27913,7 @@ where
 
 ```text
 llvm: select(1, X, Y)  =>  X
+
 where
   C0 = 1 : T1
   P0 = properties(C0)
@@ -26833,6 +27938,7 @@ where
 
 ```text
 llvm: select(0, X, Y)  =>  Y
+
 where
   C0 = 0 : T1
   P0 = properties(C0)
@@ -26857,6 +27963,7 @@ where
 
 ```text
 llvm: select(X, 1, 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -26884,6 +27991,7 @@ where
 
 ```text
 llvm: select((X & Y), X, Y)  =>  Y
+
 where
   a0 = (X & Y) : T0
   P0 = properties(a0)
@@ -26898,6 +28006,7 @@ where
 
 ```text
 llvm: select(select(X, Y, 0), X, Y)  =>  Y
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -26915,6 +28024,7 @@ where
 
 ```text
 llvm: select((Y & X), X, Y)  =>  Y
+
 where
   a0 = (Y & X) : T0
   P0 = properties(a0)
@@ -26929,6 +28039,7 @@ where
 
 ```text
 llvm: select(select(Y, X, 0), X, Y)  =>  Y
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -26956,6 +28067,7 @@ where
 
 ```text
 llvm: select((X | Y), X, Y)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -26970,6 +28082,7 @@ where
 
 ```text
 llvm: select(select(X, 1, Y), X, Y)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -26987,6 +28100,7 @@ where
 
 ```text
 llvm: select((Y | X), X, Y)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27001,6 +28115,7 @@ where
 
 ```text
 llvm: select(select(Y, 1, X), X, Y)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27028,6 +28143,7 @@ where
 
 ```text
 llvm: select((X | Y), C1, X)  =>  C1
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27045,6 +28161,7 @@ where
 
 ```text
 llvm: select(select(X, 1, Y), C2, X)  =>  C2
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27065,6 +28182,7 @@ where
 
 ```text
 llvm: select((Y | X), C1, X)  =>  C1
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27082,6 +28200,7 @@ where
 
 ```text
 llvm: select(select(Y, 1, X), C2, X)  =>  C2
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27112,6 +28231,7 @@ where
 
 ```text
 llvm: select(((X | Y) ^ 1), X, C3)  =>  C3
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27134,6 +28254,7 @@ where
 
 ```text
 llvm: select((select(X, C0, Y) ^ C2), X, C4)  =>  C4
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27159,6 +28280,7 @@ where
 
 ```text
 llvm: select(((Y | X) ^ 1), X, C3)  =>  C3
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27181,6 +28303,7 @@ where
 
 ```text
 llvm: select((select(Y, C0, X) ^ C2), X, C4)  =>  C4
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27216,6 +28339,7 @@ where
 
 ```text
 llvm: select(X, ((X | Y) ^ 1), C3)  =>  C3
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27238,6 +28362,7 @@ where
 
 ```text
 llvm: select(X, (select(X, C0, Y) ^ C2), C4)  =>  C4
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27263,6 +28388,7 @@ where
 
 ```text
 llvm: select(X, ((Y | X) ^ 1), C3)  =>  C3
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27285,6 +28411,7 @@ where
 
 ```text
 llvm: select(X, (select(Y, C0, X) ^ C2), C4)  =>  C4
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27320,6 +28447,7 @@ where
 
 ```text
 llvm: select((X | Y), X, 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27337,6 +28465,7 @@ where
 
 ```text
 llvm: select(select(X, 1, Y), X, 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27357,6 +28486,7 @@ where
 
 ```text
 llvm: select((Y | X), X, 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27374,6 +28504,7 @@ where
 
 ```text
 llvm: select(select(Y, 1, X), X, 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27404,6 +28535,7 @@ where
 
 ```text
 llvm: select(X, (Y | X), 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -27421,6 +28553,7 @@ where
 
 ```text
 llvm: select(X, select(Y, 1, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27441,6 +28574,7 @@ where
 
 ```text
 llvm: select(X, (X | Y), 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27458,6 +28592,7 @@ where
 
 ```text
 llvm: select(X, select(X, 1, Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27488,6 +28623,7 @@ where
 
 ```text
 llvm: select((X | (Y ^ 1)), (X | Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27512,6 +28648,7 @@ where
 
 ```text
 llvm: select((X | (Y ^ C0)), select(X, C3, Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27539,6 +28676,7 @@ where
 
 ```text
 llvm: select((X | (Y ^ 1)), (Y | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27563,6 +28701,7 @@ where
 
 ```text
 llvm: select((X | (Y ^ C0)), select(Y, C3, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27590,6 +28729,7 @@ where
 
 ```text
 llvm: select(select(X, C2, (Y ^ C0)), (X | Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27617,6 +28757,7 @@ where
 
 ```text
 llvm: select(select(X, C2, (Y ^ C0)), select(X, C4, Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27647,6 +28788,7 @@ where
 
 ```text
 llvm: select(select(X, C2, (Y ^ C0)), (Y | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27674,6 +28816,7 @@ where
 
 ```text
 llvm: select(select(X, C2, (Y ^ C0)), select(Y, C4, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27704,6 +28847,7 @@ where
 
 ```text
 llvm: select(((Y ^ 1) | X), (X | Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27728,6 +28872,7 @@ where
 
 ```text
 llvm: select(((Y ^ C0) | X), select(X, C3, Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27755,6 +28900,7 @@ where
 
 ```text
 llvm: select(((Y ^ 1) | X), (Y | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27779,6 +28925,7 @@ where
 
 ```text
 llvm: select(((Y ^ C0) | X), select(Y, C3, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27806,6 +28953,7 @@ where
 
 ```text
 llvm: select(select((Y ^ C0), C2, X), (X | Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27833,6 +28981,7 @@ where
 
 ```text
 llvm: select(select((Y ^ C0), C2, X), select(X, C4, Y), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27863,6 +29012,7 @@ where
 
 ```text
 llvm: select(select((Y ^ C0), C2, X), (Y | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27890,6 +29040,7 @@ where
 
 ```text
 llvm: select(select((Y ^ C0), C2, X), select(Y, C4, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -27930,6 +29081,7 @@ where
 
 ```text
 llvm: select((X | Y), (X | (Y ^ 1)), 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27954,6 +29106,7 @@ where
 
 ```text
 llvm: select((X | Y), select(X, C3, (Y ^ C1)), 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -27981,6 +29134,7 @@ where
 
 ```text
 llvm: select((X | Y), ((Y ^ 1) | X), 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -28005,6 +29159,7 @@ where
 
 ```text
 llvm: select((X | Y), select((Y ^ C1), C3, X), 0)  =>  X
+
 where
   a0 = (X | Y) : T0
   P0 = properties(a0)
@@ -28032,6 +29187,7 @@ where
 
 ```text
 llvm: select(select(X, C0, Y), (X | (Y ^ C2)), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28059,6 +29215,7 @@ where
 
 ```text
 llvm: select(select(X, C0, Y), select(X, C4, (Y ^ C2)), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28089,6 +29246,7 @@ where
 
 ```text
 llvm: select(select(X, C0, Y), ((Y ^ C2) | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28116,6 +29274,7 @@ where
 
 ```text
 llvm: select(select(X, C0, Y), select((Y ^ C2), C4, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28146,6 +29305,7 @@ where
 
 ```text
 llvm: select((Y | X), (X | (Y ^ 1)), 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -28170,6 +29330,7 @@ where
 
 ```text
 llvm: select((Y | X), select(X, C3, (Y ^ C1)), 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -28197,6 +29358,7 @@ where
 
 ```text
 llvm: select((Y | X), ((Y ^ 1) | X), 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -28221,6 +29383,7 @@ where
 
 ```text
 llvm: select((Y | X), select((Y ^ C1), C3, X), 0)  =>  X
+
 where
   a0 = (Y | X) : T0
   P0 = properties(a0)
@@ -28248,6 +29411,7 @@ where
 
 ```text
 llvm: select(select(Y, C0, X), (X | (Y ^ C2)), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28275,6 +29439,7 @@ where
 
 ```text
 llvm: select(select(Y, C0, X), select(X, C4, (Y ^ C2)), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28305,6 +29470,7 @@ where
 
 ```text
 llvm: select(select(Y, C0, X), ((Y ^ C2) | X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28332,6 +29498,7 @@ where
 
 ```text
 llvm: select(select(Y, C0, X), select((Y ^ C2), C4, X), 0)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28372,6 +29539,7 @@ where
 
 ```text
 llvm: select(((X & Y) ^ C1), C1, X)  =>  C1
+
 where
   a0 = (X & Y) : T0
   P0 = properties(a0)
@@ -28391,6 +29559,7 @@ where
 
 ```text
 llvm: select((select(X, Y, 0) ^ C2), C2, X)  =>  C2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28413,6 +29582,7 @@ where
 
 ```text
 llvm: select(((Y & X) ^ C1), C1, X)  =>  C1
+
 where
   a0 = (Y & X) : T0
   P0 = properties(a0)
@@ -28432,6 +29602,7 @@ where
 
 ```text
 llvm: select((select(Y, X, 0) ^ C2), C2, X)  =>  C2
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28464,6 +29635,7 @@ where
 
 ```text
 llvm: select(X, C0, ((X & Y) ^ C0))  =>  C0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28483,6 +29655,7 @@ where
 
 ```text
 llvm: select(X, C0, (select(X, Y, 0) ^ C0))  =>  C0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28505,6 +29678,7 @@ where
 
 ```text
 llvm: select(X, C0, ((Y & X) ^ C0))  =>  C0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28524,6 +29698,7 @@ where
 
 ```text
 llvm: select(X, C0, (select(Y, X, 0) ^ C0))  =>  C0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28556,6 +29731,7 @@ where
 
 ```text
 llvm: select((X & Y), 1, X)  =>  X
+
 where
   a0 = (X & Y) : T0
   P0 = properties(a0)
@@ -28573,6 +29749,7 @@ where
 
 ```text
 llvm: select(select(X, Y, 0), 1, X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28593,6 +29770,7 @@ where
 
 ```text
 llvm: select((Y & X), 1, X)  =>  X
+
 where
   a0 = (Y & X) : T0
   P0 = properties(a0)
@@ -28610,6 +29788,7 @@ where
 
 ```text
 llvm: select(select(Y, X, 0), 1, X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28640,6 +29819,7 @@ where
 
 ```text
 llvm: select(X, 1, (X & Y))  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28657,6 +29837,7 @@ where
 
 ```text
 llvm: select(X, 1, select(X, Y, 0))  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28677,6 +29858,7 @@ where
 
 ```text
 llvm: select(X, 1, (Y & X))  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28694,6 +29876,7 @@ where
 
 ```text
 llvm: select(X, 1, select(Y, X, 0))  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28722,6 +29905,7 @@ where
 
 ```text
 llvm: select(X, Y, Y)  =>  Y
+
 where
   root = select(X, Y, Y) : T0
   P0 = properties(root)
@@ -28743,6 +29927,7 @@ where
 
 ```text
 llvm: select(X, X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28765,6 +29950,7 @@ where
 
 ```text
 llvm: select(X, X, C0)  =>  C0
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28787,6 +29973,7 @@ where
 
 ```text
 llvm: select(X, 1, X)  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -28809,6 +29996,7 @@ where
 
 ```text
 llvm: select(X, C0, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -28830,9 +30018,10 @@ where
 [Source](../Veir/InstSimplify/IS5237a.lean#L5)
 
 ```text
-llvm: select(X, mlir.poison(), Y)  =>  Y
+llvm: select(X, poison, Y)  =>  Y
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = select(X, a0, Y) : T0
   P1 = properties(root)
@@ -28853,9 +30042,10 @@ where
 [Source](../Veir/InstSimplify/IS5242a.lean#L5)
 
 ```text
-llvm: select(X, Y, mlir.poison())  =>  Y
+llvm: select(X, Y, poison)  =>  Y
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = select(X, Y, a0) : T0
   P1 = properties(root)
@@ -28877,6 +30067,7 @@ where
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -28897,6 +30088,7 @@ where
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -28915,6 +30107,7 @@ Builder families: `Veir.InstSimplify.gepAllZeroFamily`.
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -28928,6 +30121,7 @@ where
 
 ```text
 llvm: getelementptr(X, a)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -28945,6 +30139,7 @@ where
 
 ```text
 llvm: getelementptr(X, a, b)  =>  X
+
 where
   C0 = a : T1
   P0 = properties(C0)
@@ -28974,12 +30169,13 @@ where
 
 ```text
 llvm: getelementptr(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   require P1.rawConstantIndices.values.all fun x => x != -2147483648
   T0 : Veir.LLVM.PointerType
@@ -28996,8 +30192,9 @@ Builder families: `Veir.InstSimplify.gepPoisonBaseFamily`.
 
 ```text
 llvm: getelementptr(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0) : T0
   P1 = properties(root)
@@ -29009,8 +30206,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X) : T0
   P1 = properties(root)
@@ -29024,8 +30222,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y) : T0
   P1 = properties(root)
@@ -29041,8 +30240,9 @@ where
 
 ```text
 llvm: getelementptr(a0, X, Y, Z)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = getelementptr(a0, X, Y, Z) : T0
   P1 = properties(root)
@@ -29060,12 +30260,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   require (Array.filter (fun x => x == -2147483648) P1.rawConstantIndices.values).size == 0 + 1 + 0
@@ -29078,12 +30279,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0, Y)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0, Y) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29098,12 +30300,13 @@ where
 
 ```text
 llvm: getelementptr(X, a0, Y, Z)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, a0, Y, Z) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29120,12 +30323,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29140,12 +30344,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0, Z)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0, Z) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29162,12 +30367,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, a0, Z, X3)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, a0, Z, X3) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29186,12 +30392,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29208,12 +30415,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0, X3)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0, X3) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29232,12 +30440,13 @@ where
 
 ```text
 llvm: getelementptr(X, Y, Z, a0, X3, X4)  =>  new2
+
 where
-  a0 = mlir.poison() : T1
+  a0 = poison : T1
   P0 = properties(a0)
   root = getelementptr(X, Y, Z, a0, X3, X4) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   X : T0
   Y : T2
@@ -29268,6 +30477,7 @@ where
 
 ```text
 llvm: getelementptr(X)  =>  X
+
 where
   root = getelementptr(X) : T0
   P0 = properties(root)
@@ -29283,6 +30493,7 @@ where
 
 ```text
 llvm: getelementptr(X, Y)  =>  X
+
 where
   root = getelementptr(X, Y) : T0
   P0 = properties(root)
@@ -29305,6 +30516,7 @@ where
 
 ```text
 llvm: trunc(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -29326,6 +30538,7 @@ where
 
 ```text
 llvm: zext(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -29347,6 +30560,7 @@ where
 
 ```text
 llvm: sext(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -29368,6 +30582,7 @@ where
 
 ```text
 llvm: bitcast(C0)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -29382,12 +30597,13 @@ where
 
 ```text
 llvm: ptrtoint(a0)  =>  new2
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = ptrtoint(a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 64
   T0 : Veir.LLVM.PointerType
@@ -29400,12 +30616,13 @@ where
 
 ```text
 llvm: trunc(a0)  =>  new2
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = trunc(a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29421,12 +30638,13 @@ where
 
 ```text
 llvm: trunc(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = trunc(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29442,12 +30660,13 @@ where
 
 ```text
 llvm: zext(a0)  =>  new2
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = zext(a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29463,12 +30682,13 @@ where
 
 ```text
 llvm: zext(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = zext(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29484,12 +30704,13 @@ where
 
 ```text
 llvm: sext(a0)  =>  new2
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = sext(a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29505,12 +30726,13 @@ where
 
 ```text
 llvm: sext(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = sext(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29526,8 +30748,9 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  a0
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = bitcast(a0) : T0
   P1 = properties(root)
@@ -29540,8 +30763,9 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = bitcast(a0) : T0
   P1 = properties(root)
@@ -29554,8 +30778,9 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  a0
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = bitcast(a0) : T0
   P1 = properties(root)
@@ -29568,8 +30793,9 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = bitcast(a0) : T0
   P1 = properties(root)
@@ -29582,12 +30808,13 @@ where
 
 ```text
 llvm: inttoptr(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = inttoptr(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.LLVM.PointerType
   T0 : Veir.IntegerType, where t = T0: t.bitwidth == 64
@@ -29600,12 +30827,13 @@ where
 
 ```text
 llvm: ptrtoint(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = ptrtoint(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType, where t = T1: t.bitwidth == 64
   T0 : Veir.LLVM.PointerType
@@ -29618,6 +30846,7 @@ where
 
 ```text
 llvm: bitcast(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -29639,12 +30868,13 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  new2
+
 where
-  a0 = mlir.zero() : T0
+  a0 = 0 : T0
   P0 = properties(a0)
   root = bitcast(a0) : T1
   P1 = properties(root)
-  new2 = mlir.zero() : T1 [created]
+  new2 = 0 : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29660,12 +30890,13 @@ where
 
 ```text
 llvm: bitcast(a0)  =>  new2
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = bitcast(a0) : T1
   P1 = properties(root)
-  new2 = mlir.poison() : T1 [created]
+  new2 = poison : T1 [created]
   P2 = properties(new2)
   T1 : Veir.IntegerType
   T0 : Veir.IntegerType
@@ -29689,6 +30920,7 @@ where
 
 ```text
 llvm: trunc(zext(X))  =>  X
+
 where
   a0 = zext(X) : T1
   P0 = properties(a0)
@@ -29706,6 +30938,7 @@ where
 
 ```text
 llvm: trunc(sext(X))  =>  X
+
 where
   a0 = sext(X) : T1
   P0 = properties(a0)
@@ -29725,6 +30958,7 @@ where
 
 ```text
 llvm: bitcast(bitcast(X))  =>  X
+
 where
   a0 = bitcast(X) : T1
   P0 = properties(a0)
@@ -29744,6 +30978,7 @@ where
 
 ```text
 llvm: bitcast(bitcast(X))  =>  X
+
 where
   a0 = bitcast(X) : T0
   P0 = properties(a0)
@@ -29759,6 +30994,7 @@ where
 
 ```text
 llvm: bitcast(bitcast(X))  =>  X
+
 where
   a0 = bitcast(X) : T0
   P0 = properties(a0)
@@ -29780,6 +31016,7 @@ where
 
 ```text
 llvm: bitcast(X)  =>  X
+
 where
   root = bitcast(X) : T0
   P0 = properties(root)
@@ -29793,6 +31030,7 @@ where
 
 ```text
 llvm: bitcast(X)  =>  X
+
 where
   root = bitcast(X) : T0
   P0 = properties(root)
@@ -29806,6 +31044,7 @@ where
 
 ```text
 llvm: bitcast(X)  =>  X
+
 where
   root = bitcast(X) : T0
   P0 = properties(root)
@@ -29827,6 +31066,7 @@ where
 
 ```text
 llvm: zext(trunc(X))  =>  X
+
 where
   a0 = trunc(X) : T1
   P0 = properties(a0)
@@ -29845,6 +31085,7 @@ where
 
 ```text
 llvm: sext(trunc(X))  =>  X
+
 where
   a0 = trunc(X) : T1
   P0 = properties(a0)
@@ -29871,6 +31112,7 @@ where
 
 ```text
 llvm: intr.bswap(intr.bswap(X))  =>  X
+
 where
   a0 = intr.bswap(X) : T0
   P0 = properties(a0)
@@ -29892,6 +31134,7 @@ where
 
 ```text
 llvm: intr.bitreverse(intr.bitreverse(X))  =>  X
+
 where
   a0 = intr.bitreverse(X) : T0
   P0 = properties(a0)
@@ -29915,6 +31158,7 @@ where
 
 ```text
 llvm: intr.smax(a0, X)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -29929,6 +31173,7 @@ where
 
 ```text
 llvm: intr.smax(X, a0)  =>  a0
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -29943,6 +31188,7 @@ where
 
 ```text
 llvm: intr.smax(a0, X)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -29957,6 +31203,7 @@ where
 
 ```text
 llvm: intr.smax(X, a0)  =>  a0
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -29971,6 +31218,7 @@ where
 
 ```text
 llvm: intr.smin(a0, X)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -29985,6 +31233,7 @@ where
 
 ```text
 llvm: intr.smin(X, a0)  =>  a0
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -29999,6 +31248,7 @@ where
 
 ```text
 llvm: intr.smin(a0, X)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -30013,6 +31263,7 @@ where
 
 ```text
 llvm: intr.smin(X, a0)  =>  a0
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -30027,6 +31278,7 @@ where
 
 ```text
 llvm: intr.umax(a0, X)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -30041,6 +31293,7 @@ where
 
 ```text
 llvm: intr.umax(X, a0)  =>  a0
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -30055,6 +31308,7 @@ where
 
 ```text
 llvm: intr.umax(a0, X)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -30069,6 +31323,7 @@ where
 
 ```text
 llvm: intr.umax(X, a0)  =>  a0
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -30083,6 +31338,7 @@ where
 
 ```text
 llvm: intr.umin(a0, X)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -30097,6 +31353,7 @@ where
 
 ```text
 llvm: intr.umin(X, a0)  =>  a0
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -30111,6 +31368,7 @@ where
 
 ```text
 llvm: intr.umin(a0, X)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -30125,6 +31383,7 @@ where
 
 ```text
 llvm: intr.umin(X, a0)  =>  a0
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -30149,6 +31408,7 @@ where
 
 ```text
 llvm: intr.smax(intr.smin(X, Y), X)  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -30163,6 +31423,7 @@ where
 
 ```text
 llvm: intr.smax(X, intr.smin(X, Y))  =>  X
+
 where
   a0 = intr.smin(X, Y) : T0
   P0 = properties(a0)
@@ -30177,6 +31438,7 @@ where
 
 ```text
 llvm: intr.smax(intr.smin(Y, X), X)  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -30191,6 +31453,7 @@ where
 
 ```text
 llvm: intr.smax(X, intr.smin(Y, X))  =>  X
+
 where
   a0 = intr.smin(Y, X) : T0
   P0 = properties(a0)
@@ -30205,6 +31468,7 @@ where
 
 ```text
 llvm: intr.smin(intr.smax(X, Y), X)  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -30219,6 +31483,7 @@ where
 
 ```text
 llvm: intr.smin(X, intr.smax(X, Y))  =>  X
+
 where
   a0 = intr.smax(X, Y) : T0
   P0 = properties(a0)
@@ -30233,6 +31498,7 @@ where
 
 ```text
 llvm: intr.smin(intr.smax(Y, X), X)  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -30247,6 +31513,7 @@ where
 
 ```text
 llvm: intr.smin(X, intr.smax(Y, X))  =>  X
+
 where
   a0 = intr.smax(Y, X) : T0
   P0 = properties(a0)
@@ -30261,6 +31528,7 @@ where
 
 ```text
 llvm: intr.umax(intr.umin(X, Y), X)  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -30275,6 +31543,7 @@ where
 
 ```text
 llvm: intr.umax(X, intr.umin(X, Y))  =>  X
+
 where
   a0 = intr.umin(X, Y) : T0
   P0 = properties(a0)
@@ -30289,6 +31558,7 @@ where
 
 ```text
 llvm: intr.umax(intr.umin(Y, X), X)  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -30303,6 +31573,7 @@ where
 
 ```text
 llvm: intr.umax(X, intr.umin(Y, X))  =>  X
+
 where
   a0 = intr.umin(Y, X) : T0
   P0 = properties(a0)
@@ -30317,6 +31588,7 @@ where
 
 ```text
 llvm: intr.umin(intr.umax(X, Y), X)  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -30331,6 +31603,7 @@ where
 
 ```text
 llvm: intr.umin(X, intr.umax(X, Y))  =>  X
+
 where
   a0 = intr.umax(X, Y) : T0
   P0 = properties(a0)
@@ -30345,6 +31618,7 @@ where
 
 ```text
 llvm: intr.umin(intr.umax(Y, X), X)  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -30359,6 +31633,7 @@ where
 
 ```text
 llvm: intr.umin(X, intr.umax(Y, X))  =>  X
+
 where
   a0 = intr.umax(Y, X) : T0
   P0 = properties(a0)
@@ -30381,6 +31656,7 @@ where
 
 ```text
 llvm: intr.abs(a0)  =>  a0
+
 where
   a0 = intr.abs(X) : T0
   P0 = properties(a0)
@@ -30402,6 +31678,7 @@ where
 
 ```text
 llvm: intr.cttz(shl(1, X))  =>  X
+
 where
   C0 = 1 : T0
   P0 = properties(C0)
@@ -30428,6 +31705,7 @@ where
 
 ```text
 llvm: intr.ctlz(lshr(n, X))  =>  X
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -30456,7 +31734,8 @@ where
 **Parameters:** `n : Int`
 
 ```text
-llvm: intr.ctlz(ashr(n, X))  =>  mlir.zero()
+llvm: intr.ctlz(ashr(n, X))  =>  0
+
 where
   C0 = n : T0
   P0 = properties(C0)
@@ -30464,7 +31743,7 @@ where
   P1 = properties(a1)
   root = intr.ctlz(a1) : T0
   P2 = properties(root)
-  new3 = mlir.zero() : T0 [created]
+  new3 = 0 : T0 [created]
   P3 = properties(new3)
   X : T0
   T0 : Veir.IntegerType
@@ -30489,6 +31768,7 @@ where
 
 ```text
 llvm: intr.smax(X, X)  =>  X
+
 where
   root = intr.smax(X, X) : T0
   P0 = properties(root)
@@ -30500,6 +31780,7 @@ where
 
 ```text
 llvm: intr.smin(X, X)  =>  X
+
 where
   root = intr.smin(X, X) : T0
   P0 = properties(root)
@@ -30511,6 +31792,7 @@ where
 
 ```text
 llvm: intr.umax(X, X)  =>  X
+
 where
   root = intr.umax(X, X) : T0
   P0 = properties(root)
@@ -30522,6 +31804,7 @@ where
 
 ```text
 llvm: intr.umin(X, X)  =>  X
+
 where
   root = intr.umin(X, X) : T0
   P0 = properties(root)
@@ -30543,6 +31826,7 @@ where
 
 ```text
 llvm: intr.smax(X, C0)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30560,6 +31844,7 @@ where
 
 ```text
 llvm: intr.smax(C0, X)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30577,6 +31862,7 @@ where
 
 ```text
 llvm: intr.smin(X, C0)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30594,6 +31880,7 @@ where
 
 ```text
 llvm: intr.smin(C0, X)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30611,6 +31898,7 @@ where
 
 ```text
 llvm: intr.umax(X, C0)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30628,6 +31916,7 @@ where
 
 ```text
 llvm: intr.umax(C0, X)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30645,6 +31934,7 @@ where
 
 ```text
 llvm: intr.umin(X, C0)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30662,6 +31952,7 @@ where
 
 ```text
 llvm: intr.umin(C0, X)  =>  C0
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30689,6 +31980,7 @@ where
 
 ```text
 llvm: intr.smax(X, C0)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30706,6 +31998,7 @@ where
 
 ```text
 llvm: intr.smax(C0, X)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30723,6 +32016,7 @@ where
 
 ```text
 llvm: intr.smin(X, C0)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30740,6 +32034,7 @@ where
 
 ```text
 llvm: intr.smin(C0, X)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30757,6 +32052,7 @@ where
 
 ```text
 llvm: intr.umax(X, C0)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30774,6 +32070,7 @@ where
 
 ```text
 llvm: intr.umax(C0, X)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30791,6 +32088,7 @@ where
 
 ```text
 llvm: intr.umin(X, C0)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30808,6 +32106,7 @@ where
 
 ```text
 llvm: intr.umin(C0, X)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -30835,6 +32134,7 @@ where
 
 ```text
 llvm: intr.smax(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -30867,6 +32167,7 @@ where
 
 ```text
 llvm: intr.smax(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -30899,6 +32200,7 @@ where
 
 ```text
 llvm: intr.smax(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -30931,6 +32233,7 @@ where
 
 ```text
 llvm: intr.smax(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -30963,6 +32266,7 @@ where
 
 ```text
 llvm: intr.smin(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -30995,6 +32299,7 @@ where
 
 ```text
 llvm: intr.smin(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31027,6 +32332,7 @@ where
 
 ```text
 llvm: intr.smin(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31059,6 +32365,7 @@ where
 
 ```text
 llvm: intr.smin(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31091,6 +32398,7 @@ where
 
 ```text
 llvm: intr.umax(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31123,6 +32431,7 @@ where
 
 ```text
 llvm: intr.umax(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31155,6 +32464,7 @@ where
 
 ```text
 llvm: intr.umax(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31187,6 +32497,7 @@ where
 
 ```text
 llvm: intr.umax(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31219,6 +32530,7 @@ where
 
 ```text
 llvm: intr.umin(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31251,6 +32563,7 @@ where
 
 ```text
 llvm: intr.umin(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31283,6 +32596,7 @@ where
 
 ```text
 llvm: intr.umin(a1, c2)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31315,6 +32629,7 @@ where
 
 ```text
 llvm: intr.umin(c2, a1)  =>  a1
+
 where
   C0 = c1 : T0
   P0 = properties(C0)
@@ -31357,6 +32672,7 @@ where
 
 ```text
 llvm: intr.uadd.sat(X, C0)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -31371,6 +32687,7 @@ where
 
 ```text
 llvm: intr.uadd.sat(C0, X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -31395,6 +32712,7 @@ where
 
 ```text
 llvm: intr.uadd.sat(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31409,6 +32727,7 @@ where
 
 ```text
 llvm: intr.sadd.sat(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31433,6 +32752,7 @@ where
 
 ```text
 llvm: intr.uadd.sat(0, X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31447,6 +32767,7 @@ where
 
 ```text
 llvm: intr.sadd.sat(0, X)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31470,13 +32791,14 @@ where
 **Variant 1:** `swap = false`
 
 ```text
-llvm: intr.usub.sat((if false = true then -1 else 0), X)  =>  mlir.zero()
+llvm: intr.usub.sat((if false = true then -1 else 0), X)  =>  0
+
 where
   C0 = (if false = true then -1 else 0) : T0
   P0 = properties(C0)
   root = intr.usub.sat(C0, X) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -31487,13 +32809,14 @@ where
 **Variant 2:** `swap = true`
 
 ```text
-llvm: intr.usub.sat(X, (if true = true then -1 else 0))  =>  mlir.zero()
+llvm: intr.usub.sat(X, (if true = true then -1 else 0))  =>  0
+
 where
   C0 = (if true = true then -1 else 0) : T0
   P0 = properties(C0)
   root = intr.usub.sat(X, C0) : T0
   P1 = properties(root)
-  new2 = mlir.zero() : T0 [created]
+  new2 = 0 : T0 [created]
   P2 = properties(new2)
   X : T0
   T0 : Veir.IntegerType
@@ -31514,11 +32837,12 @@ where
 **Variant 1:** `signed = false`
 
 ```text
-llvm: intr.usub.sat(X, X)  =>  mlir.zero()
+llvm: intr.usub.sat(X, X)  =>  0
+
 where
   root = intr.usub.sat(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -31528,11 +32852,12 @@ where
 **Variant 2:** `signed = true`
 
 ```text
-llvm: intr.ssub.sat(X, X)  =>  mlir.zero()
+llvm: intr.ssub.sat(X, X)  =>  0
+
 where
   root = intr.ssub.sat(X, X) : T0
   P0 = properties(root)
-  new1 = mlir.zero() : T0 [created]
+  new1 = 0 : T0 [created]
   P1 = properties(new1)
   X : T0
   T0 : Veir.IntegerType
@@ -31553,6 +32878,7 @@ where
 
 ```text
 llvm: intr.usub.sat(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31567,6 +32893,7 @@ where
 
 ```text
 llvm: intr.ssub.sat(X, 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -31589,8 +32916,9 @@ where
 
 ```text
 llvm: intr.bswap(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.bswap(a0) : T0
   P1 = properties(root)
@@ -31603,8 +32931,9 @@ where
 
 ```text
 llvm: intr.bitreverse(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.bitreverse(a0) : T0
   P1 = properties(root)
@@ -31617,8 +32946,9 @@ where
 
 ```text
 llvm: intr.ctpop(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ctpop(a0) : T0
   P1 = properties(root)
@@ -31631,8 +32961,9 @@ where
 
 ```text
 llvm: intr.ctlz(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ctlz(a0) : T0
   P1 = properties(root)
@@ -31645,8 +32976,9 @@ where
 
 ```text
 llvm: intr.cttz(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.cttz(a0) : T0
   P1 = properties(root)
@@ -31659,8 +32991,9 @@ where
 
 ```text
 llvm: intr.abs(a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.abs(a0) : T0
   P1 = properties(root)
@@ -31673,8 +33006,9 @@ where
 
 ```text
 llvm: intr.smax(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.smax(a0, X) : T0
   P1 = properties(root)
@@ -31688,8 +33022,9 @@ where
 
 ```text
 llvm: intr.smax(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.smax(X, a0) : T0
   P1 = properties(root)
@@ -31703,8 +33038,9 @@ where
 
 ```text
 llvm: intr.smin(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.smin(a0, X) : T0
   P1 = properties(root)
@@ -31718,8 +33054,9 @@ where
 
 ```text
 llvm: intr.smin(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.smin(X, a0) : T0
   P1 = properties(root)
@@ -31733,8 +33070,9 @@ where
 
 ```text
 llvm: intr.umax(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.umax(a0, X) : T0
   P1 = properties(root)
@@ -31748,8 +33086,9 @@ where
 
 ```text
 llvm: intr.umax(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.umax(X, a0) : T0
   P1 = properties(root)
@@ -31763,8 +33102,9 @@ where
 
 ```text
 llvm: intr.umin(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.umin(a0, X) : T0
   P1 = properties(root)
@@ -31778,8 +33118,9 @@ where
 
 ```text
 llvm: intr.umin(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.umin(X, a0) : T0
   P1 = properties(root)
@@ -31793,8 +33134,9 @@ where
 
 ```text
 llvm: intr.sadd.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.sadd.sat(a0, X) : T0
   P1 = properties(root)
@@ -31808,8 +33150,9 @@ where
 
 ```text
 llvm: intr.sadd.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.sadd.sat(X, a0) : T0
   P1 = properties(root)
@@ -31823,8 +33166,9 @@ where
 
 ```text
 llvm: intr.uadd.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.uadd.sat(a0, X) : T0
   P1 = properties(root)
@@ -31838,8 +33182,9 @@ where
 
 ```text
 llvm: intr.uadd.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.uadd.sat(X, a0) : T0
   P1 = properties(root)
@@ -31853,8 +33198,9 @@ where
 
 ```text
 llvm: intr.ssub.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ssub.sat(a0, X) : T0
   P1 = properties(root)
@@ -31868,8 +33214,9 @@ where
 
 ```text
 llvm: intr.ssub.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ssub.sat(X, a0) : T0
   P1 = properties(root)
@@ -31883,8 +33230,9 @@ where
 
 ```text
 llvm: intr.usub.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.usub.sat(a0, X) : T0
   P1 = properties(root)
@@ -31898,8 +33246,9 @@ where
 
 ```text
 llvm: intr.usub.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.usub.sat(X, a0) : T0
   P1 = properties(root)
@@ -31913,8 +33262,9 @@ where
 
 ```text
 llvm: intr.sshl.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.sshl.sat(a0, X) : T0
   P1 = properties(root)
@@ -31928,8 +33278,9 @@ where
 
 ```text
 llvm: intr.sshl.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.sshl.sat(X, a0) : T0
   P1 = properties(root)
@@ -31943,8 +33294,9 @@ where
 
 ```text
 llvm: intr.ushl.sat(a0, X)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ushl.sat(a0, X) : T0
   P1 = properties(root)
@@ -31958,8 +33310,9 @@ where
 
 ```text
 llvm: intr.ushl.sat(X, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.ushl.sat(X, a0) : T0
   P1 = properties(root)
@@ -31973,8 +33326,9 @@ where
 
 ```text
 llvm: intr.fshl(a0, X, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshl(a0, X, Y) : T0
   P1 = properties(root)
@@ -31989,8 +33343,9 @@ where
 
 ```text
 llvm: intr.fshl(X, a0, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshl(X, a0, Y) : T0
   P1 = properties(root)
@@ -32005,8 +33360,9 @@ where
 
 ```text
 llvm: intr.fshl(X, Y, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshl(X, Y, a0) : T0
   P1 = properties(root)
@@ -32021,8 +33377,9 @@ where
 
 ```text
 llvm: intr.fshr(a0, X, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshr(a0, X, Y) : T0
   P1 = properties(root)
@@ -32037,8 +33394,9 @@ where
 
 ```text
 llvm: intr.fshr(X, a0, Y)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshr(X, a0, Y) : T0
   P1 = properties(root)
@@ -32053,8 +33411,9 @@ where
 
 ```text
 llvm: intr.fshr(X, Y, a0)  =>  a0
+
 where
-  a0 = mlir.poison() : T0
+  a0 = poison : T0
   P0 = properties(a0)
   root = intr.fshr(X, Y, a0) : T0
   P1 = properties(root)
@@ -32075,6 +33434,7 @@ where
 
 ```text
 llvm: intr.bswap(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32092,13 +33452,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L49)
 
 ```text
-llvm: intr.bswap(C0)  =>  mlir.poison()
+llvm: intr.bswap(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.bswap(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType, where t = T0: t.bitwidth == 16 || t.bitwidth == 32 || t.bitwidth == 64
   require Veir.InstSimplify.IS7413.poison_bswap T0 P0 P1
@@ -32111,6 +33472,7 @@ where
 
 ```text
 llvm: intr.bitreverse(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32128,13 +33490,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L118)
 
 ```text
-llvm: intr.bitreverse(C0)  =>  mlir.poison()
+llvm: intr.bitreverse(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.bitreverse(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_bitreverse T0 P0 P1
@@ -32147,6 +33510,7 @@ where
 
 ```text
 llvm: intr.ctpop(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32164,13 +33528,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L187)
 
 ```text
-llvm: intr.ctpop(C0)  =>  mlir.poison()
+llvm: intr.ctpop(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.ctpop(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_ctpop T0 P0 P1
@@ -32183,6 +33548,7 @@ where
 
 ```text
 llvm: intr.ctlz(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32200,13 +33566,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L256)
 
 ```text
-llvm: intr.ctlz(C0)  =>  mlir.poison()
+llvm: intr.ctlz(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.ctlz(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_ctlz T0 P0 P1
@@ -32219,6 +33586,7 @@ where
 
 ```text
 llvm: intr.cttz(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32236,13 +33604,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L325)
 
 ```text
-llvm: intr.cttz(C0)  =>  mlir.poison()
+llvm: intr.cttz(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.cttz(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_cttz T0 P0 P1
@@ -32255,6 +33624,7 @@ where
 
 ```text
 llvm: intr.abs(C0)  =>  C2
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32272,13 +33642,14 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L394)
 
 ```text
-llvm: intr.abs(C0)  =>  mlir.poison()
+llvm: intr.abs(C0)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
   root = intr.abs(C0) : T0
   P1 = properties(root)
-  new2 = mlir.poison() : T0 [created]
+  new2 = poison : T0 [created]
   P2 = properties(new2)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_abs T0 P0 P1
@@ -32291,6 +33662,7 @@ where
 
 ```text
 llvm: intr.smax(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32310,7 +33682,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L467)
 
 ```text
-llvm: intr.smax(C0, C1)  =>  mlir.poison()
+llvm: intr.smax(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32318,7 +33691,7 @@ where
   P1 = properties(C1)
   root = intr.smax(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_smax T0 P0 P1 P2
@@ -32331,6 +33704,7 @@ where
 
 ```text
 llvm: intr.smin(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32350,7 +33724,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L542)
 
 ```text
-llvm: intr.smin(C0, C1)  =>  mlir.poison()
+llvm: intr.smin(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32358,7 +33733,7 @@ where
   P1 = properties(C1)
   root = intr.smin(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_smin T0 P0 P1 P2
@@ -32371,6 +33746,7 @@ where
 
 ```text
 llvm: intr.umax(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32390,7 +33766,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L617)
 
 ```text
-llvm: intr.umax(C0, C1)  =>  mlir.poison()
+llvm: intr.umax(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32398,7 +33775,7 @@ where
   P1 = properties(C1)
   root = intr.umax(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_umax T0 P0 P1 P2
@@ -32411,6 +33788,7 @@ where
 
 ```text
 llvm: intr.umin(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32430,7 +33808,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L692)
 
 ```text
-llvm: intr.umin(C0, C1)  =>  mlir.poison()
+llvm: intr.umin(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32438,7 +33817,7 @@ where
   P1 = properties(C1)
   root = intr.umin(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_umin T0 P0 P1 P2
@@ -32451,6 +33830,7 @@ where
 
 ```text
 llvm: intr.sadd.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32470,7 +33850,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L767)
 
 ```text
-llvm: intr.sadd.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.sadd.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32478,7 +33859,7 @@ where
   P1 = properties(C1)
   root = intr.sadd.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_saddSat T0 P0 P1 P2
@@ -32491,6 +33872,7 @@ where
 
 ```text
 llvm: intr.uadd.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32510,7 +33892,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L842)
 
 ```text
-llvm: intr.uadd.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.uadd.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32518,7 +33901,7 @@ where
   P1 = properties(C1)
   root = intr.uadd.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_uaddSat T0 P0 P1 P2
@@ -32531,6 +33914,7 @@ where
 
 ```text
 llvm: intr.ssub.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32550,7 +33934,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L917)
 
 ```text
-llvm: intr.ssub.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.ssub.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32558,7 +33943,7 @@ where
   P1 = properties(C1)
   root = intr.ssub.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_ssubSat T0 P0 P1 P2
@@ -32571,6 +33956,7 @@ where
 
 ```text
 llvm: intr.usub.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32590,7 +33976,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L992)
 
 ```text
-llvm: intr.usub.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.usub.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32598,7 +33985,7 @@ where
   P1 = properties(C1)
   root = intr.usub.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_usubSat T0 P0 P1 P2
@@ -32611,6 +33998,7 @@ where
 
 ```text
 llvm: intr.sshl.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32630,7 +34018,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L1067)
 
 ```text
-llvm: intr.sshl.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.sshl.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32638,7 +34027,7 @@ where
   P1 = properties(C1)
   root = intr.sshl.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_sshlSat T0 P0 P1 P2
@@ -32651,6 +34040,7 @@ where
 
 ```text
 llvm: intr.ushl.sat(C0, C1)  =>  C3
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32670,7 +34060,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L1142)
 
 ```text
-llvm: intr.ushl.sat(C0, C1)  =>  mlir.poison()
+llvm: intr.ushl.sat(C0, C1)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32678,7 +34069,7 @@ where
   P1 = properties(C1)
   root = intr.ushl.sat(C0, C1) : T0
   P2 = properties(root)
-  new3 = mlir.poison() : T0 [created]
+  new3 = poison : T0 [created]
   P3 = properties(new3)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_ushlSat T0 P0 P1 P2
@@ -32691,6 +34082,7 @@ where
 
 ```text
 llvm: intr.fshl(C0, C1, C2)  =>  C4
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32712,7 +34104,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L1221)
 
 ```text
-llvm: intr.fshl(C0, C1, C2)  =>  mlir.poison()
+llvm: intr.fshl(C0, C1, C2)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32722,7 +34115,7 @@ where
   P2 = properties(C2)
   root = intr.fshl(C0, C1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_fshl T0 P0 P1 P2 P3
@@ -32735,6 +34128,7 @@ where
 
 ```text
 llvm: intr.fshr(C0, C1, C2)  =>  C4
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32756,7 +34150,8 @@ where
 [Source](../Veir/InstSimplify/IS7413.lean#L1303)
 
 ```text
-llvm: intr.fshr(C0, C1, C2)  =>  mlir.poison()
+llvm: intr.fshr(C0, C1, C2)  =>  poison
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32766,7 +34161,7 @@ where
   P2 = properties(C2)
   root = intr.fshr(C0, C1, C2) : T0
   P3 = properties(root)
-  new4 = mlir.poison() : T0 [created]
+  new4 = poison : T0 [created]
   P4 = properties(new4)
   T0 : Veir.IntegerType
   require Veir.InstSimplify.IS7413.poison_fshr T0 P0 P1 P2 P3
@@ -32787,6 +34182,7 @@ where
 
 ```text
 llvm: intr.fshr(X, Y, C0)  =>  Y
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32805,6 +34201,7 @@ where
 
 ```text
 llvm: intr.fshl(X, Y, C0)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32833,6 +34230,7 @@ where
 
 ```text
 llvm: intr.fshr(lshr(X, C0), shl(X, C1), C2)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32861,6 +34259,7 @@ where
 
 ```text
 llvm: intr.fshl(lshr(X, C0), shl(X, C1), C2)  =>  X
+
 where
   C0 = mlir.constant() : T0
   P0 = properties(C0)
@@ -32899,6 +34298,7 @@ where
 
 ```text
 llvm: intr.fshr(C0, C1, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -32916,6 +34316,7 @@ where
 
 ```text
 llvm: intr.fshl(C0, C1, X)  =>  C0
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -32943,6 +34344,7 @@ where
 
 ```text
 llvm: intr.fshr(C0, C1, X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -32960,6 +34362,7 @@ where
 
 ```text
 llvm: intr.fshl(C0, C1, X)  =>  C0
+
 where
   C0 = -1 : T0
   P0 = properties(C0)
@@ -32989,6 +34392,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.ctlz(X)  =>  builtin.unrealized_conversion_cast(riscv.clzw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.ctlz(X) : T0
   P0 = properties(root)
@@ -33014,6 +34418,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.ctlz(X)  =>  builtin.unrealized_conversion_cast(riscv.clz(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.ctlz(X) : T0
   P0 = properties(root)
@@ -33039,6 +34444,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.cttz(X)  =>  builtin.unrealized_conversion_cast(riscv.ctzw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.cttz(X) : T0
   P0 = properties(root)
@@ -33064,6 +34470,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.cttz(X)  =>  builtin.unrealized_conversion_cast(riscv.ctz(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.cttz(X) : T0
   P0 = properties(root)
@@ -33089,6 +34496,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.ctpop(X)  =>  builtin.unrealized_conversion_cast(riscv.cpopw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.ctpop(X) : T0
   P0 = properties(root)
@@ -33114,6 +34522,7 @@ Builder families: `Veir.lowerUnary`.
 
 ```text
 llvm.intr.ctpop(X)  =>  builtin.unrealized_conversion_cast(riscv.cpop(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.ctpop(X) : T0
   P0 = properties(root)
@@ -33139,6 +34548,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_sext(X)  =>  builtin.unrealized_conversion_cast(riscv.sextb(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_sext(X) : T1
   P0 = properties(root)
@@ -33166,6 +34576,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_sext(X)  =>  builtin.unrealized_conversion_cast(riscv.sexth(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_sext(X) : T1
   P0 = properties(root)
@@ -33193,6 +34604,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_sext(X)  =>  builtin.unrealized_conversion_cast(riscv.sextw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_sext(X) : T1
   P0 = properties(root)
@@ -33220,6 +34632,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_zext(X)  =>  builtin.unrealized_conversion_cast(riscv.zextb(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_zext(X) : T1
   P0 = properties(root)
@@ -33247,6 +34660,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_zext(X)  =>  builtin.unrealized_conversion_cast(riscv.zexth(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_zext(X) : T1
   P0 = properties(root)
@@ -33274,6 +34688,7 @@ Builder families: `Veir.lowerExt`.
 
 ```text
 gmir.g_zext(X)  =>  builtin.unrealized_conversion_cast(riscv.zextw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_zext(X) : T1
   P0 = properties(root)
@@ -33301,6 +34716,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.add(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.add(X, Y) : T0
   P0 = properties(root)
@@ -33330,6 +34746,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.add(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.addw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.add(X, Y) : T0
   P0 = properties(root)
@@ -33359,6 +34776,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.sub(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sub(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.sub(X, Y) : T0
   P0 = properties(root)
@@ -33388,6 +34806,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.sub(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.subw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.sub(X, Y) : T0
   P0 = properties(root)
@@ -33417,6 +34836,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.umax(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.maxu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.umax(X, Y) : T0
   P0 = properties(root)
@@ -33446,6 +34866,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.umin(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.minu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.umin(X, Y) : T0
   P0 = properties(root)
@@ -33475,6 +34896,7 @@ Builder families: `Veir.lowerByteBinaryW`.
 
 ```text
 llvm.shl(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sll(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.shl(X, Y) : T2
   P0 = properties(root)
@@ -33506,6 +34928,7 @@ Builder families: `Veir.lowerByteBinaryW`.
 
 ```text
 llvm.shl(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sllw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.shl(X, Y) : T2
   P0 = properties(root)
@@ -33537,6 +34960,7 @@ Builder families: `Veir.lowerByteBinaryW`.
 
 ```text
 llvm.lshr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.srl(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.lshr(X, Y) : T2
   P0 = properties(root)
@@ -33568,6 +34992,7 @@ Builder families: `Veir.lowerByteBinaryW`.
 
 ```text
 llvm.lshr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.srlw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.lshr(X, Y) : T2
   P0 = properties(root)
@@ -33599,6 +35024,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.smax(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.max(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.smax(X, Y) : T0
   P0 = properties(root)
@@ -33628,6 +35054,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.smax(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.max(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.intr.smax(X, Y) : T0
   P0 = properties(root)
@@ -33662,6 +35089,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.smin(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.min(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.smin(X, Y) : T0
   P0 = properties(root)
@@ -33691,6 +35119,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 llvm.intr.smin(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.min(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.intr.smin(X, Y) : T0
   P0 = properties(root)
@@ -33725,6 +35154,7 @@ Builder families: `Veir.lowerRotate`.
 
 ```text
 llvm.intr.fshl(X, X, Y)  =>  builtin.unrealized_conversion_cast(riscv.rol(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.fshl(X, X, Y) : T0
   P0 = properties(root)
@@ -33754,6 +35184,7 @@ Builder families: `Veir.lowerRotate`.
 
 ```text
 llvm.intr.fshl(X, X, Y)  =>  builtin.unrealized_conversion_cast(riscv.rolw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.fshl(X, X, Y) : T0
   P0 = properties(root)
@@ -33783,6 +35214,7 @@ Builder families: `Veir.lowerRotate`.
 
 ```text
 llvm.intr.fshr(X, X, Y)  =>  builtin.unrealized_conversion_cast(riscv.ror(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.fshr(X, X, Y) : T0
   P0 = properties(root)
@@ -33812,6 +35244,7 @@ Builder families: `Veir.lowerRotate`.
 
 ```text
 llvm.intr.fshr(X, X, Y)  =>  builtin.unrealized_conversion_cast(riscv.rorw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.intr.fshr(X, X, Y) : T0
   P0 = properties(root)
@@ -33847,6 +35280,7 @@ Veir.lowerBswap 64
 
 ```text
 llvm.intr.bswap(X)  =>  builtin.unrealized_conversion_cast(riscv.rev8(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.intr.bswap(X) : T1
   P0 = properties(root)
@@ -33879,6 +35313,7 @@ Veir.lowerBswap 32
 
 ```text
 llvm.intr.bswap(X)  =>  builtin.unrealized_conversion_cast(riscv.srli(riscv.rev8(builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.intr.bswap(X) : T1
   P0 = properties(root)
@@ -33914,6 +35349,7 @@ Veir.lowerBitreverse 64
 
 ```text
 llvm.intr.bitreverse(X)  =>  builtin.unrealized_conversion_cast(riscv.rev8(riscv.or(riscv.slli(riscv.and(new14, new13)), riscv.and(new14, riscv.srli(new13)))))
+
 where
   root = llvm.intr.bitreverse(X) : T1
   P0 = properties(root)
@@ -34000,6 +35436,7 @@ Veir.lowerBitreverse 32
 
 ```text
 llvm.intr.bitreverse(X)  =>  builtin.unrealized_conversion_cast(riscv.srli(riscv.rev8(riscv.or(riscv.slli(riscv.and(new14, new13)), riscv.and(new14, riscv.srli(new13))))))
+
 where
   root = llvm.intr.bitreverse(X) : T1
   P0 = properties(root)
@@ -34081,6 +35518,7 @@ where
 
 ```text
 llvm.mlir.constant()  =>  builtin.unrealized_conversion_cast(riscv.li())
+
 where
   root = llvm.mlir.constant() : T0
   P0 = properties(root)
@@ -34117,6 +35555,7 @@ Veir.lowerAshr 64
 
 ```text
 llvm.ashr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sra(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.ashr(X, Y) : T2
   P0 = properties(root)
@@ -34154,6 +35593,7 @@ Veir.lowerAshr 32
 
 ```text
 llvm.ashr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sraw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.ashr(X, Y) : T2
   P0 = properties(root)
@@ -34191,6 +35631,7 @@ Veir.lowerAshr 8
 
 ```text
 llvm.ashr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sra(riscv.sextb(builtin.unrealized_conversion_cast(X)), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.ashr(X, Y) : T2
   P0 = properties(root)
@@ -34225,6 +35666,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.xor(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34261,6 +35703,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.xor(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34297,6 +35740,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.xor(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34328,6 +35772,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.sextb(builtin.unrealized_conversion_cast(X))))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34363,6 +35808,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.sextw(builtin.unrealized_conversion_cast(X))))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34398,6 +35844,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34428,6 +35875,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.xor(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34467,6 +35915,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.xor(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34506,6 +35955,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.xor(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34540,6 +35990,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.sextb(builtin.unrealized_conversion_cast(X))))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34578,6 +36029,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.sextw(builtin.unrealized_conversion_cast(X))))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34616,6 +36068,7 @@ where
 
 ```text
 llvm.icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = llvm.mlir.constant() : T1
   P0 = properties(C0)
@@ -34649,6 +36102,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(riscv.sextb(builtin.unrealized_conversion_cast(X)), riscv.sextb(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34682,6 +36136,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34715,6 +36170,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34743,6 +36199,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34776,6 +36233,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34809,6 +36267,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34837,6 +36296,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.sextb(builtin.unrealized_conversion_cast(X)), riscv.sextb(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34870,6 +36330,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34903,6 +36364,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34931,6 +36393,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34964,6 +36427,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -34997,6 +36461,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35025,6 +36490,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(riscv.sextb(builtin.unrealized_conversion_cast(X)), riscv.sextb(builtin.unrealized_conversion_cast(Y)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35061,6 +36527,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35097,6 +36564,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35128,6 +36596,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35164,6 +36633,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35200,6 +36670,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35231,6 +36702,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(riscv.sextb(builtin.unrealized_conversion_cast(X)), riscv.sextb(builtin.unrealized_conversion_cast(Y)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35267,6 +36739,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(riscv.sextw(builtin.unrealized_conversion_cast(X)), riscv.sextw(builtin.unrealized_conversion_cast(Y)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35303,6 +36776,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35334,6 +36808,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(riscv.sextb(builtin.unrealized_conversion_cast(Y)), riscv.sextb(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35370,6 +36845,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(riscv.sextw(builtin.unrealized_conversion_cast(Y)), riscv.sextw(builtin.unrealized_conversion_cast(X)))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35406,6 +36882,7 @@ where
 
 ```text
 llvm.icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -35441,6 +36918,7 @@ Builder families: `Veir.lowerRegCast`.
 
 ```text
 llvm.trunc(X)  =>  builtin.unrealized_conversion_cast(builtin.unrealized_conversion_cast(X))
+
 where
   root = llvm.trunc(X) : T1
   P0 = properties(root)
@@ -35465,6 +36943,7 @@ Builder families: `Veir.lowerRegCast`.
 
 ```text
 llvm.bitcast(X)  =>  builtin.unrealized_conversion_cast(builtin.unrealized_conversion_cast(X))
+
 where
   root = llvm.bitcast(X) : T1
   P0 = properties(root)
@@ -35495,6 +36974,7 @@ Veir.lowerLifetime Veir.Llvm.intr__lifetime__start
 
 ```text
 llvm: intr.lifetime.start(X)  =>  ()
+
 where
   root = intr.lifetime.start(X) : ()
   P0 = properties(root)
@@ -35516,6 +36996,7 @@ Veir.lowerLifetime Veir.Llvm.intr__lifetime__end
 
 ```text
 llvm: intr.lifetime.end(X)  =>  ()
+
 where
   root = intr.lifetime.end(X) : ()
   P0 = properties(root)
@@ -35531,6 +37012,7 @@ where
 
 ```text
 llvm.load(X)  =>  builtin.unrealized_conversion_cast(riscv.lb(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.load(X) : T1
   P0 = properties(root)
@@ -35553,6 +37035,7 @@ where
 
 ```text
 llvm.load(X)  =>  builtin.unrealized_conversion_cast(riscv.lh(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.load(X) : T1
   P0 = properties(root)
@@ -35575,6 +37058,7 @@ where
 
 ```text
 llvm.load(X)  =>  builtin.unrealized_conversion_cast(riscv.lw(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.load(X) : T1
   P0 = properties(root)
@@ -35597,6 +37081,7 @@ where
 
 ```text
 llvm.load(X)  =>  builtin.unrealized_conversion_cast(riscv.ld(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.load(X) : T1
   P0 = properties(root)
@@ -35619,6 +37104,7 @@ where
 
 ```text
 llvm.load(llvm.getelementptr(X, C0))  =>  builtin.unrealized_conversion_cast(riscv.lb(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -35649,6 +37135,7 @@ where
 
 ```text
 llvm.load(llvm.getelementptr(X, C0))  =>  builtin.unrealized_conversion_cast(riscv.lh(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -35679,6 +37166,7 @@ where
 
 ```text
 llvm.load(llvm.getelementptr(X, C0))  =>  builtin.unrealized_conversion_cast(riscv.lw(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -35709,6 +37197,7 @@ where
 
 ```text
 llvm.load(llvm.getelementptr(X, C0))  =>  builtin.unrealized_conversion_cast(riscv.ld(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -35743,6 +37232,7 @@ where
 
 ```text
 llvm.store(X, Y)  =>  ()
+
 where
   root = llvm.store(X, Y) : ()
   P0 = properties(root)
@@ -35766,6 +37256,7 @@ where
 
 ```text
 llvm.store(X, Y)  =>  ()
+
 where
   root = llvm.store(X, Y) : ()
   P0 = properties(root)
@@ -35789,6 +37280,7 @@ where
 
 ```text
 llvm.store(X, Y)  =>  ()
+
 where
   root = llvm.store(X, Y) : ()
   P0 = properties(root)
@@ -35812,6 +37304,7 @@ where
 
 ```text
 llvm.store(X, Y)  =>  ()
+
 where
   root = llvm.store(X, Y) : ()
   P0 = properties(root)
@@ -35835,6 +37328,7 @@ where
 
 ```text
 llvm.store(X, llvm.getelementptr(Y, C0))  =>  ()
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -35866,6 +37360,7 @@ where
 
 ```text
 llvm.store(X, llvm.getelementptr(Y, C0))  =>  ()
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -35897,6 +37392,7 @@ where
 
 ```text
 llvm.store(X, llvm.getelementptr(Y, C0))  =>  ()
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -35928,6 +37424,7 @@ where
 
 ```text
 llvm.store(X, llvm.getelementptr(Y, C0))  =>  ()
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -35963,6 +37460,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -35992,6 +37490,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sh1add(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -36021,6 +37520,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sh2add(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -36050,6 +37550,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sh3add(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -36081,6 +37582,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(builtin.unrealized_conversion_cast(X), riscv.slli(builtin.unrealized_conversion_cast(Y))))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -36117,6 +37619,7 @@ where
 
 ```text
 llvm.getelementptr(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(builtin.unrealized_conversion_cast(X), riscv.mul(builtin.unrealized_conversion_cast(Y), riscv.li())))
+
 where
   root = llvm.getelementptr(X, Y) : T2
   P0 = properties(root)
@@ -36156,6 +37659,7 @@ where
 
 ```text
 llvm.select(X, Y, C0)  =>  builtin.unrealized_conversion_cast(riscv.czeroeqz(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -36189,6 +37693,7 @@ where
 
 ```text
 llvm.select(X, C0, Y)  =>  builtin.unrealized_conversion_cast(riscv.czeronez(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T2
   P0 = properties(C0)
@@ -36222,6 +37727,7 @@ where
 
 ```text
 llvm.select(X, Y, Z)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.czeroeqz(builtin.unrealized_conversion_cast(Y), new3), riscv.czeronez(builtin.unrealized_conversion_cast(Z), new3)))
+
 where
   root = llvm.select(X, Y, Z) : T3
   P0 = properties(root)
@@ -36262,6 +37768,7 @@ where
 
 ```text
 llvm.intr.sadd.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.czeroeqz(riscv.xor(riscv.srai(new4), riscv.slli(riscv.li())), new9), riscv.czeronez(new4, new9)))
+
 where
   root = llvm.intr.sadd.sat(X, Y) : T2
   P0 = properties(root)
@@ -36321,6 +37828,7 @@ where
 
 ```text
 llvm.intr.ssub.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.czeroeqz(riscv.xor(riscv.srai(new4), riscv.slli(riscv.li())), new9), riscv.czeronez(new4, new9)))
+
 where
   root = llvm.intr.ssub.sat(X, Y) : T2
   P0 = properties(root)
@@ -36380,6 +37888,7 @@ where
 
 ```text
 llvm.intr.uadd.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(riscv.minu(builtin.unrealized_conversion_cast(X), riscv.xori(new2)), new2))
+
 where
   root = llvm.intr.uadd.sat(X, Y) : T2
   P0 = properties(root)
@@ -36415,6 +37924,7 @@ where
 
 ```text
 llvm.intr.usub.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sub(riscv.maxu(builtin.unrealized_conversion_cast(X), new2), new2))
+
 where
   root = llvm.intr.usub.sat(X, Y) : T2
   P0 = properties(root)
@@ -36447,6 +37957,7 @@ where
 
 ```text
 llvm.intr.sshl.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.czeroeqz(riscv.xor(riscv.srai(new1), riscv.srli(riscv.li())), new8), riscv.czeronez(new3, new8)))
+
 where
   root = llvm.intr.sshl.sat(X, Y) : T2
   P0 = properties(root)
@@ -36503,6 +38014,7 @@ where
 
 ```text
 llvm.intr.ushl.sat(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.addi(riscv.sltiu(riscv.xor(new1, riscv.srl(new3, new2)))), new3))
+
 where
   root = llvm.intr.ushl.sat(X, Y) : T2
   P0 = properties(root)
@@ -36547,6 +38059,7 @@ where
 
 ```text
 llvm.intr.abs(X)  =>  builtin.unrealized_conversion_cast(riscv.max(new1, riscv.neg(new1)))
+
 where
   root = llvm.intr.abs(X) : T1
   P0 = properties(root)
@@ -36582,6 +38095,7 @@ Veir.lowerFshConst false 64
 
 ```text
 llvm.intr.fshr(X, X, C0)  =>  builtin.unrealized_conversion_cast(riscv.rori(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -36625,6 +38139,7 @@ Veir.lowerFshConst false 32
 
 ```text
 llvm.intr.fshr(X, X, C0)  =>  builtin.unrealized_conversion_cast(riscv.roriw(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -36668,6 +38183,7 @@ Veir.lowerFshConst true 64
 
 ```text
 llvm.intr.fshl(X, X, C0)  =>  builtin.unrealized_conversion_cast(riscv.rori(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -36711,6 +38227,7 @@ Veir.lowerFshConst true 32
 
 ```text
 llvm.intr.fshl(X, X, C0)  =>  builtin.unrealized_conversion_cast(riscv.roriw(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T1
   P0 = properties(C0)
@@ -36754,6 +38271,7 @@ Veir.lowerFshlGeneral 64
 
 ```text
 llvm.intr.fshl(X, Y, Z)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.sll(builtin.unrealized_conversion_cast(X), new3), riscv.srl(riscv.srli(builtin.unrealized_conversion_cast(Y)), riscv.xori(new3))))
+
 where
   root = llvm.intr.fshl(X, Y, Z) : T3
   P0 = properties(root)
@@ -36808,6 +38326,7 @@ Veir.lowerFshlGeneral 32
 
 ```text
 llvm.intr.fshl(X, Y, Z)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.sllw(builtin.unrealized_conversion_cast(X), new3), riscv.srlw(riscv.srliw(builtin.unrealized_conversion_cast(Y)), riscv.xori(new3))))
+
 where
   root = llvm.intr.fshl(X, Y, Z) : T3
   P0 = properties(root)
@@ -36862,6 +38381,7 @@ Veir.lowerFshrGeneral 64
 
 ```text
 llvm.intr.fshr(X, Y, Z)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.sll(riscv.slli(builtin.unrealized_conversion_cast(X)), riscv.xori(new3)), riscv.srl(builtin.unrealized_conversion_cast(Y), new3)))
+
 where
   root = llvm.intr.fshr(X, Y, Z) : T3
   P0 = properties(root)
@@ -36916,6 +38436,7 @@ Veir.lowerFshrGeneral 32
 
 ```text
 llvm.intr.fshr(X, Y, Z)  =>  builtin.unrealized_conversion_cast(riscv.or(riscv.sllw(riscv.slliw(builtin.unrealized_conversion_cast(X)), riscv.xori(new3)), riscv.srlw(builtin.unrealized_conversion_cast(Y), new3)))
+
 where
   root = llvm.intr.fshr(X, Y, Z) : T3
   P0 = properties(root)
@@ -36961,9 +38482,10 @@ where
 [Source](../Veir/Passes/InstructionSelection/RISCV64.lean#L2051)
 
 ```text
-llvm.mlir.poison()  =>  builtin.unrealized_conversion_cast(riscv.li())
+poison  =>  builtin.unrealized_conversion_cast(riscv.li())
+
 where
-  root = llvm.mlir.poison() : T0
+  root = poison : T0
   P0 = properties(root)
   new1 = riscv.li() : T1 [created]
   P1 = properties(new1)
@@ -36980,9 +38502,10 @@ where
 [Source](../Veir/Passes/InstructionSelection/RISCV64.lean#L2068)
 
 ```text
-llvm.mlir.zero()  =>  builtin.unrealized_conversion_cast(riscv.li())
+0  =>  builtin.unrealized_conversion_cast(riscv.li())
+
 where
-  root = llvm.mlir.zero() : T0
+  root = 0 : T0
   P0 = properties(root)
   new1 = riscv.li() : T1 [created]
   P1 = properties(new1)
@@ -37002,6 +38525,7 @@ Builder families: `Veir.lowerRegCast`.
 
 ```text
 llvm.freeze(X)  =>  builtin.unrealized_conversion_cast(builtin.unrealized_conversion_cast(X))
+
 where
   root = llvm.freeze(X) : T1
   P0 = properties(root)
@@ -37029,6 +38553,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_add(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.add(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_add(X, Y) : T0
   P0 = properties(root)
@@ -37059,6 +38584,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_sub(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sub(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_sub(X, Y) : T0
   P0 = properties(root)
@@ -37089,6 +38615,7 @@ Builder families: `Veir.lowerRegCast`.
 
 ```text
 gmir.g_trunc(X)  =>  builtin.unrealized_conversion_cast(builtin.unrealized_conversion_cast(X))
+
 where
   root = gmir.g_trunc(X) : T1
   P0 = properties(root)
@@ -37113,6 +38640,7 @@ Builder families: `Veir.lowerRegCast`.
 
 ```text
 gmir.g_anyext(X)  =>  builtin.unrealized_conversion_cast(builtin.unrealized_conversion_cast(X))
+
 where
   root = gmir.g_anyext(X) : T1
   P0 = properties(root)
@@ -37137,6 +38665,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_and(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.and(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_and(X, Y) : T0
   P0 = properties(root)
@@ -37167,6 +38696,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_or(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.or(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_or(X, Y) : T0
   P0 = properties(root)
@@ -37197,6 +38727,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_xor(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xor(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_xor(X, Y) : T0
   P0 = properties(root)
@@ -37227,6 +38758,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_mul(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.mul(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_mul(X, Y) : T0
   P0 = properties(root)
@@ -37257,6 +38789,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_sdiv(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.div(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_sdiv(X, Y) : T0
   P0 = properties(root)
@@ -37287,6 +38820,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_udiv(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.divu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_udiv(X, Y) : T0
   P0 = properties(root)
@@ -37317,6 +38851,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_srem(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.rem(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_srem(X, Y) : T0
   P0 = properties(root)
@@ -37347,6 +38882,7 @@ Builder families: `Veir.lowerBinary`.
 
 ```text
 gmir.g_urem(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.remu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_urem(X, Y) : T0
   P0 = properties(root)
@@ -37375,6 +38911,7 @@ where
 
 ```text
 gmir.g_constant()  =>  builtin.unrealized_conversion_cast(riscv.li())
+
 where
   root = gmir.g_constant() : T0
   P0 = properties(root)
@@ -37398,6 +38935,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(riscv.xor(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37429,6 +38967,7 @@ where
 
 ```text
 gmir.g_icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltiu(builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T0
   P0 = properties(C0)
@@ -37459,6 +38998,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), riscv.xor(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37493,6 +39033,7 @@ where
 
 ```text
 gmir.g_icmp(X, C0)  =>  builtin.unrealized_conversion_cast(riscv.sltu(riscv.li(), builtin.unrealized_conversion_cast(X)))
+
 where
   C0 = gmir.g_constant() : T0
   P0 = properties(C0)
@@ -37526,6 +39067,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37554,6 +39096,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.slt(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37582,6 +39125,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37610,6 +39154,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.sltu(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X)))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37638,6 +39183,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37669,6 +39215,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.slt(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37700,6 +39247,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37731,6 +39279,7 @@ where
 
 ```text
 gmir.g_icmp(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.xori(riscv.sltu(builtin.unrealized_conversion_cast(Y), builtin.unrealized_conversion_cast(X))))
+
 where
   root = gmir.g_icmp(X, Y) : T1
   P0 = properties(root)
@@ -37780,6 +39329,7 @@ Veir.lowerBinop Veir.Llvm.add Veir.GMIR.g_add Veir.g_add._proof_1
 
 ```text
 llvm.add(X, Y)  =>  gmir.g_add(X, Y)
+
 where
   root = llvm.add(X, Y) : T2
   P0 = properties(root)
@@ -37807,6 +39357,7 @@ Veir.lowerBinop Veir.Llvm.sub Veir.GMIR.g_sub Veir.g_sub._proof_1
 
 ```text
 llvm.sub(X, Y)  =>  gmir.g_sub(X, Y)
+
 where
   root = llvm.sub(X, Y) : T2
   P0 = properties(root)
@@ -37834,6 +39385,7 @@ Veir.lowerBinop Veir.Llvm.icmp Veir.GMIR.g_icmp Veir.g_icmp._proof_1
 
 ```text
 llvm.icmp(X, Y)  =>  gmir.g_icmp(X, Y)
+
 where
   root = llvm.icmp(X, Y) : T2
   P0 = properties(root)
@@ -37861,6 +39413,7 @@ Veir.lowerBinop Veir.Llvm.and Veir.GMIR.g_and Veir.g_and._proof_1
 
 ```text
 llvm.and(X, Y)  =>  gmir.g_and(X, Y)
+
 where
   root = llvm.and(X, Y) : T2
   P0 = properties(root)
@@ -37888,6 +39441,7 @@ Veir.lowerBinop Veir.Llvm.or Veir.GMIR.g_or Veir.g_or._proof_1
 
 ```text
 llvm.or(X, Y)  =>  gmir.g_or(X, Y)
+
 where
   root = llvm.or(X, Y) : T2
   P0 = properties(root)
@@ -37915,6 +39469,7 @@ Veir.lowerBinop Veir.Llvm.xor Veir.GMIR.g_xor Veir.g_xor._proof_1
 
 ```text
 llvm.xor(X, Y)  =>  gmir.g_xor(X, Y)
+
 where
   root = llvm.xor(X, Y) : T2
   P0 = properties(root)
@@ -37942,6 +39497,7 @@ Veir.lowerBinop Veir.Llvm.mul Veir.GMIR.g_mul Veir.g_mul._proof_1
 
 ```text
 llvm.mul(X, Y)  =>  gmir.g_mul(X, Y)
+
 where
   root = llvm.mul(X, Y) : T2
   P0 = properties(root)
@@ -37969,6 +39525,7 @@ Veir.lowerBinop Veir.Llvm.sdiv Veir.GMIR.g_sdiv Veir.g_sdiv._proof_1
 
 ```text
 llvm.sdiv(X, Y)  =>  gmir.g_sdiv(X, Y)
+
 where
   root = llvm.sdiv(X, Y) : T2
   P0 = properties(root)
@@ -37996,6 +39553,7 @@ Veir.lowerBinop Veir.Llvm.udiv Veir.GMIR.g_udiv Veir.g_udiv._proof_1
 
 ```text
 llvm.udiv(X, Y)  =>  gmir.g_udiv(X, Y)
+
 where
   root = llvm.udiv(X, Y) : T2
   P0 = properties(root)
@@ -38023,6 +39581,7 @@ Veir.lowerBinop Veir.Llvm.srem Veir.GMIR.g_srem Veir.g_srem._proof_1
 
 ```text
 llvm.srem(X, Y)  =>  gmir.g_srem(X, Y)
+
 where
   root = llvm.srem(X, Y) : T2
   P0 = properties(root)
@@ -38050,6 +39609,7 @@ Veir.lowerBinop Veir.Llvm.urem Veir.GMIR.g_urem Veir.g_urem._proof_1
 
 ```text
 llvm.urem(X, Y)  =>  gmir.g_urem(X, Y)
+
 where
   root = llvm.urem(X, Y) : T2
   P0 = properties(root)
@@ -38077,6 +39637,7 @@ Veir.lowerIntegerCast Veir.Llvm.sext Veir.GMIR.g_sext Veir.g_sext._proof_1
 
 ```text
 llvm.sext(X)  =>  gmir.g_sext(X)
+
 where
   root = llvm.sext(X) : T1
   P0 = properties(root)
@@ -38102,6 +39663,7 @@ Veir.lowerIntegerCast Veir.Llvm.zext Veir.GMIR.g_zext Veir.g_zext._proof_1
 
 ```text
 llvm.zext(X)  =>  gmir.g_zext(X)
+
 where
   root = llvm.zext(X) : T1
   P0 = properties(root)
@@ -38127,6 +39689,7 @@ Veir.lowerIntegerCast Veir.Llvm.trunc Veir.GMIR.g_trunc Veir.g_trunc._proof_1
 
 ```text
 llvm.trunc(X)  =>  gmir.g_trunc(X)
+
 where
   root = llvm.trunc(X) : T1
   P0 = properties(root)
@@ -38144,6 +39707,7 @@ where
 
 ```text
 llvm.mlir.constant()  =>  C1
+
 where
   root = llvm.mlir.constant() : T0
   P0 = properties(root)
@@ -38172,6 +39736,7 @@ Veir.lowerUnaryByteOp Veir.Llvm.trunc Veir.GMIR.g_trunc Veir.g_trunc._proof_1
 
 ```text
 llvm.trunc(X)  =>  builtin.unrealized_conversion_cast(gmir.g_trunc(builtin.unrealized_conversion_cast(X)))
+
 where
   root = llvm.trunc(X) : T1
   P0 = properties(root)
@@ -38200,6 +39765,7 @@ where
 
 ```text
 llvm.bitcast(X)  =>  builtin.unrealized_conversion_cast(X)
+
 where
   root = llvm.bitcast(X) : T1
   P0 = properties(root)
@@ -38228,6 +39794,7 @@ where
 
 ```text
 gmir: g_add(X, Y)  =>  g_trunc(g_add(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_add(X, Y) : T2
   P0 = properties(root)
@@ -38254,6 +39821,7 @@ where
 
 ```text
 gmir: g_sub(X, Y)  =>  g_trunc(g_sub(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_sub(X, Y) : T2
   P0 = properties(root)
@@ -38280,6 +39848,7 @@ where
 
 ```text
 gmir: g_icmp(X, Y)  =>  g_trunc(new1)
+
 where
   root = g_icmp(X, Y) : T2
   P0 = properties(root)
@@ -38302,6 +39871,7 @@ where
 
 ```text
 gmir: g_icmp(X, Y)  =>  g_icmp(g_sext(X), g_sext(Y))
+
 where
   root = g_icmp(X, Y) : T2
   P0 = properties(root)
@@ -38326,6 +39896,7 @@ where
 
 ```text
 gmir: g_and(X, Y)  =>  g_trunc(g_and(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_and(X, Y) : T2
   P0 = properties(root)
@@ -38352,6 +39923,7 @@ where
 
 ```text
 gmir: g_or(X, Y)  =>  g_trunc(g_or(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_or(X, Y) : T2
   P0 = properties(root)
@@ -38378,6 +39950,7 @@ where
 
 ```text
 gmir: g_xor(X, Y)  =>  g_trunc(g_xor(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_xor(X, Y) : T2
   P0 = properties(root)
@@ -38404,6 +39977,7 @@ where
 
 ```text
 gmir: g_mul(X, Y)  =>  g_trunc(g_mul(g_anyext(X), g_anyext(Y)))
+
 where
   root = g_mul(X, Y) : T2
   P0 = properties(root)
@@ -38430,6 +40004,7 @@ where
 
 ```text
 gmir: g_sdiv(X, Y)  =>  g_trunc(g_sdiv(g_sext(X), g_sext(Y)))
+
 where
   root = g_sdiv(X, Y) : T2
   P0 = properties(root)
@@ -38456,6 +40031,7 @@ where
 
 ```text
 gmir: g_srem(X, Y)  =>  g_trunc(g_srem(g_sext(X), g_sext(Y)))
+
 where
   root = g_srem(X, Y) : T2
   P0 = properties(root)
@@ -38482,6 +40058,7 @@ where
 
 ```text
 gmir: g_udiv(X, Y)  =>  g_trunc(g_udiv(g_zext(X), g_zext(Y)))
+
 where
   root = g_udiv(X, Y) : T2
   P0 = properties(root)
@@ -38508,6 +40085,7 @@ where
 
 ```text
 gmir: g_urem(X, Y)  =>  g_trunc(g_urem(g_zext(X), g_zext(Y)))
+
 where
   root = g_urem(X, Y) : T2
   P0 = properties(root)
@@ -38538,6 +40116,7 @@ where
 
 ```text
 gmir: g_constant()  =>  g_trunc(C1)
+
 where
   root = g_constant() : T0
   P0 = properties(root)
@@ -38571,6 +40150,7 @@ where
 
 ```text
 gmir.g_add(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.addw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_add(X, Y) : T0
   P0 = properties(root)
@@ -38594,6 +40174,7 @@ where
 
 ```text
 gmir.g_sub(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.subw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_sub(X, Y) : T0
   P0 = properties(root)
@@ -38617,6 +40198,7 @@ where
 
 ```text
 gmir.g_mul(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.mulw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_mul(X, Y) : T0
   P0 = properties(root)
@@ -38640,6 +40222,7 @@ where
 
 ```text
 gmir.g_sdiv(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.divw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_sdiv(X, Y) : T0
   P0 = properties(root)
@@ -38663,6 +40246,7 @@ where
 
 ```text
 gmir.g_udiv(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.divuw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_udiv(X, Y) : T0
   P0 = properties(root)
@@ -38686,6 +40270,7 @@ where
 
 ```text
 gmir.g_urem(X, Y)  =>  builtin.unrealized_conversion_cast(riscv.remuw(builtin.unrealized_conversion_cast(X), builtin.unrealized_conversion_cast(Y)))
+
 where
   root = gmir.g_urem(X, Y) : T0
   P0 = properties(root)
@@ -38719,6 +40304,7 @@ where
 
 ```text
 riscv: add(X, li())  =>  X
+
 where
   a0 = li() : T0
   P0 = properties(a0)
@@ -38735,6 +40321,7 @@ where
 
 ```text
 riscv: zextw(a0)  =>  a0
+
 where
   a0 = zextb(X) : T1
   P0 = properties(a0)
@@ -38751,6 +40338,7 @@ where
 
 ```text
 riscv: zextb(a0)  =>  a0
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -38775,6 +40363,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lw 1 (fun x => true) Veir.R
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lw(X) : T1
   P0 = properties(a0)
@@ -38799,6 +40388,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lh 1 (fun x => true) Veir.R
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lh(X) : T1
   P0 = properties(a0)
@@ -38823,6 +40413,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lb 1 (fun x => true) Veir.R
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lb(X) : T1
   P0 = properties(a0)
@@ -38847,6 +40438,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lhu 1 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lhu(X) : T1
   P0 = properties(a0)
@@ -38871,6 +40463,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lbu 1 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -38895,6 +40488,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.addw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = addw(X, Y) : T2
   P0 = properties(a0)
@@ -38921,6 +40515,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.addiw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = addiw(X) : T1
   P0 = properties(a0)
@@ -38945,6 +40540,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.subw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = subw(X, Y) : T2
   P0 = properties(a0)
@@ -38971,6 +40567,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.mulw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = mulw(X, Y) : T2
   P0 = properties(a0)
@@ -38997,6 +40594,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.divw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = divw(X, Y) : T2
   P0 = properties(a0)
@@ -39023,6 +40621,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.divuw 2 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = divuw(X, Y) : T2
   P0 = properties(a0)
@@ -39049,6 +40648,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.remw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = remw(X, Y) : T2
   P0 = properties(a0)
@@ -39075,6 +40675,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.remuw 2 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = remuw(X, Y) : T2
   P0 = properties(a0)
@@ -39101,6 +40702,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sllw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sllw(X, Y) : T2
   P0 = properties(a0)
@@ -39127,6 +40729,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.slliw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = slliw(X) : T1
   P0 = properties(a0)
@@ -39151,6 +40754,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.srlw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = srlw(X, Y) : T2
   P0 = properties(a0)
@@ -39177,6 +40781,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.srliw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = srliw(X) : T1
   P0 = properties(a0)
@@ -39201,6 +40806,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sraw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sraw(X, Y) : T2
   P0 = properties(a0)
@@ -39227,6 +40833,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sraiw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sraiw(X) : T1
   P0 = properties(a0)
@@ -39251,6 +40858,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.rolw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = rolw(X, Y) : T2
   P0 = properties(a0)
@@ -39277,6 +40885,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.rorw 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = rorw(X, Y) : T2
   P0 = properties(a0)
@@ -39303,6 +40912,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.roriw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = roriw(X) : T1
   P0 = properties(a0)
@@ -39327,6 +40937,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.packw 2 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = packw(X, Y) : T2
   P0 = properties(a0)
@@ -39353,6 +40964,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.lui 0 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = lui() : T0
   P0 = properties(a0)
@@ -39375,6 +40987,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.cpop 1 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = cpop(X) : T1
   P0 = properties(a0)
@@ -39399,6 +41012,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.cpopw 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = cpopw(X) : T1
   P0 = properties(a0)
@@ -39423,6 +41037,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.clz 1 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = clz(X) : T1
   P0 = properties(a0)
@@ -39447,6 +41062,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.clzw 1 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = clzw(X) : T1
   P0 = properties(a0)
@@ -39471,6 +41087,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.ctz 1 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = ctz(X) : T1
   P0 = properties(a0)
@@ -39495,6 +41112,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.ctzw 1 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = ctzw(X) : T1
   P0 = properties(a0)
@@ -39519,6 +41137,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.slt 2 (fun x => true) Veir.
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = slt(X, Y) : T2
   P0 = properties(a0)
@@ -39545,6 +41164,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sltu 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sltu(X, Y) : T2
   P0 = properties(a0)
@@ -39571,6 +41191,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.slti 1 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = slti(X) : T1
   P0 = properties(a0)
@@ -39595,6 +41216,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sltiu 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sltiu(X) : T1
   P0 = properties(a0)
@@ -39619,6 +41241,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.bext 2 (fun x => true) Veir
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = bext(X, Y) : T2
   P0 = properties(a0)
@@ -39645,6 +41268,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.bexti 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = bexti(X) : T1
   P0 = properties(a0)
@@ -39669,6 +41293,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sextb 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sextb(X) : T1
   P0 = properties(a0)
@@ -39693,6 +41318,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.sexth 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = sexth(X) : T1
   P0 = properties(a0)
@@ -39717,6 +41343,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.zexth 1 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = zexth(X) : T1
   P0 = properties(a0)
@@ -39741,6 +41368,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.packh 2 (fun x => true) Vei
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = packh(X, Y) : T2
   P0 = properties(a0)
@@ -39768,6 +41396,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.srai 1
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = srai(X) : T1
   P0 = properties(a0)
@@ -39794,6 +41423,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.srli 1
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = srli(X) : T1
   P0 = properties(a0)
@@ -39820,6 +41450,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.andi 1
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = andi(X) : T1
   P0 = properties(a0)
@@ -39846,6 +41477,7 @@ Veir.RISCV.sextw_signExtendingOpW_pattern Veir.Riscv.ori 1 (fun p => (Veir.RISCV
 
 ```text
 riscv: sextw(a0)  =>  a0
+
 where
   a0 = ori(X) : T1
   P0 = properties(a0)
@@ -39865,6 +41497,7 @@ where
 
 ```text
 riscv: zextw(slliw(a0))  =>  slli(a0)
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -39891,6 +41524,7 @@ where
 
 ```text
 riscv: or(a0, slli(a1))  =>  packh(a0, a1)
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -39918,6 +41552,7 @@ where
 
 ```text
 riscv: or(slli(a1), a0)  =>  packh(a0, a1)
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -39949,6 +41584,7 @@ where
 
 ```text
 riscv: or(slli(a0), slli(a1))  =>  slli(packh(a0, a1))
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -39983,6 +41619,7 @@ where
 
 ```text
 riscv: or(slli(a1), slli(a0))  =>  slli(packh(a0, a1))
+
 where
   a0 = lbu(X) : T1
   P0 = properties(a0)
@@ -40023,6 +41660,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: addw(zextw(X), Y)  =>  addw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40041,6 +41679,7 @@ where
 
 ```text
 riscv: addw(Y, zextw(X))  =>  addw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40065,6 +41704,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: addiw(zextw(X))  =>  addiw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40087,6 +41727,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: roriw(zextw(X))  =>  roriw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40109,6 +41750,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: srliw(zextw(X))  =>  srliw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40131,6 +41773,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: subw(zextw(X), Y)  =>  subw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40149,6 +41792,7 @@ where
 
 ```text
 riscv: subw(Y, zextw(X))  =>  subw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40173,6 +41817,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: mulw(zextw(X), Y)  =>  mulw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40191,6 +41836,7 @@ where
 
 ```text
 riscv: mulw(Y, zextw(X))  =>  mulw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40215,6 +41861,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: divw(zextw(X), Y)  =>  divw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40233,6 +41880,7 @@ where
 
 ```text
 riscv: divw(Y, zextw(X))  =>  divw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40257,6 +41905,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: divuw(zextw(X), Y)  =>  divuw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40275,6 +41924,7 @@ where
 
 ```text
 riscv: divuw(Y, zextw(X))  =>  divuw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40299,6 +41949,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: remw(zextw(X), Y)  =>  remw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40317,6 +41968,7 @@ where
 
 ```text
 riscv: remw(Y, zextw(X))  =>  remw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40341,6 +41993,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: remuw(zextw(X), Y)  =>  remuw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40359,6 +42012,7 @@ where
 
 ```text
 riscv: remuw(Y, zextw(X))  =>  remuw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40383,6 +42037,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sllw(zextw(X), Y)  =>  sllw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40401,6 +42056,7 @@ where
 
 ```text
 riscv: sllw(Y, zextw(X))  =>  sllw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40425,6 +42081,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: srlw(zextw(X), Y)  =>  srlw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40443,6 +42100,7 @@ where
 
 ```text
 riscv: srlw(Y, zextw(X))  =>  srlw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40467,6 +42125,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sraw(zextw(X), Y)  =>  sraw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40485,6 +42144,7 @@ where
 
 ```text
 riscv: sraw(Y, zextw(X))  =>  sraw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40509,6 +42169,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: rolw(zextw(X), Y)  =>  rolw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40527,6 +42188,7 @@ where
 
 ```text
 riscv: rolw(Y, zextw(X))  =>  rolw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40551,6 +42213,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: rorw(zextw(X), Y)  =>  rorw(X, Y)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40569,6 +42232,7 @@ where
 
 ```text
 riscv: rorw(Y, zextw(X))  =>  rorw(Y, X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40593,6 +42257,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sraiw(zextw(X))  =>  sraiw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40615,6 +42280,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: slliuw(zextw(X))  =>  slliuw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40637,6 +42303,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: clzw(zextw(X))  =>  clzw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40659,6 +42326,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: ctzw(zextw(X))  =>  ctzw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40681,6 +42349,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: cpopw(zextw(X))  =>  cpopw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40703,6 +42372,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sextw(zextw(X))  =>  sextw(X)
+
 where
   a0 = zextw(X) : T0
   P0 = properties(a0)
@@ -40725,6 +42395,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: addw(sextw(X), Y)  =>  addw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40743,6 +42414,7 @@ where
 
 ```text
 riscv: addw(Y, sextw(X))  =>  addw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40767,6 +42439,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: addiw(sextw(X))  =>  addiw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40789,6 +42462,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: roriw(sextw(X))  =>  roriw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40811,6 +42485,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: srliw(sextw(X))  =>  srliw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40833,6 +42508,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: subw(sextw(X), Y)  =>  subw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40851,6 +42527,7 @@ where
 
 ```text
 riscv: subw(Y, sextw(X))  =>  subw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40875,6 +42552,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: mulw(sextw(X), Y)  =>  mulw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40893,6 +42571,7 @@ where
 
 ```text
 riscv: mulw(Y, sextw(X))  =>  mulw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40917,6 +42596,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: divw(sextw(X), Y)  =>  divw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40935,6 +42615,7 @@ where
 
 ```text
 riscv: divw(Y, sextw(X))  =>  divw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40959,6 +42640,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: divuw(sextw(X), Y)  =>  divuw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -40977,6 +42659,7 @@ where
 
 ```text
 riscv: divuw(Y, sextw(X))  =>  divuw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41001,6 +42684,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: remw(sextw(X), Y)  =>  remw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41019,6 +42703,7 @@ where
 
 ```text
 riscv: remw(Y, sextw(X))  =>  remw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41043,6 +42728,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: remuw(sextw(X), Y)  =>  remuw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41061,6 +42747,7 @@ where
 
 ```text
 riscv: remuw(Y, sextw(X))  =>  remuw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41085,6 +42772,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sllw(sextw(X), Y)  =>  sllw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41103,6 +42791,7 @@ where
 
 ```text
 riscv: sllw(Y, sextw(X))  =>  sllw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41127,6 +42816,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: srlw(sextw(X), Y)  =>  srlw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41145,6 +42835,7 @@ where
 
 ```text
 riscv: srlw(Y, sextw(X))  =>  srlw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41169,6 +42860,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sraw(sextw(X), Y)  =>  sraw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41187,6 +42879,7 @@ where
 
 ```text
 riscv: sraw(Y, sextw(X))  =>  sraw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41211,6 +42904,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: rolw(sextw(X), Y)  =>  rolw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41229,6 +42923,7 @@ where
 
 ```text
 riscv: rolw(Y, sextw(X))  =>  rolw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41253,6 +42948,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: rorw(sextw(X), Y)  =>  rorw(X, Y)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41271,6 +42967,7 @@ where
 
 ```text
 riscv: rorw(Y, sextw(X))  =>  rorw(Y, X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41295,6 +42992,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: sraiw(sextw(X))  =>  sraiw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41317,6 +43015,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: slliuw(sextw(X))  =>  slliuw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41339,6 +43038,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: clzw(sextw(X))  =>  clzw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41361,6 +43061,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: ctzw(sextw(X))  =>  ctzw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41383,6 +43084,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: cpopw(sextw(X))  =>  cpopw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
@@ -41405,6 +43107,7 @@ Builder families: `Veir.RISCV.drop_ext_low_word_pattern`.
 
 ```text
 riscv: zextw(sextw(X))  =>  zextw(X)
+
 where
   a0 = sextw(X) : T0
   P0 = properties(a0)
