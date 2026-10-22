@@ -43,6 +43,9 @@ command line tool `veir-opt`. The FileCheck tests require
 Run a single benchmark with `lake exe run-benchmarks <name>` (see
 [`Veir/Benchmarks.lean`](Veir/Benchmarks.lean) for the available names).
 
+Puddle rewrites can be displayed with `#print_puddle`; see
+[Reading Puddle rewrites](docs/puddle-printing.md) for examples and notation.
+
 ## From C to VeIR
 
 This section gives an example showing how to run code through a VeIR
