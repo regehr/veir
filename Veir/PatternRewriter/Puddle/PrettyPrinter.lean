@@ -485,7 +485,7 @@ private def render (d : Description) (bindings : Array (Nat × Expr)) : MetaM Fo
   let header := Format.text lines[0]!
   let detailLines := (lines.toList.drop 1).flatMap (·.splitOn "\n")
   let details := Format.joinSep (detailLines.map Format.text) Format.line
-  return header ++ Format.line ++ "where" ++ Format.nest 2 (Format.line ++ details)
+  return header ++ Format.line ++ Format.line ++ "where" ++ Format.nest 2 (Format.line ++ details)
 
 private def withMetadata (d : Description) (remaining : List Metadata)
     (bindings : Array (Nat × Expr)) : MetaM Format :=
@@ -494,12 +494,53 @@ private def withMetadata (d : Description) (remaining : List Metadata)
   | item :: rest => withLocalDeclD (.mkSimple item.name) item.type fun value =>
     withMetadata d rest (bindings.push (item.id, value))
 
+private def normalizeGraph (rule : Expr) : MetaM Expr := do
+  -- Normalize builder state before reflection. In module clients Array.range's
+  -- body is hidden, so use public equations to expose its elements instead.
+  let mut thms : SimpTheorems := {}
+  for name in #[``Pattern.Builder, ``MatchProg.build, ``CreateProg.build, ``bind, ``pure,
+      ``MatchProg.value, ``MatchProg.type, ``MatchProg.root, ``MatchProg.operation,
+      ``MatchProg.matchNative, ``MatchProg.inspectOperation,
+      ``CreateProg.type, ``CreateProg.operation, ``CreateProg.property, ``CreateProg.applyNative,
+      ``MetadataTuple.fresh, ``IsMetadataTuple.shape_unit, ``IsMetadataTuple.shape_type,
+      ``IsMetadataTuple.shape_property, ``IsMetadataTuple.shape_type_cons,
+      ``IsMetadataTuple.shape_property_cons, ``MetadataTuple.Shape.fresh, ``MetadataTuple.Atom.fresh] do
+    thms ← thms.addDeclToUnfold name
+  thms ← thms.addConst ``List.toArray_range (inv := true)
+  for name in #[``List.range_zero, ``List.range_succ, ``List.map_toArray,
+      ``List.size_toArray, ``List.length_nil, ``List.length_cons,
+      ``Array.size_map, ``Array.size_range, ``getElem!_pos, ``Array.getElem_map,
+      ``Array.getElem_range, ``List.cons_append, ``List.nil_append,
+      ``List.reverse_cons, ``List.reverse_nil, ``Nat.zero_add, ``Nat.add_zero] do
+    thms ← thms.addConst name
+  let rule ← whnf rule
+  -- Helpers can introduce more builder state. Unfold only graph-producing
+  -- definitions reachable from this rule, preserving native computations.
+  let mut pending := rule.getUsedConstants
+  let mut seen : NameSet := {}
+  while let some name := pending.back? do
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    let some (.defnInfo info) := (← getEnv).find? name | continue
+    unless [``Pattern, ``MatchProg.Builder, ``CreateProg.Builder].any
+        info.type.getForallBody.isAppOf do continue
+    thms ← thms.addDeclToUnfold name
+    pending := pending ++ info.value.getUsedConstants
+  let ctx ← Simp.mkContext { autoUnfold := false } (simpTheorems := #[thms])
+  return (← simp rule ctx).1.expr
+
 /-- Format an elaborated Puddle pattern, retaining Lean expressions for native conditions.
 Parameters controlling graph construction (e.g. commutation flags) must be instantiated.
 Parameters occurring only in predicates may remain symbolic. -/
 def format (rule : Expr) : MetaM Format := withTransparency .all do
-  let d ← nameHandles (← describe rule)
-  withMetadata d d.metadata.toList #[]
+  let d ← nameHandles (← describe (← normalizeGraph rule))
+  -- Graph references are strings, but Lean must know their names are in scope
+  -- when printing native expressions. These unused locals make the delaborator
+  -- qualify colliding global constants, including those exposed by helpers.
+  let names := d.leaves.map (fun (id, _) => valueName d id) ++ d.operations.map (opName d)
+  withLocalDeclsD (names.map fun name => (.mkSimple name, fun _ => pure (mkConst ``Unit))) fun _ =>
+    withMetadata d d.metadata.toList #[]
 
 end PrettyPrinter
 

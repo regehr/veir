@@ -25,6 +25,7 @@ import UnitTest.RegionKindInterfaces
 import UnitTest.SymbolInterfaces
 import UnitTest.Puddle
 import UnitTest.PuddlePrinting
+import UnitTest.PuddlePrintingModule
 import UnitTest.BoundedBitblasting.BoundedBitblasting
 import UnitTest.BoundedBitblasting.Elab
 import UnitTest.BoundedBitblasting.CounterExamples

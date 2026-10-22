@@ -70,7 +70,8 @@ llvm: select(X, 1, 0)  =>  X
 llvm: icmp(udiv((X * 2), 8), X)  =>  0
 ```
 
-Each summary is followed by a `where` block. **The conditions in that block are
+Each summary is separated from its `where` block by a blank line and uses a larger
+font in the PDF. **The conditions in that block are
 part of the rewrite.** For example, the select rule requires an integer type of
 width 1, and the comparison rule requires the `ugt` predicate and a bound on the
 constants. The summary alone does not express those requirements.
@@ -81,7 +82,8 @@ and InstCombine. It is intended for reading, not parsing back into a pattern:
 - `X`, `Y`, `Z`, and `X3`, ... are free SSA values. Repeated names denote the same
   value. Parentheses make grouping explicit. Generated value, operation, type,
   and property names gain suffixes such as `_1` when needed to avoid collisions
-  with symbolic parameters.
+  with symbolic parameters. Global Lean constants are qualified when their
+  names would collide with graph references.
 - `T0`, `T1`, ... are type handles; `P0`, `P1`, ... are operation properties.
   Type equality, property predicates, and overflow flags remain visible in the
   `where` block. Unconstrained matched properties are not assumed to be defaults.

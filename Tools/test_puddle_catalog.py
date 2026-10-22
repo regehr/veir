@@ -39,7 +39,7 @@ class CoverageTests(unittest.TestCase):
         self.definitions = [{'name': 'family'}, {'name': 'alias'}]
         self.record = {
             'name': 'alias', 'families': ['family'],
-            'output': 'llvm: (X + 0)  =>  X\nwhere\n  X : T0\n  require width > 0',
+            'output': 'llvm: (X + 0)  =>  X\n\nwhere\n  X : T0\n  require width > 0',
         }
 
     def test_alias_can_cover_its_builder(self):
@@ -63,6 +63,7 @@ class CoverageTests(unittest.TestCase):
 class PDFTextTests(unittest.TestCase):
     markdown = '''```text
 llvm: (X + 0)  =>  X
+
 where
   X : T0
   require width > 0
@@ -70,6 +71,7 @@ where
 '''
     extracted = '''VeIR · Puddle rewrite catalog
 llvm: (X + 0) => X
+
 where
   X : T0
 

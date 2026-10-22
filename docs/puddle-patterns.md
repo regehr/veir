@@ -1,6 +1,6 @@
 # Puddle rewrite catalog
 
-Generated on 2026-10-22 from the working tree at `5d4a6b8a9e8da2262f08025fc51307622beb530a` (`math-fehr/instsimplify-proofs`).
+Generated on 2026-10-22 from the working tree at `9ad043ebaebd277ced08cc0955acd54e6580532c` (`pretty-print`).
 
 **1,703 renderings**, covering all **534 discovered production `Pattern OpCode` declarations** under `Veir/`: 472 builder definitions, 3 direct record definitions, and 59 aliases or dispatchers. The renderings also include concrete instances extracted from compiled pass patterns. Generic builders are covered through the displayed instances; compiler-generated auxiliary declarations and unit tests are excluded.
 

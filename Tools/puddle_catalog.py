@@ -274,9 +274,21 @@ PDF_TEMPLATE = r'''
 #show heading.where(level: 4): set text(size: 9pt)
 #show link: set text(fill: rgb("245a88"))
 #show raw: set text(font: __CODE_FONTS__, size: 7.5pt)
-#show raw.where(block: true): block.with(
-  width: 100%, inset: 6pt, fill: rgb("f5f6f8"), radius: 2pt, breakable: true,
-)
+#show raw.where(block: true): it => {
+  let parts = it.text.split("\nwhere\n")
+  let body = if parts.len() == 2 {
+    [
+      #block(above: 0pt, below: 0pt)[
+        #show raw: set text(size: 11pt, weight: "semibold")
+        #raw(parts.at(0).trim())
+      ]
+      #v(12pt)
+      #raw("where\n" + parts.at(1))
+    ]
+  } else { it }
+  block(width: 100%, inset: 6pt, fill: rgb("f5f6f8"), radius: 2pt,
+    breakable: true, body)
+}
 #set table(inset: 4pt, stroke: (bottom: 0.3pt + rgb("dddddd")))
 $body$
 '''

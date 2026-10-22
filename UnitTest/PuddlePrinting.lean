@@ -28,6 +28,7 @@ private def addZero : Pattern OpCode := Pattern.Builder
 
 /--
 info: arith: (X + 0)  =>  X
+
 where
   C0 = 0 : T0
   P0 = properties(C0)
@@ -55,6 +56,7 @@ private def duplicate : Pattern OpCode := Pattern.Builder
 
 /--
 info: llvm: (a0 - a0)  =>  (X - X)
+
 where
   a0 = (X + Y) : T0
   P0 = properties(a0)
@@ -334,5 +336,37 @@ private def narrowConstant : Pattern OpCode := Pattern.Builder
 #guard_puddle narrowConstant contains "llvm: trunc(C0)  =>  0"
 #guard_puddle narrowConstant contains "C0 = mlir.constant() : T1"
 #guard_puddle narrowConstant contains "require InstSimplify.bitConstantGuard T0 P0 0"
+
+namespace GlobalNames
+
+def X : Int := 2
+def root : Int := 8
+def new2 : Int := 3
+
+-- Global names must remain distinct from graph references in every part of
+-- the rendering, even when Lean would normally print them unqualified.
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X root
+  contains "icmp(udiv((X * GlobalNames.X), GlobalNames.root), X)"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X root contains "C0 = GlobalNames.X : T0"
+#guard_puddle Veir.InstSimplify.IS3341_mulUdiv X root
+  contains "intConstantGuard P0 GlobalNames.X"
+#guard_puddle createdCompound new2 contains "arith: (X + X)  =>  (X * (GlobalNames.new2 + 1))"
+
+private def constantGuard (p : ArithConstantProperties) : Bool := p.value.value == X
+
+private def hiddenGlobal : Pattern OpCode := Pattern.Builder
+  (do
+    let ty ← MatchProg.type (Attr := IntegerType)
+    let x ← MatchProg.value ty
+    let c ← MatchProg.operation (.arith .constant) #[] #[ty] constantGuard
+    let _ ← MatchProg.root (.arith .addi) #[x, c.res[0]!] #[ty]
+    return x)
+  pure (fun x => x)
+
+-- The collision can also appear only after unfolding a predicate helper.
+#guard_puddle hiddenGlobal contains "arith: (X + GlobalNames.X)  =>  X"
+#guard_puddle hiddenGlobal contains "require P0.value.value == GlobalNames.X"
+
+end GlobalNames
 
 end PuddlePrintingTest
